@@ -254,6 +254,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .job-card:last-child { border-bottom: none; }
+
+.job-card.target-highlight {
+  border-left: 3px solid var(--color-target);
+}
 .job-card:hover { background: rgba(0,204,188,0.03); }
 @media (prefers-color-scheme: dark) {
   .job-card:hover { background: rgba(0,204,188,0.05); }

@@ -190,58 +190,96 @@ async function fetchLinkedIn() {
   }
 }
 
-// ─── LinkedIn Easy Apply (all companies, India, SWE) ───
+// ─── LinkedIn Easy Apply (multiple searches, deduplicated) ───
+
+const EASY_APPLY_SEARCHES = [
+  { keywords: 'Senior+Software+Engineer', label: 'Sr. SWE (all)' },
+  { keywords: 'SMTS', fC: '3185', label: 'SMTS @ Salesforce' },
+  { keywords: 'Software+Engineer', fC: '3185', label: 'SWE @ Salesforce' },
+  { keywords: 'Software+Engineer', fC: '2498', label: 'SWE @ Booking.com' },
+];
+
+const TARGET_COMPANIES = ['salesforce', 'booking.com', 'linkedin'];
+
+function parseLinkedInCards(html) {
+  const results = [];
+  const cards = html.split('base-search-card__info').slice(1);
+  for (const card of cards) {
+    const titleMatch = card.match(/class="base-search-card__title[^"]*"[^>]*>([^<]+)/);
+    const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?]+)/);
+    const locMatch = card.match(/job-search-card__location[^>]*>([^<]+)/);
+    const companyMatch = card.match(/subtitle[\s\S]*?href="[^"]*company[^"]*"[^>]*>\s*([^<]+)/);
+    const companyFallback = card.match(/base-search-card__subtitle[^>]*>[\s\S]*?(?:<[^>]*>)*\s*(\S[^<]+)/);
+    const dateMatch = card.match(/datetime="([^"]+)"/);
+
+    if (!titleMatch) continue;
+    const title = titleMatch[1].trim();
+    const company = (companyMatch ? companyMatch[1] : companyFallback ? companyFallback[1] : '').trim() || '—';
+    const jobId = linkMatch ? linkMatch[1].split('/').pop() : null;
+
+    results.push({
+      id: jobId || `li-${results.length}`,
+      title,
+      url: linkMatch ? linkMatch[1] : '#',
+      location: locMatch ? locMatch[1].trim() : 'India',
+      department: company,
+      type: 'Easy Apply',
+      postedDate: dateMatch ? dateMatch[1] : new Date().toISOString(),
+      isTargetCompany: TARGET_COMPANIES.some((tc) => company.toLowerCase().includes(tc)),
+    });
+  }
+  return results;
+}
+
 async function fetchLinkedInEasyApply() {
-  console.log('[LinkedIn Easy Apply] Fetching...');
+  console.log('[LinkedIn Easy Apply] Fetching across multiple searches...');
+  const seen = new Set();
   const allJobs = [];
 
-  const baseUrl =
-    'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
-    '?keywords=Senior+Software+Engineer&location=India&f_AL=true';
+  for (const search of EASY_APPLY_SEARCHES) {
+    const base =
+      'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
+      `?keywords=${search.keywords}&location=India&f_AL=true` +
+      (search.fC ? `&f_C=${search.fC}` : '');
 
-  try {
-    for (let start = 0; start < 150; start += 25) {
-      const url = `${baseUrl}&start=${start}`;
-      const html = await httpGet(url, {
-        'User-Agent': 'Mozilla/5.0 (compatible; JobTracker/1.0)',
-      });
-      if (!html.includes('base-search-card')) break;
-
-      const cards = html.split('base-search-card__info').slice(1);
-      for (const card of cards) {
-        const titleMatch = card.match(/class="base-search-card__title[^"]*"[^>]*>([^<]+)/);
-        const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?]+)/);
-        const locMatch = card.match(/job-search-card__location[^>]*>([^<]+)/);
-        const companyMatch = card.match(/subtitle[\s\S]*?href="[^"]*company[^"]*"[^>]*>\s*([^<]+)/);
-        const companyFallback = card.match(/base-search-card__subtitle[^>]*>[\s\S]*?(?:<[^>]*>)*\s*(\S[^<]+)/);
-        const dateMatch = card.match(/datetime="([^"]+)"/);
-
-        if (!titleMatch) continue;
-        const title = titleMatch[1].trim();
-        if (!matchesRoleFilter(title, 'linkedin')) continue;
-
-        const company = (companyMatch ? companyMatch[1] : companyFallback ? companyFallback[1] : '').trim() || '—';
-        const jobId = linkMatch ? linkMatch[1].split('/').pop() : `li-ea-${allJobs.length}`;
-        allJobs.push({
-          id: jobId,
-          title,
-          url: linkMatch ? linkMatch[1] : '#',
-          location: locMatch ? locMatch[1].trim() : 'India',
-          department: company,
-          type: 'Easy Apply',
-          postedDate: dateMatch ? dateMatch[1] : new Date().toISOString(),
+    try {
+      for (let start = 0; start < 100; start += 25) {
+        const url = `${base}&start=${start}`;
+        const html = await httpGet(url, {
+          'User-Agent': 'Mozilla/5.0 (compatible; JobTracker/1.0)',
         });
+        if (!html.includes('base-search-card')) break;
+
+        const jobs = parseLinkedInCards(html);
+        for (const job of jobs) {
+          if (seen.has(job.id)) continue;
+          // For generic search, apply strict role filter
+          if (!search.fC && !matchesRoleFilter(job.title, 'linkedin')) continue;
+          // For Salesforce search, accept SMTS or SWE titles
+          if (search.fC === '3185') {
+            const t = job.title.toLowerCase();
+            if (!/\b(smts|software\s+engineer|swe|mts)\b/.test(t)) continue;
+          }
+          seen.add(job.id);
+          allJobs.push(job);
+        }
+
+        await new Promise((r) => setTimeout(r, 300));
       }
-
-      await new Promise((r) => setTimeout(r, 500));
+      console.log(`  [${search.label}] cumulative: ${allJobs.length}`);
+    } catch (err) {
+      console.error(`  [${search.label}] Error:`, err.message);
     }
-
-    console.log(`[LinkedIn Easy Apply] Found ${allJobs.length} matching roles`);
-    return allJobs;
-  } catch (err) {
-    console.error('[LinkedIn Easy Apply] Error:', err.message);
-    return allJobs;
   }
+
+  // Sort: target companies first, then by date
+  allJobs.sort((a, b) => {
+    if (a.isTargetCompany !== b.isTargetCompany) return a.isTargetCompany ? -1 : 1;
+    return new Date(b.postedDate) - new Date(a.postedDate);
+  });
+
+  console.log(`[LinkedIn Easy Apply] Total: ${allJobs.length} unique roles`);
+  return allJobs;
 }
 
 // ─── Main ───

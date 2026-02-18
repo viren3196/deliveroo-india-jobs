@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-18T19:23:50.853Z",
+  "fetchedAt": "2026-02-18T19:28:08.339Z",
   "companies": {
     "salesforce": {
       "name": "Salesforce",
@@ -136,13 +136,164 @@
       "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true",
       "jobs": [
         {
-          "id": "senior-software-engineer-at-microsoft-4358252957",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4358252957",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Microsoft",
+          "id": "software-engineering-lmts-fullstack-at-salesforce-4371289750",
+          "title": "MTS, Software Engineering",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-lmts-fullstack-at-salesforce-4371289750",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
           "type": "Easy Apply",
-          "postedDate": "2026-02-04"
+          "postedDate": "2026-02-18",
+          "isTargetCompany": true
+        },
+        {
+          "id": "lmts-smts-mts-data-engineer-at-salesforce-4371636072",
+          "title": "LMTS/SMTS/MTS Data Engineer",
+          "url": "https://in.linkedin.com/jobs/view/lmts-smts-mts-data-engineer-at-salesforce-4371636072",
+          "location": "Pune, Maharashtra, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-17",
+          "isTargetCompany": true
+        },
+        {
+          "id": "software-engineering-lmts-fullstack-at-salesforce-4371405128",
+          "title": "Principal Software Engineer / PMTS - Backend - Distributed Systems",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-lmts-fullstack-at-salesforce-4371405128",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-17",
+          "isTargetCompany": true
+        },
+        {
+          "id": "li-9",
+          "title": "Sr. Software Engineer",
+          "url": "#",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "LinkedIn",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-13",
+          "isTargetCompany": true
+        },
+        {
+          "id": "lmts-smts-mts-data-engineer-at-salesforce-4371618964",
+          "title": "Performance Engineer (SMTS/LMTS)",
+          "url": "https://in.linkedin.com/jobs/view/lmts-smts-mts-data-engineer-at-salesforce-4371618964",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-12",
+          "isTargetCompany": true
+        },
+        {
+          "id": "software-engineering-smts-tableau-at-salesforce-4367264362",
+          "title": "Software Engineering SMTS",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-smts-tableau-at-salesforce-4367264362",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-12",
+          "isTargetCompany": true
+        },
+        {
+          "id": "lmts-smts-mts-data-engineer-at-salesforce-4373915310",
+          "title": "LMTS/SMTS/MTS Data Engineer",
+          "url": "https://in.linkedin.com/jobs/view/lmts-smts-mts-data-engineer-at-salesforce-4373915310",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": true
+        },
+        {
+          "id": "smts-lmts-distributed-systems-public-cloud-gcp-at-salesforce-4328708628",
+          "title": "LMTS/SMTS/MTS Data Engineer",
+          "url": "https://in.linkedin.com/jobs/view/smts-lmts-distributed-systems-public-cloud-gcp-at-salesforce-4328708628",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": true
+        },
+        {
+          "id": "software-engineering-lmts-pmts-architect-kafka-platform-engineer-at-salesforce-4361156809",
+          "title": "LMTS - Lead Software Engineer - Network Security Platform",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-lmts-pmts-architect-kafka-platform-engineer-at-salesforce-4361156809",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": true
+        },
+        {
+          "id": "li-8",
+          "title": "Software Engineering SMTS- Tableau",
+          "url": "#",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-09",
+          "isTargetCompany": true
+        },
+        {
+          "id": "software-engineering-lmts-smts-big-data-infra-spark-kubernetes-terraform-helm-at-salesforce-4341213951",
+          "title": "SMTS/LMTS Distributed Systems - Public Cloud, GCP",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-lmts-smts-big-data-infra-spark-kubernetes-terraform-helm-at-salesforce-4341213951",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-05",
+          "isTargetCompany": true
+        },
+        {
+          "id": "software-engineering-smts-at-salesforce-4371855040",
+          "title": "Software Engineering LMTS/SMTS - Big Data Infra (Spark/Kubernetes/Terraform/Helm))",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-smts-at-salesforce-4371855040",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-04",
+          "isTargetCompany": true
+        },
+        {
+          "id": "principal-software-engineer-pmts-backend-distributed-systems-at-salesforce-4336881385",
+          "title": "Software Engineering LMTS/SMTS - Big Data Infra (Spark/Kubernetes/Terraform/Helm))",
+          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-pmts-backend-distributed-systems-at-salesforce-4336881385",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-04",
+          "isTargetCompany": true
+        },
+        {
+          "id": "software-engineering-smts-tableau-at-salesforce-4370558846",
+          "title": "Software Engineering SMTS- Tableau",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-smts-tableau-at-salesforce-4370558846",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-30",
+          "isTargetCompany": true
+        },
+        {
+          "id": "agentforce-technical-manager-at-salesforce-4374713744",
+          "title": "Software Engineering SMTS- Tableau",
+          "url": "https://in.linkedin.com/jobs/view/agentforce-technical-manager-at-salesforce-4374713744",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-30",
+          "isTargetCompany": true
+        },
+        {
+          "id": "software-engineering-mts-tableau-at-salesforce-4367254642",
+          "title": "Lead Software Engineer/LMTS - Backend - Distributed Systems - Hyderabad",
+          "url": "https://in.linkedin.com/jobs/view/software-engineering-mts-tableau-at-salesforce-4367254642",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Salesforce",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-28",
+          "isTargetCompany": true
         },
         {
           "id": "senior-software-engineer-at-microsoft-4328178653",
@@ -151,187 +302,18 @@
           "location": "Bengaluru, Karnataka, India",
           "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-18"
+          "postedDate": "2026-02-18",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-software-engineer-at-microsoft-4358904409",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4358904409",
-          "location": "Noida, Uttar Pradesh, India",
-          "department": "Microsoft",
+          "id": "software-engineer-at-rockwell-automation-4373944584",
+          "title": "Associate Software Engineer - JAVA/Spring Boot",
+          "url": "https://in.linkedin.com/jobs/view/software-engineer-at-rockwell-automation-4373944584",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
           "type": "Easy Apply",
-          "postedDate": "2026-02-06"
-        },
-        {
-          "id": "senior-applications-developer-c%23-at-ups-4324317907",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-applications-developer-c%23-at-ups-4324317907",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-30"
-        },
-        {
-          "id": "senior-software-engineer-backend-at-roku-4312053138",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-roku-4312053138",
-          "location": "India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-11"
-        },
-        {
-          "id": "senior-software-engineer-at-flipkart-4366450815",
-          "title": "Senior Software Engineer - Backend",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-flipkart-4366450815",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Roku",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-15"
-        },
-        {
-          "id": "ind-senior-software-engineer-at-walmart-global-tech-india-4347423892",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/ind-senior-software-engineer-at-walmart-global-tech-india-4347423892",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Flipkart",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-28"
-        },
-        {
-          "id": "li-ea-7",
-          "title": "Sr. Software Engineer",
-          "url": "#",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-13"
-        },
-        {
-          "id": "senior-software-engineer-backend-at-doordash-4217752499",
-          "title": "Senior Software Engineer - FullStack",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-doordash-4217752499",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Roku",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-06"
-        },
-        {
-          "id": "senior-java-software-engineer-at-deloitte-4359833771",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://in.linkedin.com/jobs/view/senior-java-software-engineer-at-deloitte-4359833771",
-          "location": "Pune/Pimpri-Chinchwad Area",
-          "department": "DoorDash",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-29"
-        },
-        {
-          "id": "senior-software-engineer-at-microsoft-4358282180",
-          "title": "Senior Software Engineer (Java - Backend. Ads)",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4358282180",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Roku",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-09"
-        },
-        {
-          "id": "principal-software-engineer-at-microsoft-4358410025",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-at-microsoft-4358410025",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-29"
-        },
-        {
-          "id": "senior-software-engineer-frontend-at-paypal-4352268574",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-frontend-at-paypal-4352268574",
-          "location": "Bangalore Urban, Karnataka, India",
-          "department": "Deloitte",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-25"
-        },
-        {
-          "id": "senior-software-engineering-at-microsoft-4341561232",
-          "title": "Senior Software Engineer - Frontend",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineering-at-microsoft-4341561232",
-          "location": "Bengaluru East, Karnataka, India",
-          "department": "PayPal",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-31"
-        },
-        {
-          "id": "senior-software-engineer-core-at-google-4366520063",
-          "title": "Senior Software Engineering",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-core-at-google-4366520063",
-          "location": "Noida, Uttar Pradesh, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-06"
-        },
-        {
-          "id": "senior-software-engineer-at-microsoft-4365046491",
-          "title": "Senior Software Engineer, Core",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4365046491",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Google",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-28"
-        },
-        {
-          "id": "senior-software-engineer-at-clari5-a-perfios-company-4370663388",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-clari5-a-perfios-company-4370663388",
-          "location": "Noida, Uttar Pradesh, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-11"
-        },
-        {
-          "id": "senior-software-engineer-at-microsoft-4342178424",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4342178424",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Clari5 - A Perfios Company",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-10"
-        },
-        {
-          "id": "principal-software-engineer-backend-at-microsoft-4359494764",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-backend-at-microsoft-4359494764",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-07"
-        },
-        {
-          "id": "li-ea-19",
-          "title": "Senior Software Engineer",
-          "url": "#",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-12"
-        },
-        {
-          "id": "senior-software-engineer-at-microsoft-4367493471",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4367493471",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-12"
-        },
-        {
-          "id": "sr-software-development-engineer-at-workday-4310722170",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/sr-software-development-engineer-at-workday-4310722170",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-30"
+          "postedDate": "2026-02-18",
+          "isTargetCompany": false
         },
         {
           "id": "senior-software-engineer-at-microsoft-4371294999",
@@ -340,25 +322,28 @@
           "location": "Bengaluru, Karnataka, India",
           "department": "Freshworks",
           "type": "Easy Apply",
-          "postedDate": "2026-02-17"
+          "postedDate": "2026-02-17",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-software-engineer-backend-at-freshworks-4370520763",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-freshworks-4370520763",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Microsoft",
+          "id": "data-scientist-at-rockwell-automation-4345000535",
+          "title": "Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/data-scientist-at-rockwell-automation-4345000535",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
           "type": "Easy Apply",
-          "postedDate": "2026-02-11"
+          "postedDate": "2026-02-17",
+          "isTargetCompany": false
         },
         {
-          "id": "lead-software-engineer-at-razorpay-4366437262",
-          "title": "Senior Software Engineer - Backend",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-at-razorpay-4366437262",
-          "location": "Chennai, Tamil Nadu, India",
-          "department": "Freshworks",
+          "id": "software-engineer-at-rockwell-automation-4373997981",
+          "title": "Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/software-engineer-at-rockwell-automation-4373997981",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
           "type": "Easy Apply",
-          "postedDate": "2026-02-09"
+          "postedDate": "2026-02-17",
+          "isTargetCompany": false
         },
         {
           "id": "senior-software-engineer-at-microsoft-4365057156",
@@ -367,7 +352,78 @@
           "location": "Bengaluru, Karnataka, India",
           "department": "CSC",
           "type": "Easy Apply",
-          "postedDate": "2026-02-16"
+          "postedDate": "2026-02-16",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-at-flipkart-4366450815",
+          "title": "Senior Software Engineer - Backend",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-flipkart-4366450815",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Roku",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-15",
+          "isTargetCompany": false
+        },
+        {
+          "id": "associate-software-engineer-java-mes-at-rockwell-automation-4346897314",
+          "title": "Associate Software Engineer- JAVA(MES)",
+          "url": "https://in.linkedin.com/jobs/view/associate-software-engineer-java-mes-at-rockwell-automation-4346897314",
+          "location": "Chennai, Tamil Nadu, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-14",
+          "isTargetCompany": false
+        },
+        {
+          "id": "associate-software-engineer-java-spring-boot-at-rockwell-automation-4374785603",
+          "title": "Associate Software Engineer- JAVA(MES)",
+          "url": "https://in.linkedin.com/jobs/view/associate-software-engineer-java-spring-boot-at-rockwell-automation-4374785603",
+          "location": "Andaman and Nicobar Islands, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-14",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-at-microsoft-4367493471",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4367493471",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Microsoft",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-12",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-backend-at-roku-4312053138",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-roku-4312053138",
+          "location": "India",
+          "department": "Microsoft",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-at-clari5-a-perfios-company-4370663388",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-clari5-a-perfios-company-4370663388",
+          "location": "Noida, Uttar Pradesh, India",
+          "department": "Microsoft",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-backend-at-freshworks-4370520763",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-freshworks-4370520763",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Microsoft",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": false
         },
         {
           "id": "senior-software-engineer-infra-at-roku-4334486167",
@@ -376,115 +432,298 @@
           "location": "Bengaluru, Karnataka, India",
           "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-11"
+          "postedDate": "2026-02-11",
+          "isTargetCompany": false
         },
         {
-          "id": "li-ea-27",
-          "title": "Senior Software Engineer, Infra",
-          "url": "#",
+          "id": "technical-leader-platform-automation-at-rockwell-automation-4371298775",
+          "title": "Technical Leader - Platform Automation",
+          "url": "https://in.linkedin.com/jobs/view/technical-leader-platform-automation-at-rockwell-automation-4371298775",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-developer-ifs-cloud-at-rockwell-automation-4358414504",
+          "title": "Technical Leader - Platform Automation",
+          "url": "https://in.linkedin.com/jobs/view/senior-developer-ifs-cloud-at-rockwell-automation-4358414504",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-11",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-at-microsoft-4342178424",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4342178424",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Clari5 - A Perfios Company",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-10",
+          "isTargetCompany": false
+        },
+        {
+          "id": "data-scientist-at-rockwell-automation-4344990589",
+          "title": "Data Scientist",
+          "url": "https://in.linkedin.com/jobs/view/data-scientist-at-rockwell-automation-4344990589",
+          "location": "Andaman and Nicobar Islands, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-10",
+          "isTargetCompany": false
+        },
+        {
+          "id": "data-scientist-at-rockwell-automation-4344941117",
+          "title": "Data Scientist",
+          "url": "https://in.linkedin.com/jobs/view/data-scientist-at-rockwell-automation-4344941117",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-10",
+          "isTargetCompany": false
+        },
+        {
+          "id": "software-engineer-at-rockwell-automation-4374110700",
+          "title": "Data Scientist",
+          "url": "https://in.linkedin.com/jobs/view/software-engineer-at-rockwell-automation-4374110700",
+          "location": "Delhi, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-10",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-at-microsoft-4358282180",
+          "title": "Senior Software Engineer (Java - Backend. Ads)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4358282180",
           "location": "Bengaluru, Karnataka, India",
           "department": "Roku",
           "type": "Easy Apply",
-          "postedDate": "2026-01-31"
+          "postedDate": "2026-02-09",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-software-engineer-web-at-hdfc-securities-4348971044",
+          "id": "lead-software-engineer-at-razorpay-4366437262",
+          "title": "Senior Software Engineer - Backend",
+          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-at-razorpay-4366437262",
+          "location": "Chennai, Tamil Nadu, India",
+          "department": "Freshworks",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-09",
+          "isTargetCompany": false
+        },
+        {
+          "id": "technical-leader-platform-automation-at-rockwell-automation-4371290921",
+          "title": "Mulesoft Developer",
+          "url": "https://in.linkedin.com/jobs/view/technical-leader-platform-automation-at-rockwell-automation-4371290921",
+          "location": "Andaman and Nicobar Islands, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-09",
+          "isTargetCompany": false
+        },
+        {
+          "id": "principal-software-engineer-backend-at-microsoft-4359494764",
           "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-web-at-hdfc-securities-4348971044",
-          "location": "Hyderabad, Telangana, India",
+          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-backend-at-microsoft-4359494764",
+          "location": "Bengaluru, Karnataka, India",
           "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-06"
+          "postedDate": "2026-02-07",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-java-software-engineer-at-capgemini-4369026665",
-          "title": "Senior Software Engineer - Web",
-          "url": "https://in.linkedin.com/jobs/view/senior-java-software-engineer-at-capgemini-4369026665",
-          "location": "Bangalore Urban, Karnataka, India",
-          "department": "HDFC securities",
-          "type": "Easy Apply",
-          "postedDate": "2025-12-08"
-        },
-        {
-          "id": "lead-software-engineer-backend-at-pocket-fm-4363090193",
-          "title": "Senior Software Engineer III",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-backend-at-pocket-fm-4363090193",
-          "location": "Gurugram, Haryana, India",
-          "department": "GreyOrange",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-10"
-        },
-        {
-          "id": "senior-software-engineer-at-google-4367221738",
+          "id": "senior-software-engineer-at-microsoft-4358904409",
           "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-google-4367221738",
-          "location": "Hyderabad, Telangana, India",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4358904409",
+          "location": "Noida, Uttar Pradesh, India",
           "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-04"
+          "postedDate": "2026-02-06",
+          "isTargetCompany": false
         },
         {
-          "id": "principal-software-engineer-at-mastercard-4356605031",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-at-mastercard-4356605031",
+          "id": "senior-software-engineer-backend-at-doordash-4217752499",
+          "title": "Senior Software Engineer - FullStack",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-doordash-4217752499",
           "location": "Bengaluru, Karnataka, India",
-          "department": "Google",
+          "department": "Roku",
           "type": "Easy Apply",
-          "postedDate": "2026-01-30"
+          "postedDate": "2026-02-06",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-principal-software-engineer-at-oracle-4361054986",
-          "title": "Senior Software Engineer - Core Products Engineering, Pune",
-          "url": "https://in.linkedin.com/jobs/view/senior-principal-software-engineer-at-oracle-4361054986",
-          "location": "Pune/Pimpri-Chinchwad Area",
-          "department": "Bloomberg",
+          "id": "senior-software-engineer-core-at-google-4366520063",
+          "title": "Senior Software Engineering",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-core-at-google-4366520063",
+          "location": "Noida, Uttar Pradesh, India",
+          "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-04"
+          "postedDate": "2026-02-06",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-software-developer-at-oracle-4338165261",
+          "id": "senior-software-engineer-at-microsoft-4358252957",
           "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-developer-at-oracle-4338165261",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Oracle",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-07"
-        },
-        {
-          "id": "senior-software-engineer-python-at-paypal-4352386895",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-python-at-paypal-4352386895",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4358252957",
           "location": "Bengaluru, Karnataka, India",
-          "department": "Porter",
+          "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-18"
+          "postedDate": "2026-02-04",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-software-developer-at-oracle-4257179516",
-          "title": "Senior Software Engineer - Python",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-developer-at-oracle-4257179516",
+          "id": "associate-software-engineer-java-mes-at-rockwell-automation-4346906972",
+          "title": "Software Test Engineer - Java/Selenium",
+          "url": "https://in.linkedin.com/jobs/view/associate-software-engineer-java-mes-at-rockwell-automation-4346906972",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-03",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineering-at-microsoft-4341561232",
+          "title": "Senior Software Engineer - Frontend",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineering-at-microsoft-4341561232",
           "location": "Bengaluru East, Karnataka, India",
           "department": "PayPal",
           "type": "Easy Apply",
-          "postedDate": "2026-01-31"
+          "postedDate": "2026-01-31",
+          "isTargetCompany": false
         },
         {
-          "id": "senior-software-engineer-salesforce-at-linkedin-4365241537",
+          "id": "senior-applications-developer-c%23-at-ups-4324317907",
           "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-salesforce-at-linkedin-4365241537",
+          "url": "https://in.linkedin.com/jobs/view/senior-applications-developer-c%23-at-ups-4324317907",
           "location": "Hyderabad, Telangana, India",
           "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-11"
+          "postedDate": "2026-01-30",
+          "isTargetCompany": false
         },
         {
-          "id": "li-ea-38",
-          "title": "Senior Software Engineer, Salesforce",
-          "url": "#",
+          "id": "sr-software-development-engineer-at-workday-4310722170",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/sr-software-development-engineer-at-workday-4310722170",
           "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
+          "department": "Microsoft",
           "type": "Easy Apply",
-          "postedDate": "2026-02-12"
+          "postedDate": "2026-01-30",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-java-software-engineer-at-deloitte-4359833771",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://in.linkedin.com/jobs/view/senior-java-software-engineer-at-deloitte-4359833771",
+          "location": "Pune/Pimpri-Chinchwad Area",
+          "department": "DoorDash",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-29",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-c%2B%2B-developer-lead-at-coforge-4370667190",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-c%2B%2B-developer-lead-at-coforge-4370667190",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Microsoft",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-29",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-developer-ifs-cloud-at-rockwell-automation-4358189123",
+          "title": "Senior Developer IFS Cloud",
+          "url": "https://in.linkedin.com/jobs/view/senior-developer-ifs-cloud-at-rockwell-automation-4358189123",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-29",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-developer-ifs-cloud-at-rockwell-automation-4358480711",
+          "title": "Senior Developer IFS Cloud",
+          "url": "https://in.linkedin.com/jobs/view/senior-developer-ifs-cloud-at-rockwell-automation-4358480711",
+          "location": "Andaman and Nicobar Islands, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-29",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-developer-ifs-cloud-at-rockwell-automation-4358239244",
+          "title": "Senior Developer IFS Cloud",
+          "url": "https://in.linkedin.com/jobs/view/senior-developer-ifs-cloud-at-rockwell-automation-4358239244",
+          "location": "Pune, Maharashtra, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-29",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-developer-ifs-cloud-at-rockwell-automation-4358159255",
+          "title": "Senior Developer IFS Cloud",
+          "url": "https://in.linkedin.com/jobs/view/senior-developer-ifs-cloud-at-rockwell-automation-4358159255",
+          "location": "Andaman and Nicobar Islands, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-29",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-developer-ifs-cloud-at-rockwell-automation-4358441993",
+          "title": "Senior Developer IFS Cloud",
+          "url": "https://in.linkedin.com/jobs/view/senior-developer-ifs-cloud-at-rockwell-automation-4358441993",
+          "location": "Delhi, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-29",
+          "isTargetCompany": false
+        },
+        {
+          "id": "ind-senior-software-engineer-at-walmart-global-tech-india-4347423892",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/ind-senior-software-engineer-at-walmart-global-tech-india-4347423892",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Flipkart",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-28",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-at-microsoft-4365046491",
+          "title": "Senior Software Engineer, Core",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4365046491",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Google",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-28",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-developer-ifs-cloud-at-rockwell-automation-4358337468",
+          "title": "Senior Developer IFS Cloud",
+          "url": "https://in.linkedin.com/jobs/view/senior-developer-ifs-cloud-at-rockwell-automation-4358337468",
+          "location": "Andaman and Nicobar Islands, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-28",
+          "isTargetCompany": false
+        },
+        {
+          "id": "senior-software-engineer-frontend-at-paypal-4352268574",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-frontend-at-paypal-4352268574",
+          "location": "Bangalore Urban, Karnataka, India",
+          "department": "Deloitte",
+          "type": "Easy Apply",
+          "postedDate": "2026-01-25",
+          "isTargetCompany": false
         }
       ]
     }
