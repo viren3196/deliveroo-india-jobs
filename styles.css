@@ -271,16 +271,33 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .job-header {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   gap: 8px;
   margin-bottom: 6px;
 }
 
+.company-logo {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-top: 1px;
+  object-fit: contain;
+  background: var(--color-bg);
+}
+
+.company-logo[src=""],
+.company-logo.logo-error {
+  display: none;
+}
+
 .job-title {
+  flex: 1;
   font-size: 0.88rem;
   font-weight: 600;
   line-height: 1.35;
 }
+
+.new-badge { margin-left: auto; }
 
 .new-badge {
   flex-shrink: 0;

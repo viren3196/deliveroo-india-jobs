@@ -50,6 +50,63 @@
     }).format(date);
   }
 
+  const COMPANY_DOMAINS = {
+    'deliveroo': 'deliveroo.co.uk',
+    'salesforce': 'salesforce.com',
+    'booking.com': 'booking.com',
+    'booking': 'booking.com',
+    'linkedin': 'linkedin.com',
+    'microsoft': 'microsoft.com',
+    'google': 'google.com',
+    'amazon': 'amazon.com',
+    'meta': 'meta.com',
+    'apple': 'apple.com',
+    'netflix': 'netflix.com',
+    'uber': 'uber.com',
+    'stripe': 'stripe.com',
+    'airbnb': 'airbnb.com',
+    'spotify': 'spotify.com',
+    'adobe': 'adobe.com',
+    'oracle': 'oracle.com',
+    'ibm': 'ibm.com',
+    'intel': 'intel.com',
+    'nvidia': 'nvidia.com',
+    'snap': 'snap.com',
+    'twitter': 'x.com',
+    'x': 'x.com',
+    'atlassian': 'atlassian.com',
+    'shopify': 'shopify.com',
+    'databricks': 'databricks.com',
+    'snowflake': 'snowflake.com',
+    'cloudflare': 'cloudflare.com',
+    'twilio': 'twilio.com',
+    'roku': 'roku.com',
+    'freshworks': 'freshworks.com',
+    'porter': 'porter.in',
+    'doordash': 'doordash.com',
+    'csc': 'csc.com',
+    'rippling': 'rippling.com',
+    'zomato': 'zomato.com',
+    'swiggy': 'swiggy.com',
+    'flipkart': 'flipkart.com',
+    'phonepe': 'phonepe.com',
+    'razorpay': 'razorpay.com',
+    'cred': 'cred.club',
+    'meesho': 'meesho.com',
+    'groww': 'groww.in',
+    'zerodha': 'zerodha.com',
+    'paytm': 'paytm.com',
+  };
+
+  function getLogoUrl(companyName) {
+    if (!companyName) return '';
+    const key = companyName.toLowerCase().trim();
+    const domain = COMPANY_DOMAINS[key]
+      || COMPANY_DOMAINS[key.split(/[\s,()-]+/)[0]]
+      || `${key.replace(/[^a-z0-9]/g, '')}.com`;
+    return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+  }
+
   function formatPostedDate(raw) {
     if (!raw) return '—';
     try {
@@ -66,6 +123,13 @@
   }
 
   // ─── Section UI Controller ───
+  const SECTION_COMPANY_MAP = {
+    deliveroo: 'Deliveroo',
+    salesforce: 'Salesforce',
+    booking: 'Booking.com',
+    linkedin: 'LinkedIn',
+  };
+
   function sectionUI(company) {
     const sec = $(`[data-company="${company}"]`);
     return {
@@ -88,6 +152,8 @@
         this.list.innerHTML = '';
         if (!jobs.length) { this.showState('empty'); return; }
 
+        const sectionCompany = SECTION_COMPANY_MAP[company];
+
         this.showState('jobs');
         const frag = document.createDocumentFragment();
         jobs.forEach((job) => {
@@ -98,6 +164,7 @@
           const loc = $('.location-text', clone);
           const team = $('.team-text', clone);
           const dateEl = $('.date-text', clone);
+          const logo = $('.company-logo', clone);
 
           link.href = job.url || job.link || '#';
           title.textContent = job.title;
@@ -106,6 +173,15 @@
           dateEl.textContent = formatPostedDate(job.postedDate || job.date);
           if (!seenIds.has(String(job.id))) badge.hidden = false;
           $('.job-card', clone).dataset.jobId = job.id;
+
+          const logoCompany = sectionCompany || job.department || '';
+          const logoUrl = getLogoUrl(logoCompany);
+          if (logoUrl) {
+            logo.src = logoUrl;
+            logo.alt = logoCompany;
+            logo.onerror = function () { this.classList.add('logo-error'); };
+          }
+
           frag.appendChild(clone);
         });
         this.list.appendChild(frag);
