@@ -158,20 +158,23 @@ async function fetchLinkedIn() {
         const titleMatch = card.match(/class="base-search-card__title[^"]*"[^>]*>([^<]+)/);
         const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?]+)/);
         const locMatch = card.match(/job-search-card__location[^>]*>([^<]+)/);
-        const companyMatch = card.match(/base-search-card__subtitle[^>]*>(?:<[^>]+>)*\s*([^<]+)/);
+        const companyMatch = card.match(/subtitle[\s\S]*?href="[^"]*company[^"]*"[^>]*>\s*([^<]+)/);
+        const companyFallback = card.match(/base-search-card__subtitle[^>]*>[\s\S]*?(?:<[^>]*>)*\s*(\S[^<]+)/);
+        const dateMatch = card.match(/datetime="([^"]+)"/);
 
         if (!titleMatch) continue;
         const title = titleMatch[1].trim();
         if (!matchesRoleFilter(title, 'linkedin')) continue;
 
+        const company = (companyMatch ? companyMatch[1] : companyFallback ? companyFallback[1] : '').trim() || 'LinkedIn';
         allJobs.push({
           id: linkMatch ? linkMatch[1].split('/').pop() : `li-${allJobs.length}`,
           title,
           url: linkMatch ? linkMatch[1] : '#',
           location: locMatch ? locMatch[1].trim() : 'India',
-          department: companyMatch ? companyMatch[1].trim() : 'LinkedIn',
+          department: company,
           type: 'Full time',
-          postedDate: new Date().toISOString(),
+          postedDate: dateMatch ? dateMatch[1] : new Date().toISOString(),
         });
       }
 
@@ -187,14 +190,69 @@ async function fetchLinkedIn() {
   }
 }
 
+// ─── LinkedIn Easy Apply (all companies, India, SWE) ───
+async function fetchLinkedInEasyApply() {
+  console.log('[LinkedIn Easy Apply] Fetching...');
+  const allJobs = [];
+
+  const baseUrl =
+    'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
+    '?keywords=Senior+Software+Engineer&location=India&f_AL=true';
+
+  try {
+    for (let start = 0; start < 150; start += 25) {
+      const url = `${baseUrl}&start=${start}`;
+      const html = await httpGet(url, {
+        'User-Agent': 'Mozilla/5.0 (compatible; JobTracker/1.0)',
+      });
+      if (!html.includes('base-search-card')) break;
+
+      const cards = html.split('base-search-card__info').slice(1);
+      for (const card of cards) {
+        const titleMatch = card.match(/class="base-search-card__title[^"]*"[^>]*>([^<]+)/);
+        const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?]+)/);
+        const locMatch = card.match(/job-search-card__location[^>]*>([^<]+)/);
+        const companyMatch = card.match(/subtitle[\s\S]*?href="[^"]*company[^"]*"[^>]*>\s*([^<]+)/);
+        const companyFallback = card.match(/base-search-card__subtitle[^>]*>[\s\S]*?(?:<[^>]*>)*\s*(\S[^<]+)/);
+        const dateMatch = card.match(/datetime="([^"]+)"/);
+
+        if (!titleMatch) continue;
+        const title = titleMatch[1].trim();
+        if (!matchesRoleFilter(title, 'linkedin')) continue;
+
+        const company = (companyMatch ? companyMatch[1] : companyFallback ? companyFallback[1] : '').trim() || '—';
+        const jobId = linkMatch ? linkMatch[1].split('/').pop() : `li-ea-${allJobs.length}`;
+        allJobs.push({
+          id: jobId,
+          title,
+          url: linkMatch ? linkMatch[1] : '#',
+          location: locMatch ? locMatch[1].trim() : 'India',
+          department: company,
+          type: 'Easy Apply',
+          postedDate: dateMatch ? dateMatch[1] : new Date().toISOString(),
+        });
+      }
+
+      await new Promise((r) => setTimeout(r, 500));
+    }
+
+    console.log(`[LinkedIn Easy Apply] Found ${allJobs.length} matching roles`);
+    return allJobs;
+  } catch (err) {
+    console.error('[LinkedIn Easy Apply] Error:', err.message);
+    return allJobs;
+  }
+}
+
 // ─── Main ───
 async function main() {
   console.log('Starting job fetch...', new Date().toISOString());
 
-  const [salesforce, booking, linkedin] = await Promise.all([
+  const [salesforce, booking, linkedin, linkedinEasy] = await Promise.all([
     fetchSalesforce(),
     fetchBooking(),
     fetchLinkedIn(),
+    fetchLinkedInEasyApply(),
   ]);
 
   const output = {
@@ -219,6 +277,13 @@ async function main() {
           'https://www.linkedin.com/jobs/search/?f_C=1337&geoId=102713980',
         jobs: linkedin,
       },
+      linkedin_easy: {
+        name: 'LinkedIn Easy Apply',
+        targetRole: 'Senior Software Engineer (all companies)',
+        careersUrl:
+          'https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true',
+        jobs: linkedinEasy,
+      },
     },
   };
 
@@ -226,11 +291,12 @@ async function main() {
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
-  const total = salesforce.length + booking.length + linkedin.length;
+  const total = salesforce.length + booking.length + linkedin.length + linkedinEasy.length;
   console.log(`\nDone. ${total} total matching roles written to data/jobs.json`);
   console.log(`  Salesforce: ${salesforce.length}`);
   console.log(`  Booking.com: ${booking.length}`);
   console.log(`  LinkedIn: ${linkedin.length}`);
+  console.log(`  LinkedIn Easy Apply: ${linkedinEasy.length}`);
 }
 
 main().catch((err) => {

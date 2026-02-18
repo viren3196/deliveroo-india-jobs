@@ -233,7 +233,7 @@
         ui.updateMeta(cached.deliveroo.jobs.length, cached.deliveroo.timestamp);
       }
 
-      for (const key of ['salesforce', 'booking', 'linkedin']) {
+      for (const key of ['salesforce', 'booking', 'linkedin', 'linkedin_easy']) {
         const data = cached[key];
         if (data?.jobs?.length) {
           const ui = sectionUI(key);
@@ -289,7 +289,7 @@
     },
 
     async refreshTargetCompanies(seenIds, cache, allIds) {
-      const companies = ['salesforce', 'booking', 'linkedin'];
+      const companies = ['salesforce', 'booking', 'linkedin', 'linkedin_easy'];
       companies.forEach((c) => {
         const ui = sectionUI(c);
         if (ui.list.children.length === 0) ui.showState('loading');

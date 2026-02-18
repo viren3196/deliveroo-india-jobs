@@ -185,6 +185,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .referral-badge { background: var(--color-referral); }
 .target-badge { background: var(--color-target); }
+.easy-badge { background: #0a66c2; }
 
 .target-role {
   font-size: 0.7rem;
