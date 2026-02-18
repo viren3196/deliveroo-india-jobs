@@ -296,7 +296,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   margin-bottom: 6px;
 }
 
-.job-location, .job-team {
+.job-location, .job-team, .job-date {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -304,7 +304,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   color: var(--color-text-secondary);
 }
 
-.job-location svg, .job-team svg { flex-shrink: 0; opacity: 0.5; }
+.job-location svg, .job-team svg, .job-date svg { flex-shrink: 0; opacity: 0.5; }
 
 .apply-cta {
   display: inline-block;

@@ -50,6 +50,21 @@
     }).format(date);
   }
 
+  function formatPostedDate(raw) {
+    if (!raw) return '—';
+    try {
+      const d = new Date(raw);
+      if (isNaN(d)) return '—';
+      const now = Date.now();
+      const diff = Math.floor((now - d.getTime()) / 86400000);
+      if (diff === 0) return 'Today';
+      if (diff === 1) return 'Yesterday';
+      if (diff < 7) return `${diff}d ago`;
+      if (diff < 30) return `${Math.floor(diff / 7)}w ago`;
+      return new Intl.DateTimeFormat('en-IN', { day: 'numeric', month: 'short' }).format(d);
+    } catch { return '—'; }
+  }
+
   // ─── Section UI Controller ───
   function sectionUI(company) {
     const sec = $(`[data-company="${company}"]`);
@@ -82,11 +97,13 @@
           const badge = $('.new-badge', clone);
           const loc = $('.location-text', clone);
           const team = $('.team-text', clone);
+          const dateEl = $('.date-text', clone);
 
           link.href = job.url || job.link || '#';
           title.textContent = job.title;
           loc.textContent = job.location || '—';
           team.textContent = job.team || job.department || '—';
+          dateEl.textContent = formatPostedDate(job.postedDate || job.date);
           if (!seenIds.has(String(job.id))) badge.hidden = false;
           $('.job-card', clone).dataset.jobId = job.id;
           frag.appendChild(clone);
@@ -134,6 +151,7 @@
         url: j.link,
         location: j.meta?.ats_location || j.meta?.ashby_location || 'India',
         team: (j.teams || []).map((id) => teamsMap[id] || 'Unknown').join(', ') || '—',
+        postedDate: j.date,
       }));
     },
   };
