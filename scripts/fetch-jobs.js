@@ -34,45 +34,30 @@ function httpGet(url, headers = {}) {
   });
 }
 
-const ROLE_FILTERS = {
-  salesforce: [
-    'member of technical staff',
-    'smts',
-    'mts',
-    'software engineer',
-    'engineering manager',
-    'principal engineer',
-    'staff engineer',
-    'architect',
-  ],
-  booking: [
-    'software engineer',
-    'engineering manager',
-    'staff engineer',
-    'principal engineer',
-    'backend engineer',
-    'frontend engineer',
-    'full stack engineer',
-    'platform engineer',
-    'architect',
-  ],
-  linkedin: [
-    'software engineer',
-    'engineering manager',
-    'staff engineer',
-    'principal engineer',
-    'backend engineer',
-    'frontend engineer',
-    'full stack engineer',
-    'platform engineer',
-    'architect',
-  ],
-};
-
+/**
+ * Strict role matching per company.
+ * Only titles the user is actually targeting.
+ */
 function matchesRoleFilter(title, company) {
-  const filters = ROLE_FILTERS[company] || [];
-  const lower = title.toLowerCase();
-  return filters.some((f) => lower.includes(f));
+  const t = title.toLowerCase();
+
+  switch (company) {
+    case 'salesforce':
+      // "Senior Member of Technical Staff" / "SMTS" only
+      return /\bsmts\b/.test(t) || t.includes('senior member of technical staff');
+
+    case 'booking':
+      // "Senior Software Engineer" only (not plain SWE I/II, not Staff, not Architect)
+      return /senior\s+software\s+engineer/i.test(title);
+
+    case 'linkedin':
+      // "Senior Software Engineer" / "Sr. Software Engineer" only (not Staff, not Principal)
+      if (/\b(staff|principal|lead|manager|director)\b/i.test(title)) return false;
+      return /\b(senior|sr\.?)\s+software\s+engineer/i.test(title);
+
+    default:
+      return false;
+  }
 }
 
 // ─── Salesforce (RSS/XML) ───
@@ -157,7 +142,7 @@ async function fetchLinkedIn() {
   // f_C=1337 = LinkedIn company
   const baseUrl =
     'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
-    '?keywords=Software+Engineer&location=India&f_C=1337';
+    '?keywords=Senior+Software+Engineer&location=India&f_C=1337';
 
   try {
     for (let start = 0; start < 100; start += 25) {
