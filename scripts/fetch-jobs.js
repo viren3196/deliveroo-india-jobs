@@ -192,14 +192,13 @@ async function fetchLinkedIn() {
 
 // ─── LinkedIn Easy Apply (multiple searches, deduplicated) ───
 
+// Only target companies — no generic "all companies" search
 const EASY_APPLY_SEARCHES = [
-  { keywords: 'Senior+Software+Engineer', label: 'Sr. SWE (all)' },
   { keywords: 'SMTS', fC: '3185', label: 'SMTS @ Salesforce' },
   { keywords: 'Software+Engineer', fC: '3185', label: 'SWE @ Salesforce' },
-  { keywords: 'Software+Engineer', fC: '2498', label: 'SWE @ Booking.com' },
+  { keywords: 'Senior+Software+Engineer', fC: '1337', label: 'Sr. SWE @ LinkedIn' },
+  { keywords: 'Senior+Software+Engineer', fC: '2498', label: 'Sr. SWE @ Booking.com' },
 ];
-
-const TARGET_COMPANIES = ['salesforce', 'booking.com', 'linkedin'];
 
 function parseLinkedInCards(html) {
   const results = [];
@@ -225,7 +224,6 @@ function parseLinkedInCards(html) {
       department: company,
       type: 'Easy Apply',
       postedDate: dateMatch ? dateMatch[1] : new Date().toISOString(),
-      isTargetCompany: TARGET_COMPANIES.some((tc) => company.toLowerCase().includes(tc)),
     });
   }
   return results;
@@ -253,13 +251,6 @@ async function fetchLinkedInEasyApply() {
         const jobs = parseLinkedInCards(html);
         for (const job of jobs) {
           if (seen.has(job.id)) continue;
-          // For generic search, apply strict role filter
-          if (!search.fC && !matchesRoleFilter(job.title, 'linkedin')) continue;
-          // For Salesforce search, accept SMTS or SWE titles
-          if (search.fC === '3185') {
-            const t = job.title.toLowerCase();
-            if (!/\b(smts|software\s+engineer|swe|mts)\b/.test(t)) continue;
-          }
           seen.add(job.id);
           allJobs.push(job);
         }
@@ -272,11 +263,7 @@ async function fetchLinkedInEasyApply() {
     }
   }
 
-  // Sort: target companies first, then by date
-  allJobs.sort((a, b) => {
-    if (a.isTargetCompany !== b.isTargetCompany) return a.isTargetCompany ? -1 : 1;
-    return new Date(b.postedDate) - new Date(a.postedDate);
-  });
+  allJobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
 
   console.log(`[LinkedIn Easy Apply] Total: ${allJobs.length} unique roles`);
   return allJobs;

@@ -105,7 +105,6 @@
           team.textContent = job.team || job.department || '—';
           dateEl.textContent = formatPostedDate(job.postedDate || job.date);
           if (!seenIds.has(String(job.id))) badge.hidden = false;
-          if (job.isTargetCompany) $('.job-card', clone).classList.add('target-highlight');
           $('.job-card', clone).dataset.jobId = job.id;
           frag.appendChild(clone);
         });
