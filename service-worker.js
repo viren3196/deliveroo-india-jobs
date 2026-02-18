@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const SHELL_CACHE = `shell-${CACHE_VERSION}`;
 const DATA_CACHE = `data-${CACHE_VERSION}`;
 
@@ -11,9 +11,8 @@ const SHELL_ASSETS = [
   'icons/icon.svg',
 ];
 
-const API_ORIGIN = 'careers.deliveroo.co.uk';
+const API_HOSTS = ['careers.deliveroo.co.uk'];
 
-// ─── Install: pre-cache the app shell ───
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(SHELL_CACHE).then((cache) => cache.addAll(SHELL_ASSETS))
@@ -21,7 +20,6 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-// ─── Activate: clean up old caches ───
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
@@ -35,24 +33,21 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// ─── Fetch strategy ───
-// Shell assets: cache-first
-// API calls: network-first with cache fallback
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  if (url.hostname === API_ORIGIN) {
-    event.respondWith(networkFirstThenCache(request));
+  // data/jobs.json and Deliveroo API: network-first
+  if (url.pathname.includes('data/jobs.json') || API_HOSTS.includes(url.hostname)) {
+    event.respondWith(networkFirst(request));
   } else {
-    event.respondWith(cacheFirstThenNetwork(request));
+    event.respondWith(cacheFirst(request));
   }
 });
 
-async function cacheFirstThenNetwork(request) {
+async function cacheFirst(request) {
   const cached = await caches.match(request);
   if (cached) return cached;
-
   try {
     const response = await fetch(request);
     if (response.ok) {
@@ -61,11 +56,11 @@ async function cacheFirstThenNetwork(request) {
     }
     return response;
   } catch {
-    return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
+    return new Response('Offline', { status: 503 });
   }
 }
 
-async function networkFirstThenCache(request) {
+async function networkFirst(request) {
   try {
     const response = await fetch(request);
     if (response.ok) {
@@ -75,8 +70,7 @@ async function networkFirstThenCache(request) {
     return response;
   } catch {
     const cached = await caches.match(request);
-    if (cached) return cached;
-    return new Response(JSON.stringify([]), {
+    return cached || new Response('[]', {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });

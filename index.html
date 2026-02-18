@@ -7,37 +7,33 @@
   <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Roo India Jobs">
-  <meta name="description" content="Track open job positions at Deliveroo India">
+  <meta name="apple-mobile-web-app-title" content="Job Radar">
+  <meta name="description" content="Personal job radar — track open roles at target companies in India">
 
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 
-  <title>Deliveroo India — Open Roles</title>
+  <title>Job Radar — India</title>
 </head>
 <body>
   <div id="app">
     <header class="header">
       <div class="header-content">
         <div class="brand">
-          <svg class="logo" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <svg class="logo" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
             <circle cx="12" cy="12" r="11" fill="currentColor" opacity="0.15"/>
-            <path d="M12 4C7.58 4 4 7.58 4 12s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14.4A6.4 6.4 0 1 1 18.4 12 6.41 6.41 0 0 1 12 18.4zm3.2-8.8h-2.4V7.2a.8.8 0 0 0-1.6 0v3.2H8.8a.8.8 0 0 0 0 1.6h2.4v2.4a.8.8 0 0 0 1.6 0V12h2.4a.8.8 0 0 0 0-1.6z" fill="currentColor"/>
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4-2.42z" fill="currentColor"/>
           </svg>
-          <h1>Deliveroo India <span class="subtitle">Open Roles</span></h1>
+          <h1>Job Radar <span class="subtitle">India</span></h1>
         </div>
-        <button id="refresh-btn" class="refresh-btn" aria-label="Refresh job listings" title="Refresh">
+        <button id="refresh-btn" class="refresh-btn" aria-label="Refresh" title="Refresh">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="23 4 23 10 17 10"/>
             <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
           </svg>
         </button>
-      </div>
-      <div id="status-bar" class="status-bar">
-        <span id="job-count" class="job-count"></span>
-        <span id="last-updated" class="last-updated"></span>
       </div>
     </header>
 
@@ -50,35 +46,109 @@
     </div>
 
     <main id="main-content" class="main-content">
-      <div id="loading-state" class="state-message loading-state" hidden>
-        <div class="spinner"></div>
-        <p>Fetching latest roles...</p>
-      </div>
 
-      <div id="error-state" class="state-message error-state" hidden>
-        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <p id="error-message">Something went wrong.</p>
-        <button id="retry-btn" class="retry-btn">Try Again</button>
-      </div>
+      <!-- Referral Section: Deliveroo -->
+      <section class="company-section referral-section" data-company="deliveroo">
+        <div class="section-header">
+          <div class="section-title-group">
+            <span class="section-badge referral-badge">REFERRAL</span>
+            <h2>Deliveroo India</h2>
+          </div>
+          <div class="section-meta">
+            <span class="section-count" data-count="deliveroo"></span>
+            <span class="section-updated" data-updated="deliveroo"></span>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="state-message loading-state" data-loading="deliveroo" hidden>
+            <div class="spinner"></div>
+            <p>Fetching roles...</p>
+          </div>
+          <div class="state-message error-state" data-error="deliveroo" hidden>
+            <p class="error-msg">Failed to load</p>
+            <button class="retry-btn" data-retry="deliveroo">Retry</button>
+          </div>
+          <div class="state-message empty-state" data-empty="deliveroo" hidden>
+            <p>No open roles right now.</p>
+          </div>
+          <ul class="job-list" data-jobs="deliveroo" role="list"></ul>
+        </div>
+      </section>
 
-      <div id="empty-state" class="state-message empty-state" hidden>
-        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-        </svg>
-        <p>No open roles in India right now.</p>
-        <p class="hint">Check back later — new positions open regularly.</p>
-      </div>
+      <!-- Target Companies -->
+      <section class="company-section" data-company="salesforce">
+        <div class="section-header">
+          <div class="section-title-group">
+            <span class="section-badge target-badge">TARGET</span>
+            <h2>Salesforce</h2>
+            <span class="target-role">SMTS / Software Engineer</span>
+          </div>
+          <div class="section-meta">
+            <span class="section-count" data-count="salesforce"></span>
+            <span class="section-updated" data-updated="salesforce"></span>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="state-message loading-state" data-loading="salesforce" hidden>
+            <div class="spinner"></div>
+          </div>
+          <div class="state-message empty-state" data-empty="salesforce" hidden>
+            <p>No matching roles found.</p>
+          </div>
+          <ul class="job-list" data-jobs="salesforce" role="list"></ul>
+        </div>
+      </section>
 
-      <ul id="job-list" class="job-list" role="list"></ul>
+      <section class="company-section" data-company="booking">
+        <div class="section-header">
+          <div class="section-title-group">
+            <span class="section-badge target-badge">TARGET</span>
+            <h2>Booking.com</h2>
+            <span class="target-role">Senior Software Engineer</span>
+          </div>
+          <div class="section-meta">
+            <span class="section-count" data-count="booking"></span>
+            <span class="section-updated" data-updated="booking"></span>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="state-message loading-state" data-loading="booking" hidden>
+            <div class="spinner"></div>
+          </div>
+          <div class="state-message empty-state" data-empty="booking" hidden>
+            <p>No matching roles found.</p>
+          </div>
+          <ul class="job-list" data-jobs="booking" role="list"></ul>
+        </div>
+      </section>
+
+      <section class="company-section" data-company="linkedin">
+        <div class="section-header">
+          <div class="section-title-group">
+            <span class="section-badge target-badge">TARGET</span>
+            <h2>LinkedIn</h2>
+            <span class="target-role">Senior Software Engineer</span>
+          </div>
+          <div class="section-meta">
+            <span class="section-count" data-count="linkedin"></span>
+            <span class="section-updated" data-updated="linkedin"></span>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="state-message loading-state" data-loading="linkedin" hidden>
+            <div class="spinner"></div>
+          </div>
+          <div class="state-message empty-state" data-empty="linkedin" hidden>
+            <p>No matching roles found.</p>
+          </div>
+          <ul class="job-list" data-jobs="linkedin" role="list"></ul>
+        </div>
+      </section>
+
     </main>
 
     <footer class="footer">
-      <p>Data from <a href="https://careers.deliveroo.co.uk" target="_blank" rel="noopener">careers.deliveroo.co.uk</a></p>
+      <p>Target company data refreshed via <a href="https://github.com/viren3196/deliveroo-india-jobs/actions" target="_blank" rel="noopener">GitHub Actions</a> every 6h</p>
     </footer>
   </div>
 
@@ -86,20 +156,20 @@
     <li class="job-card" role="listitem">
       <a class="job-link" target="_blank" rel="noopener">
         <div class="job-header">
-          <h2 class="job-title"></h2>
+          <h3 class="job-title"></h3>
           <span class="new-badge" hidden>NEW</span>
         </div>
         <div class="job-meta">
           <span class="job-location">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span class="location-text"></span>
           </span>
           <span class="job-team">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             <span class="team-text"></span>
           </span>
         </div>
-        <span class="apply-cta">View &amp; Apply →</span>
+        <span class="apply-cta">View & Apply →</span>
       </a>
     </li>
   </template>

@@ -1,0 +1,746 @@
+{
+  "fetchedAt": "2026-02-18T18:46:41.349Z",
+  "companies": {
+    "salesforce": {
+      "name": "Salesforce",
+      "targetRole": "Senior Member of Technical Staff (SMTS)",
+      "careersUrl": "https://careers.salesforce.com/en/jobs/?country=India",
+      "jobs": [
+        {
+          "id": "JR312180",
+          "title": "Director, Software Engineering - Distributed Systems + Big Data | Hyderabad",
+          "url": "https://careers.salesforce.com/en/jobs/jr312180/director-software-engineering-distributed-systems-plus-big-data-hyderabad/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 18 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR330045",
+          "title": "Salesforce Success Architect (Agentforce)",
+          "url": "https://careers.salesforce.com/en/jobs/jr330045/salesforce-success-architect-agentforce/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Wed, 18 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR297741",
+          "title": "Software Engineering PMTS(Search Domain)",
+          "url": "https://careers.salesforce.com/en/jobs/jr297741/software-engineering-pmts-search-domain/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 18 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR327532",
+          "title": "Software Engineering MTS- Tableau",
+          "url": "https://careers.salesforce.com/en/jobs/jr327532/software-engineering-mts-tableau/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 18 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR329805",
+          "title": "MTS, Software Engineering",
+          "url": "https://careers.salesforce.com/en/jobs/jr329805/mts-software-engineering/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 18 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR321153",
+          "title": "LMTS/SMTS/MTS Data Engineer",
+          "url": "https://careers.salesforce.com/en/jobs/jr321153/lmtssmtsmts-data-engineer/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Tue, 17 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR326089",
+          "title": "Salesforce Devops  Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr326089/salesforce-devops-architect/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Tue, 17 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR329111",
+          "title": "Success Architect - Agentforce",
+          "url": "https://careers.salesforce.com/en/jobs/jr329111/success-architect-agentforce/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Tue, 17 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR282415",
+          "title": "Senior Manager, Software Engineering (Backend)",
+          "url": "https://careers.salesforce.com/en/jobs/jr282415/senior-manager-software-engineering-backend/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Tue, 17 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR312166",
+          "title": "Principal Software Engineer / PMTS - Backend - Distributed Systems",
+          "url": "https://careers.salesforce.com/en/jobs/jr312166/principal-software-engineer-pmts-backend-distributed-systems/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 16 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR328825",
+          "title": "Salesforce Developer - Software Engineering MTS",
+          "url": "https://careers.salesforce.com/en/jobs/jr328825/salesforce-developer-software-engineering-mts/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 16 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR322298",
+          "title": "Success Architect-Tableau",
+          "url": "https://careers.salesforce.com/en/jobs/jr322298/success-architect-tableau/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Mon, 16 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR318189",
+          "title": "Salesforce Test Engineer, MTS (SDET)",
+          "url": "https://careers.salesforce.com/en/jobs/jr318189/salesforce-test-engineer-mts-sdet/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 16 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR312799",
+          "title": "Performance Engineer LMTS",
+          "url": "https://careers.salesforce.com/en/jobs/jr312799/performance-engineer-lmts/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 16 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR328264",
+          "title": "Success Architect - B2C Commerce",
+          "url": "https://careers.salesforce.com/en/jobs/jr328264/success-architect-b2c-commerce/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Fri, 13 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR328265",
+          "title": "Success Architect - B2B Commerce",
+          "url": "https://careers.salesforce.com/en/jobs/jr328265/success-architect-b2b-commerce/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Fri, 13 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR329416",
+          "title": "Software Engineering SMTS",
+          "url": "https://careers.salesforce.com/en/jobs/jr329416/software-engineering-smts/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Thu, 12 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR325466",
+          "title": "Software Engineering LMTS Fullstack",
+          "url": "https://careers.salesforce.com/en/jobs/jr325466/software-engineering-lmts-fullstack/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 11 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR328628",
+          "title": "Software Engineering PMTS",
+          "url": "https://careers.salesforce.com/en/jobs/jr328628/software-engineering-pmts/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 11 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR329246",
+          "title": "LMTS - Lead Software Engineer - Network Security Platform",
+          "url": "https://careers.salesforce.com/en/jobs/jr329246/lmts-lead-software-engineer-network-security-platform/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 11 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR328382",
+          "title": "Senior Manager, Software Engineering (Distributed Systems + Machine Learning)",
+          "url": "https://careers.salesforce.com/en/jobs/jr328382/senior-manager-software-engineering-distributed-systems-plus-machine-learning/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 11 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR327654",
+          "title": "Software Engineering LMTS - (Database Kernel)",
+          "url": "https://careers.salesforce.com/en/jobs/jr327654/software-engineering-lmts-database-kernel/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 11 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR328632",
+          "title": "Software Engineering LMTS",
+          "url": "https://careers.salesforce.com/en/jobs/jr328632/software-engineering-lmts/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 11 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR327543",
+          "title": "Software Engineering LMTS - Tableau",
+          "url": "https://careers.salesforce.com/en/jobs/jr327543/software-engineering-lmts-tableau/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 09 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR327535",
+          "title": "Software Engineering SMTS- Tableau",
+          "url": "https://careers.salesforce.com/en/jobs/jr327535/software-engineering-smts-tableau/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 09 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR325971",
+          "title": "LMTS | Data Scientist | AI for Platform Reliability & Operations",
+          "url": "https://careers.salesforce.com/en/jobs/jr325971/lmts-data-scientist-ai-for-platform-reliability-operations/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 09 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR313327",
+          "title": "AI ML Software Engineering PMTS",
+          "url": "https://careers.salesforce.com/en/jobs/jr313327/ai-ml-software-engineering-pmts/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Fri, 06 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR326081",
+          "title": "Salesforce Technical Architect - (Manufacturing industry exp mandate)",
+          "url": "https://careers.salesforce.com/en/jobs/jr326081/salesforce-technical-architect-manufacturing-industry-exp-mandate/",
+          "location": "Pune, Mahārāshtra, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Fri, 06 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR327159",
+          "title": "Mulesoft Senior Technical Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr327159/mulesoft-senior-technical-architect/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Fri, 06 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR326082",
+          "title": "Salesforce Technical Architect  (Automotive Industry exp mandate)",
+          "url": "https://careers.salesforce.com/en/jobs/jr326082/salesforce-technical-architect-automotive-industry-exp-mandate/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Fri, 06 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR326080",
+          "title": "Salesforce Technical Architect - (Life Sciences Industry exp mandate)",
+          "url": "https://careers.salesforce.com/en/jobs/jr326080/salesforce-technical-architect-life-sciences-industry-exp-mandate/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Fri, 06 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR328379",
+          "title": "SFMC/Salesforce Marketing Cloud/Technical Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr328379/sfmcsalesforce-marketing-cloudtechnical-architect/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Thu, 05 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR323191",
+          "title": "Software Engineering PMTS Database Store Services",
+          "url": "https://careers.salesforce.com/en/jobs/jr323191/software-engineering-pmts-database-store-services/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Thu, 05 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR282412",
+          "title": "Principal Software Engineer / PMTS -  Backend - Distributed Systems- Hyderabad/Bangalore",
+          "url": "https://careers.salesforce.com/en/jobs/jr282412/principal-software-engineer-pmts-backend-distributed-systems-hyderabadbangalore/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 04 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR310621",
+          "title": "Software Engineering LMTS/SMTS - Big Data Infra (Spark/Kubernetes/Terraform/Helm))",
+          "url": "https://careers.salesforce.com/en/jobs/jr310621/software-engineering-lmtssmts-big-data-infra-sparkkubernetesterraformhelm/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Tue, 03 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR327810",
+          "title": "Salesforce Technical Architect, Consumer goods (REX or TPM or CG Cloud exp mandatory)",
+          "url": "https://careers.salesforce.com/en/jobs/jr327810/salesforce-technical-architect-consumer-goods-rex-or-tpm-or-cg-cloud-exp-mandatory/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Mon, 02 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR322992",
+          "title": "Software Engineering LMTS/PMTS/Architect (Kafka Platform Engineer)",
+          "url": "https://careers.salesforce.com/en/jobs/jr322992/software-engineering-lmtspmtsarchitect-kafka-platform-engineer/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 02 Feb 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR327393",
+          "title": "Salesforce Technical Architect (Revenue Cloud Or Salesforce CPQ)",
+          "url": "https://careers.salesforce.com/en/jobs/jr327393/salesforce-technical-architect-revenue-cloud-or-salesforce-cpq/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Wed, 28 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR282414",
+          "title": "Principal Software Engineer / PMTS - Bangalore",
+          "url": "https://careers.salesforce.com/en/jobs/jr282414/principal-software-engineer-pmts-bangalore/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 28 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR312172",
+          "title": "Software Engineering Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr312172/software-engineering-architect/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 28 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR326986",
+          "title": "DDoS Network Security Engineer - MTS/LMTS - Bangalore",
+          "url": "https://careers.salesforce.com/en/jobs/jr326986/ddos-network-security-engineer-mtslmts-bangalore/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Sat, 24 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR326554",
+          "title": "Salesforce Senior Technical Architect /Technical Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr326554/salesforce-senior-technical-architect-technical-architect/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Wed, 21 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR312773",
+          "title": "Performance Engineer (SMTS/LMTS)",
+          "url": "https://careers.salesforce.com/en/jobs/jr312773/performance-engineer-smtslmts/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 21 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR323939",
+          "title": "Software Engineering PMTS",
+          "url": "https://careers.salesforce.com/en/jobs/jr323939/software-engineering-pmts/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Tue, 20 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR312170",
+          "title": "Principal Software Engineer / PMTS - Fullstack",
+          "url": "https://careers.salesforce.com/en/jobs/jr312170/principal-software-engineer-pmts-fullstack/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Mon, 19 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR288530",
+          "title": "SMTS/LMTS Distributed Systems - Public Cloud, GCP",
+          "url": "https://careers.salesforce.com/en/jobs/jr288530/smtslmts-distributed-systems-public-cloud-gcp/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 14 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR315722",
+          "title": "Salesforce Technical Architect/ Senior Technical Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr315722/salesforce-technical-architect-senior-technical-architect/",
+          "location": "Mumbai, Mahārāshtra, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Mon, 12 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR321299",
+          "title": "Salesforce Senior Success Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr321299/salesforce-senior-success-architect/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Thu, 08 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR312167",
+          "title": "Principal Software Engineer / PMTS - Backend - Distributed Systems",
+          "url": "https://careers.salesforce.com/en/jobs/jr312167/principal-software-engineer-pmts-backend-distributed-systems/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 07 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR321835",
+          "title": "Success Architect-MuleSoft",
+          "url": "https://careers.salesforce.com/en/jobs/jr321835/success-architect-mulesoft/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Tue, 06 Jan 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR321649",
+          "title": "Salesforce Success Architect (Data Cloud/Agentforce)",
+          "url": "https://careers.salesforce.com/en/jobs/jr321649/salesforce-success-architect-data-cloudagentforce/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Tue, 30 Dec 2025 00:00:00 GMT"
+        },
+        {
+          "id": "JR321224",
+          "title": "Success Architect-Sales Cloud",
+          "url": "https://careers.salesforce.com/en/jobs/jr321224/success-architect-sales-cloud/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Mon, 15 Dec 2025 00:00:00 GMT"
+        },
+        {
+          "id": "JR322267",
+          "title": "Salesforce Success Architect (Salesforce Exp is mandatory)",
+          "url": "https://careers.salesforce.com/en/jobs/jr322267/salesforce-success-architect-salesforce-exp-is-mandatory/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Mon, 15 Dec 2025 00:00:00 GMT"
+        },
+        {
+          "id": "JR307956",
+          "title": "Senior Technical Architect - Communication Cloud",
+          "url": "https://careers.salesforce.com/en/jobs/jr307956/senior-technical-architect-communication-cloud/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Wed, 26 Nov 2025 00:00:00 GMT"
+        },
+        {
+          "id": "JR307937",
+          "title": "Senior Technical Architect - Consumer Goods",
+          "url": "https://careers.salesforce.com/en/jobs/jr307937/senior-technical-architect-consumer-goods/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Wed, 26 Nov 2025 00:00:00 GMT"
+        },
+        {
+          "id": "JR282410",
+          "title": "Lead Software Engineer/LMTS - Backend - Distributed Systems - Hyderabad",
+          "url": "https://careers.salesforce.com/en/jobs/jr282410/lead-software-engineerlmts-backend-distributed-systems-hyderabad/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Tue, 25 Nov 2025 00:00:00 GMT"
+        },
+        {
+          "id": "JR282676",
+          "title": "Software Engineering Architect",
+          "url": "https://careers.salesforce.com/en/jobs/jr282676/software-engineering-architect/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 15 Oct 2025 00:00:00 GMT"
+        },
+        {
+          "id": "JR307957",
+          "title": "Senior Salesforce Technical Architect - Life Sciences",
+          "url": "https://careers.salesforce.com/en/jobs/jr307957/senior-salesforce-technical-architect-life-sciences/",
+          "location": "Bangalore, Karnātaka, India",
+          "department": "Customer Success",
+          "type": "Full time",
+          "postedDate": "Mon, 13 Oct 2025 00:00:00 GMT"
+        }
+      ]
+    },
+    "booking": {
+      "name": "Booking.com",
+      "targetRole": "Senior Software Engineer",
+      "careersUrl": "https://jobs.booking.com/booking/jobs?location=India",
+      "jobs": [
+        {
+          "id": "21538",
+          "title": "Solution Architect I",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/21538/login",
+          "location": "Bangalore, India",
+          "department": "Fintech",
+          "type": "FULL_TIME",
+          "postedDate": "2025-10-22T09:16:00+0000"
+        },
+        {
+          "id": "26833",
+          "title": "Blackline Solution Architect",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/26833/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2025-12-08T14:27:00+0000"
+        },
+        {
+          "id": "27380",
+          "title": "Senior Software Engineer II",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/27380/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2026-02-16T09:30:00+0000"
+        },
+        {
+          "id": "21484",
+          "title": "Platform Architect (CMDB) - ServiceNow",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/21484/login",
+          "location": "Bangalore, India",
+          "department": "ServiceNow",
+          "type": "FULL_TIME",
+          "postedDate": "2025-10-23T05:59:00+0000"
+        },
+        {
+          "id": "26857",
+          "title": "Software Engineer I",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/26857/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2026-02-17T04:58:00+0000"
+        },
+        {
+          "id": "21224",
+          "title": "Software Engineer II",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/21224/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2026-02-09T07:55:00+0000"
+        },
+        {
+          "id": "26849",
+          "title": "Engineering Manager- Data Quality and Observability",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/26849/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2025-12-31T05:41:00+0000"
+        },
+        {
+          "id": "26813",
+          "title": "Tax Solutions Architect",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/26813/login",
+          "location": "Bangalore, India",
+          "department": "Fintech",
+          "type": "FULL_TIME",
+          "postedDate": "2025-12-11T08:39:00+0000"
+        },
+        {
+          "id": "26895",
+          "title": "Site Reliability Engineering manager",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/26895/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2026-02-10T05:50:00+0000"
+        },
+        {
+          "id": "27298",
+          "title": "Data Architect - Data and AI Governance",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/27298/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2026-01-08T17:12:00+0000"
+        },
+        {
+          "id": "26773",
+          "title": "Engineering Manager",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/26773/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2026-02-10T05:00:00+0000"
+        },
+        {
+          "id": "28323",
+          "title": "Engineering Manager - Marketplace",
+          "url": "https://careers-holdings-workingatbooking.icims.com/jobs/28323/login",
+          "location": "Bangalore, India",
+          "department": "Engineering",
+          "type": "FULL_TIME",
+          "postedDate": "2026-02-17T07:12:00+0000"
+        }
+      ]
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "targetRole": "Senior Software Engineer",
+      "careersUrl": "https://www.linkedin.com/jobs/search/?f_C=1337&geoId=102713980",
+      "jobs": [
+        {
+          "id": "senior-software-engineer-fullstack-at-linkedin-4367410545",
+          "title": "Sr. Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-fullstack-at-linkedin-4367410545",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "sr-software-engineer-at-linkedin-4371267467",
+          "title": "Senior Software Engineer - Fullstack",
+          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-at-linkedin-4371267467",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "senior-software-engineer-systems-infrastructure-at-linkedin-4361321746",
+          "title": "Sr. Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-systems-infrastructure-at-linkedin-4361321746",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "staff-software-engineer-full-stack-at-linkedin-4368492152",
+          "title": "Senior Software Engineer, Systems Infrastructure",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-full-stack-at-linkedin-4368492152",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "staff-software-engineer-fullstack-at-linkedin-4367410546",
+          "title": "Staff Software Engineer, Full-stack",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-fullstack-at-linkedin-4367410546",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "principal-staff-software-engineer-linkedin-talent-solutions-at-linkedin-4373582051",
+          "title": "Staff Software Engineer - Fullstack",
+          "url": "https://in.linkedin.com/jobs/view/principal-staff-software-engineer-linkedin-talent-solutions-at-linkedin-4373582051",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "staff-software-engineer-applications-at-linkedin-4361531508",
+          "title": "Principal Staff Software Engineer - LinkedIn Talent Solutions",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-applications-at-linkedin-4361531508",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "sr-staff-software-engineer-at-linkedin-4370936978",
+          "title": "Staff Software Engineer - Applications",
+          "url": "https://in.linkedin.com/jobs/view/sr-staff-software-engineer-at-linkedin-4370936978",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "sr-staff-software-engineer-at-linkedin-4371249663",
+          "title": "Sr. Staff Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/sr-staff-software-engineer-at-linkedin-4371249663",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.083Z"
+        },
+        {
+          "id": "li-9",
+          "title": "Sr. Staff Software Engineer",
+          "url": "#",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "",
+          "type": "Full time",
+          "postedDate": "2026-02-18T18:46:40.084Z"
+        }
+      ]
+    }
+  }
+}
