@@ -192,12 +192,12 @@ async function fetchLinkedIn() {
 
 // ─── LinkedIn Easy Apply (multiple searches, deduplicated) ───
 
-// Only target companies — no generic "all companies" search
+// Only target companies, with strict role filters per company
 const EASY_APPLY_SEARCHES = [
-  { keywords: 'SMTS', fC: '3185', label: 'SMTS @ Salesforce' },
-  { keywords: 'Software+Engineer', fC: '3185', label: 'SWE @ Salesforce' },
-  { keywords: 'Senior+Software+Engineer', fC: '1337', label: 'Sr. SWE @ LinkedIn' },
-  { keywords: 'Senior+Software+Engineer', fC: '11348', label: 'Sr. SWE @ Booking.com' },
+  { keywords: 'SMTS', fC: '3185', filterAs: 'salesforce', label: 'SMTS @ Salesforce' },
+  { keywords: 'Senior+Member+Technical+Staff', fC: '3185', filterAs: 'salesforce', label: 'SMTS (full) @ Salesforce' },
+  { keywords: 'Senior+Software+Engineer', fC: '1337', filterAs: 'linkedin', label: 'Sr. SWE @ LinkedIn' },
+  { keywords: 'Senior+Software+Engineer', fC: '11348', filterAs: 'booking', label: 'Sr. SWE @ Booking.com' },
 ];
 
 function parseLinkedInCards(html) {
@@ -251,6 +251,7 @@ async function fetchLinkedInEasyApply() {
         const jobs = parseLinkedInCards(html);
         for (const job of jobs) {
           if (seen.has(job.id)) continue;
+          if (!matchesRoleFilter(job.title, search.filterAs)) continue;
           seen.add(job.id);
           allJobs.push(job);
         }
