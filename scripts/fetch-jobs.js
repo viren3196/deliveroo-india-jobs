@@ -189,15 +189,7 @@ async function fetchLinkedIn() {
   }
 }
 
-// ─── LinkedIn Easy Apply (multiple searches, deduplicated) ───
-
-// Only target companies, with strict role filters per company
-const EASY_APPLY_SEARCHES = [
-  { keywords: 'SMTS', fC: '3185', filterAs: 'salesforce', label: 'SMTS @ Salesforce' },
-  { keywords: 'Senior+Member+Technical+Staff', fC: '3185', filterAs: 'salesforce', label: 'SMTS (full) @ Salesforce' },
-  { keywords: 'Senior+Software+Engineer', fC: '1337', filterAs: 'linkedin', label: 'Sr. SWE @ LinkedIn' },
-  { keywords: 'Senior+Software+Engineer', fC: '11348', filterAs: 'booking', label: 'Sr. SWE @ Booking.com' },
-];
+// ─── LinkedIn Easy Apply ───
 
 function parseLinkedInCards(html) {
   const results = [];
@@ -228,48 +220,7 @@ function parseLinkedInCards(html) {
   return results;
 }
 
-async function fetchLinkedInEasyApply() {
-  console.log('[LinkedIn Easy Apply] Fetching across multiple searches...');
-  const seen = new Set();
-  const allJobs = [];
-
-  for (const search of EASY_APPLY_SEARCHES) {
-    const base =
-      'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
-      `?keywords=${search.keywords}&location=India&f_AL=true` +
-      (search.fC ? `&f_C=${search.fC}` : '');
-
-    try {
-      for (let start = 0; start < 100; start += 25) {
-        const url = `${base}&start=${start}`;
-        const html = await httpGet(url, {
-          'User-Agent': 'Mozilla/5.0 (compatible; JobTracker/1.0)',
-        });
-        if (!html.includes('base-search-card')) break;
-
-        const jobs = parseLinkedInCards(html);
-        for (const job of jobs) {
-          if (seen.has(job.id)) continue;
-          if (!matchesRoleFilter(job.title, search.filterAs)) continue;
-          seen.add(job.id);
-          allJobs.push(job);
-        }
-
-        await new Promise((r) => setTimeout(r, 300));
-      }
-      console.log(`  [${search.label}] cumulative: ${allJobs.length}`);
-    } catch (err) {
-      console.error(`  [${search.label}] Error:`, err.message);
-    }
-  }
-
-  allJobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
-
-  console.log(`[LinkedIn Easy Apply] Total: ${allJobs.length} unique roles`);
-  return allJobs;
-}
-
-// ─── LinkedIn Easy Apply — All Companies (generic Sr. SWE search) ───
+// ─── LinkedIn Easy Apply — All Companies (Sr. SWE search with f_AL=true) ───
 
 async function fetchLinkedInEasyApplyAll() {
   console.log('[LinkedIn Easy Apply All] Fetching Sr. SWE across all companies...');
@@ -312,13 +263,25 @@ async function fetchLinkedInEasyApplyAll() {
 async function main() {
   console.log('Starting job fetch...', new Date().toISOString());
 
-  const [salesforce, booking, linkedin, linkedinEasy, linkedinEasyAll] = await Promise.all([
+  const [salesforce, booking, linkedin, linkedinEasyAll] = await Promise.all([
     fetchSalesforce(),
     fetchBooking(),
     fetchLinkedIn(),
-    fetchLinkedInEasyApply(),
     fetchLinkedInEasyApplyAll(),
   ]);
+
+  // Build a set of titles already covered by careers sections to mark Easy Apply dupes
+  const careersTitles = new Set();
+  for (const job of [...salesforce, ...booking, ...linkedin]) {
+    careersTitles.add(job.title.toLowerCase().trim());
+  }
+
+  // Remove careers-section duplicates from Easy Apply All
+  const easyAllDeduped = linkedinEasyAll.filter(
+    (j) => !careersTitles.has(j.title.toLowerCase().trim())
+  );
+
+  console.log(`[Easy Apply All] ${linkedinEasyAll.length} raw → ${easyAllDeduped.length} after removing careers dupes`);
 
   const output = {
     fetchedAt: new Date().toISOString(),
@@ -342,19 +305,12 @@ async function main() {
           'https://www.linkedin.com/jobs/search/?f_C=1337&geoId=102713980',
         jobs: linkedin,
       },
-      linkedin_easy: {
-        name: 'LinkedIn Easy Apply (Target)',
-        targetRole: 'SMTS / Sr. SWE at target companies',
-        careersUrl:
-          'https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true',
-        jobs: linkedinEasy,
-      },
       linkedin_easy_all: {
-        name: 'LinkedIn Easy Apply (All)',
-        targetRole: 'Senior Software Engineer (all companies)',
+        name: 'LinkedIn Easy Apply',
+        targetRole: 'Senior Software Engineer · All Companies · India',
         careersUrl:
           'https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true',
-        jobs: linkedinEasyAll,
+        jobs: easyAllDeduped,
       },
     },
   };
@@ -363,13 +319,12 @@ async function main() {
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
-  const total = salesforce.length + booking.length + linkedin.length + linkedinEasy.length + linkedinEasyAll.length;
+  const total = salesforce.length + booking.length + linkedin.length + easyAllDeduped.length;
   console.log(`\nDone. ${total} total matching roles written to data/jobs.json`);
   console.log(`  Salesforce: ${salesforce.length}`);
   console.log(`  Booking.com: ${booking.length}`);
   console.log(`  LinkedIn: ${linkedin.length}`);
-  console.log(`  LinkedIn Easy Apply (Target): ${linkedinEasy.length}`);
-  console.log(`  LinkedIn Easy Apply (All): ${linkedinEasyAll.length}`);
+  console.log(`  LinkedIn Easy Apply (All): ${easyAllDeduped.length}`);
 }
 
 main().catch((err) => {
