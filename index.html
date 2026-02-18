@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#00ccbc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Roo India Jobs">
+  <meta name="description" content="Track open job positions at Deliveroo India">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Deliveroo India — Open Roles</title>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header-content">
+        <div class="brand">
+          <svg class="logo" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="currentColor" opacity="0.15"/>
+            <path d="M12 4C7.58 4 4 7.58 4 12s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14.4A6.4 6.4 0 1 1 18.4 12 6.41 6.41 0 0 1 12 18.4zm3.2-8.8h-2.4V7.2a.8.8 0 0 0-1.6 0v3.2H8.8a.8.8 0 0 0 0 1.6h2.4v2.4a.8.8 0 0 0 1.6 0V12h2.4a.8.8 0 0 0 0-1.6z" fill="currentColor"/>
+          </svg>
+          <h1>Deliveroo India <span class="subtitle">Open Roles</span></h1>
+        </div>
+        <button id="refresh-btn" class="refresh-btn" aria-label="Refresh job listings" title="Refresh">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+        </button>
+      </div>
+      <div id="status-bar" class="status-bar">
+        <span id="job-count" class="job-count"></span>
+        <span id="last-updated" class="last-updated"></span>
+      </div>
+    </header>
+
+    <div id="pull-indicator" class="pull-indicator" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 4 23 10 17 10"/>
+        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+      </svg>
+      <span>Pull to refresh</span>
+    </div>
+
+    <main id="main-content" class="main-content">
+      <div id="loading-state" class="state-message loading-state" hidden>
+        <div class="spinner"></div>
+        <p>Fetching latest roles...</p>
+      </div>
+
+      <div id="error-state" class="state-message error-state" hidden>
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p id="error-message">Something went wrong.</p>
+        <button id="retry-btn" class="retry-btn">Try Again</button>
+      </div>
+
+      <div id="empty-state" class="state-message empty-state" hidden>
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+        <p>No open roles in India right now.</p>
+        <p class="hint">Check back later — new positions open regularly.</p>
+      </div>
+
+      <ul id="job-list" class="job-list" role="list"></ul>
+    </main>
+
+    <footer class="footer">
+      <p>Data from <a href="https://careers.deliveroo.co.uk" target="_blank" rel="noopener">careers.deliveroo.co.uk</a></p>
+    </footer>
+  </div>
+
+  <template id="job-card-template">
+    <li class="job-card" role="listitem">
+      <a class="job-link" target="_blank" rel="noopener">
+        <div class="job-header">
+          <h2 class="job-title"></h2>
+          <span class="new-badge" hidden>NEW</span>
+        </div>
+        <div class="job-meta">
+          <span class="job-location">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="location-text"></span>
+          </span>
+          <span class="job-team">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="team-text"></span>
+          </span>
+        </div>
+        <span class="apply-cta">View &amp; Apply →</span>
+      </a>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
