@@ -197,7 +197,7 @@ const EASY_APPLY_SEARCHES = [
   { keywords: 'SMTS', fC: '3185', label: 'SMTS @ Salesforce' },
   { keywords: 'Software+Engineer', fC: '3185', label: 'SWE @ Salesforce' },
   { keywords: 'Senior+Software+Engineer', fC: '1337', label: 'Sr. SWE @ LinkedIn' },
-  { keywords: 'Senior+Software+Engineer', fC: '2498', label: 'Sr. SWE @ Booking.com' },
+  { keywords: 'Senior+Software+Engineer', fC: '11348', label: 'Sr. SWE @ Booking.com' },
 ];
 
 function parseLinkedInCards(html) {
