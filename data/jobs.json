@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-18T20:02:41.115Z",
+  "fetchedAt": "2026-02-18T20:20:05.831Z",
   "companies": {
     "salesforce": {
       "name": "Salesforce",
@@ -130,142 +130,9 @@
         }
       ]
     },
-    "linkedin_easy": {
-      "name": "LinkedIn Easy Apply (Target)",
-      "targetRole": "SMTS / Sr. SWE at target companies",
-      "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true",
-      "jobs": [
-        {
-          "id": "lmts-smts-mts-data-engineer-at-salesforce-4373915310",
-          "title": "LMTS/SMTS/MTS Data Engineer",
-          "url": "https://in.linkedin.com/jobs/view/lmts-smts-mts-data-engineer-at-salesforce-4373915310",
-          "location": "Pune, Maharashtra, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-17"
-        },
-        {
-          "id": "sr-software-engineer-at-linkedin-4372244236",
-          "title": "Sr. Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-at-linkedin-4372244236",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-13"
-        },
-        {
-          "id": "performance-engineer-smts-lmts-at-salesforce-4336891355",
-          "title": "Performance Engineer (SMTS/LMTS)",
-          "url": "https://in.linkedin.com/jobs/view/performance-engineer-smts-lmts-at-salesforce-4336891355",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-12"
-        },
-        {
-          "id": "software-engineering-smts-at-salesforce-4371855040",
-          "title": "Software Engineering SMTS",
-          "url": "https://in.linkedin.com/jobs/view/software-engineering-smts-at-salesforce-4371855040",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-12"
-        },
-        {
-          "id": "senior-software-engineer-salesforce-at-linkedin-4365241537",
-          "title": "Senior Software Engineer, Salesforce",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-salesforce-at-linkedin-4365241537",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-12"
-        },
-        {
-          "id": "lmts-smts-mts-data-engineer-at-salesforce-4371618964",
-          "title": "LMTS/SMTS/MTS Data Engineer",
-          "url": "https://in.linkedin.com/jobs/view/lmts-smts-mts-data-engineer-at-salesforce-4371618964",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-11"
-        },
-        {
-          "id": "lmts-smts-mts-data-engineer-at-salesforce-4371636072",
-          "title": "LMTS/SMTS/MTS Data Engineer",
-          "url": "https://in.linkedin.com/jobs/view/lmts-smts-mts-data-engineer-at-salesforce-4371636072",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-11"
-        },
-        {
-          "id": "sr-software-engineer-at-linkedin-4371267467",
-          "title": "Sr. Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-at-linkedin-4371267467",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-11"
-        },
-        {
-          "id": "software-engineering-smts-tableau-at-salesforce-4370558846",
-          "title": "Software Engineering SMTS- Tableau",
-          "url": "https://in.linkedin.com/jobs/view/software-engineering-smts-tableau-at-salesforce-4370558846",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-09"
-        },
-        {
-          "id": "smts-lmts-distributed-systems-public-cloud-gcp-at-salesforce-4328708628",
-          "title": "SMTS/LMTS Distributed Systems - Public Cloud, GCP",
-          "url": "https://in.linkedin.com/jobs/view/smts-lmts-distributed-systems-public-cloud-gcp-at-salesforce-4328708628",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-05"
-        },
-        {
-          "id": "software-engineering-lmts-smts-big-data-infra-spark-kubernetes-terraform-helm-at-salesforce-4341213951",
-          "title": "Software Engineering LMTS/SMTS - Big Data Infra (Spark/Kubernetes/Terraform/Helm))",
-          "url": "https://in.linkedin.com/jobs/view/software-engineering-lmts-smts-big-data-infra-spark-kubernetes-terraform-helm-at-salesforce-4341213951",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-04"
-        },
-        {
-          "id": "senior-software-engineer-systems-infrastructure-at-linkedin-4361321746",
-          "title": "Senior Software Engineer, Systems Infrastructure",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-systems-infrastructure-at-linkedin-4361321746",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-04"
-        },
-        {
-          "id": "software-engineering-smts-tableau-at-salesforce-4367264362",
-          "title": "Software Engineering SMTS- Tableau",
-          "url": "https://in.linkedin.com/jobs/view/software-engineering-smts-tableau-at-salesforce-4367264362",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Salesforce",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-30"
-        },
-        {
-          "id": "senior-software-engineer-fullstack-at-linkedin-4367410545",
-          "title": "Senior Software Engineer - Fullstack",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-fullstack-at-linkedin-4367410545",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-01-30"
-        }
-      ]
-    },
     "linkedin_easy_all": {
-      "name": "LinkedIn Easy Apply (All)",
-      "targetRole": "Senior Software Engineer (all companies)",
+      "name": "LinkedIn Easy Apply",
+      "targetRole": "Senior Software Engineer · All Companies · India",
       "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true",
       "jobs": [
         {
@@ -283,6 +150,15 @@
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-porter-4372435892",
           "location": "Bengaluru, Karnataka, India",
           "department": "Porter",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-18"
+        },
+        {
+          "id": "senior-software-engineer-at-microsoft-4374722868",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4374722868",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Microsoft",
           "type": "Easy Apply",
           "postedDate": "2026-02-18"
         },
@@ -314,15 +190,6 @@
           "postedDate": "2026-02-15"
         },
         {
-          "id": "sr-software-engineer-at-linkedin-4372244236",
-          "title": "Sr. Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-at-linkedin-4372244236",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-13"
-        },
-        {
           "id": "senior-software-engineer-at-microsoft-4342917993",
           "title": "Senior Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4342917993",
@@ -350,20 +217,20 @@
           "postedDate": "2026-02-12"
         },
         {
-          "id": "senior-software-engineer-salesforce-at-linkedin-4365241537",
-          "title": "Senior Software Engineer, Salesforce",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-salesforce-at-linkedin-4365241537",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-12"
-        },
-        {
           "id": "senior-software-engineer-frontend-at-paypal-4279474942",
           "title": "Senior Software Engineer - Frontend",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-frontend-at-paypal-4279474942",
           "location": "Chennai, Tamil Nadu, India",
           "department": "PayPal",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-12"
+        },
+        {
+          "id": "senior-software-engineer-full-stack-core-at-google-4371535613",
+          "title": "Senior Software Engineer, Full Stack, Core",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-core-at-google-4371535613",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Google",
           "type": "Easy Apply",
           "postedDate": "2026-02-12"
         },
@@ -408,15 +275,6 @@
           "title": "Senior Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4341215473",
           "location": "Hyderabad, Telangana, India",
-          "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-11"
-        },
-        {
-          "id": "senior-software-engineer-at-microsoft-4371403485",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4371403485",
-          "location": "Bengaluru, Karnataka, India",
           "department": "Microsoft",
           "type": "Easy Apply",
           "postedDate": "2026-02-11"
@@ -512,15 +370,6 @@
           "postedDate": "2026-02-06"
         },
         {
-          "id": "senior-software-engineer-fullstack-at-roku-4317821413",
-          "title": "Senior Software Engineer - FullStack",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-fullstack-at-roku-4317821413",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Roku",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-06"
-        },
-        {
           "id": "senior-software-engineering-at-microsoft-4341561232",
           "title": "Senior Software Engineering",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineering-at-microsoft-4341561232",
@@ -530,9 +379,9 @@
           "postedDate": "2026-02-06"
         },
         {
-          "id": "senior-software-engineer-at-microsoft-4369923723",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4369923723",
+          "id": "senior-software-engineer-c%2B%2B-at-microsoft-4341525004",
+          "title": "Senior Software Engineer - C++",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-c%2B%2B-at-microsoft-4341525004",
           "location": "Hyderabad, Telangana, India",
           "department": "Microsoft",
           "type": "Easy Apply",
@@ -553,15 +402,6 @@
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4341215514",
           "location": "Hyderabad, Telangana, India",
           "department": "Microsoft",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-04"
-        },
-        {
-          "id": "senior-software-engineer-core-products-engineering-pune-at-bloomberg-4359850361",
-          "title": "Senior Software Engineer - Core Products Engineering, Pune",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-core-products-engineering-pune-at-bloomberg-4359850361",
-          "location": "Pune/Pimpri-Chinchwad Area",
-          "department": "Bloomberg",
           "type": "Easy Apply",
           "postedDate": "2026-02-04"
         },
