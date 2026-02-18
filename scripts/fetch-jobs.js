@@ -152,11 +152,10 @@ async function fetchLinkedIn() {
       });
       if (!html.includes('base-search-card')) break;
 
-      // Parse job cards from HTML
-      const cards = html.split('base-search-card__info').slice(1);
+      const cards = html.split('data-entity-urn').slice(1);
       for (const card of cards) {
-        const titleMatch = card.match(/class="base-search-card__title[^"]*"[^>]*>([^<]+)/);
-        const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?]+)/);
+        const titleMatch = card.match(/base-search-card__title[^"]*"[^>]*>([^<]+)/);
+        const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?&]+)/);
         const locMatch = card.match(/job-search-card__location[^>]*>([^<]+)/);
         const companyMatch = card.match(/subtitle[\s\S]*?href="[^"]*company[^"]*"[^>]*>\s*([^<]+)/);
         const companyFallback = card.match(/base-search-card__subtitle[^>]*>[\s\S]*?(?:<[^>]*>)*\s*(\S[^<]+)/);
@@ -202,10 +201,10 @@ const EASY_APPLY_SEARCHES = [
 
 function parseLinkedInCards(html) {
   const results = [];
-  const cards = html.split('base-search-card__info').slice(1);
+  const cards = html.split('data-entity-urn').slice(1);
   for (const card of cards) {
-    const titleMatch = card.match(/class="base-search-card__title[^"]*"[^>]*>([^<]+)/);
-    const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?]+)/);
+    const titleMatch = card.match(/base-search-card__title[^"]*"[^>]*>([^<]+)/);
+    const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?&]+)/);
     const locMatch = card.match(/job-search-card__location[^>]*>([^<]+)/);
     const companyMatch = card.match(/subtitle[\s\S]*?href="[^"]*company[^"]*"[^>]*>\s*([^<]+)/);
     const companyFallback = card.match(/base-search-card__subtitle[^>]*>[\s\S]*?(?:<[^>]*>)*\s*(\S[^<]+)/);
