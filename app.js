@@ -210,7 +210,7 @@
             findLink.hidden = false;
             findLink.classList.add('candidate-link');
           } else {
-            const refCompany = job.department || sectionCompany || '';
+            const refCompany = sectionCompany || job.department || '';
             if (refCompany) {
               findLink.href = LinkedInSearch.referrerUrl(refCompany);
               findText.textContent = 'Referrers';
