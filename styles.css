@@ -335,6 +335,48 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   color: var(--color-primary);
 }
 
+/* ─── LinkedIn Find People Link ─── */
+.find-people-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #0a66c2;
+  border-top: 1px dashed var(--color-border);
+  transition: background var(--transition);
+}
+
+.find-people-link:hover {
+  background: rgba(10, 102, 194, 0.07);
+}
+
+.find-people-link .linkedin-icon {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.find-people-link.candidate-link {
+  color: var(--color-referral);
+}
+
+.find-people-link.candidate-link:hover {
+  background: rgba(0, 204, 188, 0.07);
+}
+
+.find-people-link.candidate-link .linkedin-icon {
+  color: #0a66c2;
+}
+
+@media (prefers-color-scheme: dark) {
+  .find-people-link { color: #4c9be8; }
+  .find-people-link:hover { background: rgba(76, 155, 232, 0.1); }
+  .find-people-link.candidate-link { color: var(--color-primary); }
+  .find-people-link.candidate-link:hover { background: rgba(0, 204, 188, 0.1); }
+  .find-people-link.candidate-link .linkedin-icon { color: #4c9be8; }
+}
+
 /* ─── Collapsible sections ─── */
 .section-header {
   cursor: pointer;
