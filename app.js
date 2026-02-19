@@ -206,14 +206,14 @@
 
           if (isDeliveroo) {
             findLink.href = LinkedInSearch.candidateUrl(job.title);
-            findText.textContent = 'Find Candidates';
+            findText.textContent = 'Candidates';
             findLink.hidden = false;
             findLink.classList.add('candidate-link');
           } else {
             const refCompany = job.department || sectionCompany || '';
             if (refCompany) {
               findLink.href = LinkedInSearch.referrerUrl(refCompany);
-              findText.textContent = `Referrers at ${refCompany}`;
+              findText.textContent = 'Referrers';
               findLink.hidden = false;
               findLink.classList.add('referrer-link');
             }
