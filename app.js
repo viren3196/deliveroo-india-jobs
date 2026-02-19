@@ -125,44 +125,14 @@
   // ─── LinkedIn Search Helpers ───
   const LINKEDIN_INDIA_GEO = '102713980';
 
-  const LINKEDIN_SLUGS = {
-    'deliveroo': 'deliveroo',
-    'salesforce': 'salesforce',
-    'booking.com': 'booking.com',
-    'linkedin': 'linkedin',
-    'microsoft': 'microsoft',
-    'google': 'google',
-    'amazon': 'amazon',
-    'meta': 'meta',
-    'apple': 'apple',
-    'netflix': 'netflix',
-    'uber': 'uber-com',
-    'stripe': 'stripe',
-    'paypal': 'paypal',
-    'roku': 'roku-inc',
-    'freshworks': 'freshworks',
-    'doordash': 'doordash',
-    'flipkart': 'flipkart',
-    'oracle': 'oracle',
-    'adobe': 'adobe',
-    'porter': 'porter-technologies',
-    'deloitte': 'deloitte',
-    'hdfc securities': 'hdfc-securities',
-    'greyorange': 'greyorange',
-  };
-
   const LinkedInSearch = {
-    getSlug(companyName) {
-      if (!companyName) return '';
-      const key = companyName.toLowerCase().trim();
-      return LINKEDIN_SLUGS[key] || key.replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
-    },
     candidateUrl(jobTitle) {
       const kw = encodeURIComponent(jobTitle);
       return `https://www.linkedin.com/search/results/people/?keywords=${kw}&geoUrn=%5B%22${LINKEDIN_INDIA_GEO}%22%5D&origin=GLOBAL_SEARCH_HEADER`;
     },
-    referrerUrl(companySlug) {
-      return `https://www.linkedin.com/company/${encodeURIComponent(companySlug)}/people/`;
+    referrerUrl(companyName) {
+      const kw = encodeURIComponent(companyName);
+      return `https://www.linkedin.com/search/results/people/?keywords=${kw}&geoUrn=%5B%22${LINKEDIN_INDIA_GEO}%22%5D&origin=GLOBAL_SEARCH_HEADER`;
     },
   };
 
@@ -211,13 +181,17 @@
           const dateEl = $('.date-text', clone);
           const logo = $('.company-logo', clone);
 
-          link.href = job.url || job.link || '#';
+          const jobUrl = job.url || job.link || '#';
+          link.href = jobUrl;
           title.textContent = job.title;
           loc.textContent = job.location || '—';
           team.textContent = job.team || job.department || '—';
           dateEl.textContent = formatPostedDate(job.postedDate || job.date);
           if (!seenIds.has(String(job.id))) badge.hidden = false;
           $('.job-card', clone).dataset.jobId = job.id;
+
+          const applyCta = $('.apply-cta', clone);
+          applyCta.href = jobUrl;
 
           const logoCompany = sectionCompany || job.department || '';
           const logoUrl = getLogoUrl(logoCompany);
@@ -232,15 +206,14 @@
 
           if (isDeliveroo) {
             findLink.href = LinkedInSearch.candidateUrl(job.title);
-            findText.textContent = 'Find Candidates to Refer';
+            findText.textContent = 'Find Candidates';
             findLink.hidden = false;
             findLink.classList.add('candidate-link');
           } else {
             const refCompany = job.department || sectionCompany || '';
-            const slug = LinkedInSearch.getSlug(refCompany);
-            if (slug) {
-              findLink.href = LinkedInSearch.referrerUrl(slug);
-              findText.textContent = `Find Referrer at ${refCompany}`;
+            if (refCompany) {
+              findLink.href = LinkedInSearch.referrerUrl(refCompany);
+              findText.textContent = `Referrers at ${refCompany}`;
               findLink.hidden = false;
               findLink.classList.add('referrer-link');
             }

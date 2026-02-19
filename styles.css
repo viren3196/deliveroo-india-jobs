@@ -265,7 +265,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .job-link {
   display: block;
-  padding: 12px 16px;
+  padding: 12px 16px 4px;
 }
 
 .job-header {
@@ -328,52 +328,41 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .job-location svg, .job-team svg, .job-date svg { flex-shrink: 0; opacity: 0.5; }
 
+/* ─── Job Actions Row ─── */
+.job-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px 10px;
+}
+
 .apply-cta {
-  display: inline-block;
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--color-primary);
 }
 
-/* ─── LinkedIn Find People Link ─── */
 .find-people-link {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 16px;
-  font-size: 0.72rem;
+  gap: 4px;
+  font-size: 0.66rem;
   font-weight: 600;
   color: #0a66c2;
-  border-top: 1px dashed var(--color-border);
-  transition: background var(--transition);
+  opacity: 0.75;
+  transition: opacity var(--transition);
+  margin-left: auto;
 }
 
-.find-people-link:hover {
-  background: rgba(10, 102, 194, 0.07);
-}
+.find-people-link:hover { opacity: 1; }
+.find-people-link .linkedin-icon { flex-shrink: 0; }
 
-.find-people-link .linkedin-icon {
-  flex-shrink: 0;
-  opacity: 0.8;
-}
-
-.find-people-link.candidate-link {
-  color: var(--color-referral);
-}
-
-.find-people-link.candidate-link:hover {
-  background: rgba(0, 204, 188, 0.07);
-}
-
-.find-people-link.candidate-link .linkedin-icon {
-  color: #0a66c2;
-}
+.find-people-link.candidate-link { color: var(--color-referral); }
+.find-people-link.candidate-link .linkedin-icon { color: #0a66c2; }
 
 @media (prefers-color-scheme: dark) {
   .find-people-link { color: #4c9be8; }
-  .find-people-link:hover { background: rgba(76, 155, 232, 0.1); }
   .find-people-link.candidate-link { color: var(--color-primary); }
-  .find-people-link.candidate-link:hover { background: rgba(0, 204, 188, 0.1); }
   .find-people-link.candidate-link .linkedin-icon { color: #4c9be8; }
 }
 
