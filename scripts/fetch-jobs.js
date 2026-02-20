@@ -93,6 +93,7 @@ async function fetchSalesforce() {
       });
     }
 
+    jobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
     console.log(`[Salesforce] Found ${jobs.length} matching India roles`);
     return jobs;
   } catch (err) {
@@ -126,6 +127,7 @@ async function fetchBooking() {
       });
     }
 
+    jobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
     console.log(`[Booking.com] Found ${jobs.length} matching India roles`);
     return jobs;
   } catch (err) {
@@ -139,10 +141,10 @@ async function fetchLinkedIn() {
   console.log('[LinkedIn] Fetching guest job listings...');
   const allJobs = [];
 
-  // f_C=1337 = LinkedIn company
+  // f_C=1337 = LinkedIn company, sortBy=DD = most recent, f_TPR=r2592000 = past month
   const baseUrl =
     'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
-    '?keywords=Senior+Software+Engineer&location=India&f_C=1337';
+    '?keywords=Senior+Software+Engineer&location=India&f_C=1337&sortBy=DD&f_TPR=r2592000';
 
   try {
     for (let start = 0; start < 100; start += 25) {
@@ -181,6 +183,7 @@ async function fetchLinkedIn() {
       await new Promise((r) => setTimeout(r, 500));
     }
 
+    allJobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
     console.log(`[LinkedIn] Found ${allJobs.length} matching India roles`);
     return allJobs;
   } catch (err) {
@@ -227,9 +230,10 @@ async function fetchLinkedInEasyApplyAll() {
   const seen = new Set();
   const allJobs = [];
 
+  // sortBy=DD = most recent, f_TPR=r2592000 = past month
   const base =
     'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
-    '?keywords=Senior+Software+Engineer&location=India&f_AL=true';
+    '?keywords=Senior+Software+Engineer&location=India&f_AL=true&sortBy=DD&f_TPR=r2592000';
 
   try {
     for (let start = 0; start < 200; start += 25) {

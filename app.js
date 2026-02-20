@@ -168,6 +168,7 @@
 
         const sectionCompany = SECTION_COMPANY_MAP[company];
         const isDeliveroo = company === 'deliveroo';
+        const isEasyApply = company === 'linkedin_easy_all';
 
         this.showState('jobs');
         const frag = document.createDocumentFragment();
@@ -192,6 +193,14 @@
 
           const applyCta = $('.apply-cta', clone);
           applyCta.href = jobUrl;
+
+          const externalBadge = $('.external-badge', clone);
+          const easyApplyBadge = $('.easy-apply-badge', clone);
+          if (isEasyApply) {
+            easyApplyBadge.hidden = false;
+          } else if (!isDeliveroo) {
+            externalBadge.hidden = false;
+          }
 
           const logoCompany = sectionCompany || job.department || '';
           const logoUrl = getLogoUrl(logoCompany);
