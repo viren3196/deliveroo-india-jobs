@@ -223,6 +223,76 @@ function parseLinkedInCards(html) {
   return results;
 }
 
+// ─── Salary Lookup (AmbitionBox) ───
+const MIN_SALARY_LPA = 50;
+const SALARY_CACHE_PATH = path.join(__dirname, '..', 'data', 'salary-cache.json');
+const SALARY_CACHE_TTL_DAYS = 14;
+
+function loadSalaryCache() {
+  try {
+    return JSON.parse(fs.readFileSync(SALARY_CACHE_PATH, 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+function saveSalaryCache(cache) {
+  fs.mkdirSync(path.dirname(SALARY_CACHE_PATH), { recursive: true });
+  fs.writeFileSync(SALARY_CACHE_PATH, JSON.stringify(cache, null, 2));
+}
+
+function companyToSlug(name) {
+  return name.toLowerCase()
+    .replace(/&amp;/g, 'and').replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+var childProcess = require('child_process');
+
+function curlGet(url) {
+  return new Promise(function (resolve, reject) {
+    childProcess.exec(
+      'curl -sL -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" --max-time 10 ' + JSON.stringify(url),
+      { maxBuffer: 2 * 1024 * 1024 },
+      function (err, stdout) {
+        if (err) return reject(err);
+        resolve(stdout);
+      }
+    );
+  });
+}
+
+async function fetchSalaryFromAmbitionBox(companySlug) {
+  var url = 'https://www.ambitionbox.com/salaries/' + companySlug + '-salaries/senior-software-engineer';
+  try {
+    var html = await curlGet(url);
+    var rangeMatch = html.match(/salary[^₹]{0,50}₹([\d,.]+)\s*(Lakhs?|L|Cr)[^₹]{0,30}₹([\d,.]+)\s*(Lakhs?|L|Cr)/i);
+    if (rangeMatch) {
+      var minLPA = parseFloat(rangeMatch[1].replace(/,/g, ''));
+      var maxLPA = parseFloat(rangeMatch[3].replace(/,/g, ''));
+      if (rangeMatch[2].toLowerCase().startsWith('cr')) minLPA *= 100;
+      if (rangeMatch[4].toLowerCase().startsWith('cr')) maxLPA *= 100;
+      return { minLPA: minLPA, maxLPA: maxLPA };
+    }
+    return { minLPA: null, maxLPA: null };
+  } catch {
+    return { minLPA: null, maxLPA: null };
+  }
+}
+
+async function getSalaryData(companyName, cache) {
+  var slug = companyToSlug(companyName);
+  var cached = cache[slug];
+  var now = Date.now();
+  if (cached && cached.ts && (now - cached.ts) < SALARY_CACHE_TTL_DAYS * 86400000) {
+    return cached;
+  }
+
+  var data = await fetchSalaryFromAmbitionBox(slug);
+  cache[slug] = { minLPA: data.minLPA, maxLPA: data.maxLPA, ts: now };
+  return cache[slug];
+}
+
 // ─── LinkedIn Easy Apply — All Companies (Sr. SWE search with f_AL=true) ───
 
 // Companies that always redirect to their own career portals (never Easy Apply).
@@ -253,12 +323,19 @@ function isExternalApplyCompany(companyName) {
   return false;
 }
 
-// Broader role filter for Easy Apply — accept any senior-level engineering role
+// Backend-focused role filter for Easy Apply
 function matchesEasyApplyFilter(title) {
   const t = title.toLowerCase();
-  if (/\b(manager|director|recruiter|analyst|consultant|intern)\b/.test(t)) return false;
-  return /\b(senior|sr\.?|lead|staff|principal)\b/.test(t) &&
-    /\b(software|backend|frontend|full[- ]?stack|platform|systems|data|cloud|devops|sre|infrastructure)\b/.test(t) &&
+  // Exclude non-backend roles
+  if (/\b(frontend|front[- ]end|ui\b|ux\b|react|angular|ios|android|mobile)\b/.test(t)) return false;
+  if (/\b(security|cybersec|infosec|penetration|threat)\b/.test(t)) return false;
+  if (/\b(machine learning|ml\b|data scientist|ai\b|nlp|computer vision)\b/.test(t)) return false;
+  if (/\b(manager|director|recruiter|analyst|consultant|intern|qa\b|test|sdet)\b/.test(t)) return false;
+  if (/\b(network|hardware|firmware|embedded)\b/.test(t)) return false;
+  // Must be senior-level
+  if (!/\b(senior|sr\.?|lead|staff|principal)\b/.test(t)) return false;
+  // Must be backend-adjacent engineering
+  return /\b(software|backend|back[- ]end|full[- ]?stack|platform|systems|cloud|devops|sre|infrastructure|distributed)\b/.test(t) &&
     /\b(engineer|developer|architect)\b/.test(t);
 }
 
@@ -267,13 +344,12 @@ async function fetchLinkedInEasyApplyAll() {
   const seen = new Set();
   const allJobs = [];
 
-  // Multiple search queries to cast a wider net
   const searches = [
     'Senior+Software+Engineer',
     'Senior+Backend+Engineer',
-    'Senior+Full+Stack+Engineer',
     'Senior+Platform+Engineer',
     'Staff+Software+Engineer',
+    'Senior+Software+Developer',
   ];
 
   for (const keywords of searches) {
@@ -315,8 +391,61 @@ async function fetchLinkedInEasyApplyAll() {
 
   allJobs.sort(function (a, b) { return new Date(b.postedDate) - new Date(a.postedDate); });
 
-  console.log('[LinkedIn Easy Apply All] Total: ' + allJobs.length + ' unique roles across ' + searches.length + ' queries');
+  console.log('[LinkedIn Easy Apply All] Found ' + allJobs.length + ' roles across ' + searches.length + ' queries (before salary filter)');
   return allJobs;
+}
+
+// Filter jobs by salary using AmbitionBox data
+async function filterBySalary(jobs, salaryCache) {
+  var uniqueCompanies = new Set();
+  jobs.forEach(function (j) { if (j.department) uniqueCompanies.add(j.department); });
+
+  console.log('[Salary] Checking ' + uniqueCompanies.size + ' unique companies against AmbitionBox...');
+
+  var companyList = Array.from(uniqueCompanies);
+  var CONCURRENCY = 5;
+  for (var i = 0; i < companyList.length; i += CONCURRENCY) {
+    var batch = companyList.slice(i, i + CONCURRENCY);
+    await Promise.all(batch.map(function (c) { return getSalaryData(c, salaryCache); }));
+    if (i + CONCURRENCY < companyList.length) {
+      await new Promise(function (r) { setTimeout(r, 300); });
+    }
+  }
+
+  saveSalaryCache(salaryCache);
+
+  var passed = [];
+  var rejected = [];
+  var noData = [];
+
+  jobs.forEach(function (job) {
+    var slug = companyToSlug(job.department || '');
+    var data = salaryCache[slug];
+    if (!data || data.maxLPA === null) {
+      passed.push(job);
+      noData.push(job.department);
+      return;
+    }
+    if (data.maxLPA >= MIN_SALARY_LPA) {
+      job.salaryRange = data.minLPA + '-' + data.maxLPA + ' LPA';
+      passed.push(job);
+    } else {
+      rejected.push(job.department + ' (' + data.maxLPA + ' LPA)');
+    }
+  });
+
+  var uniqueNoData = Array.from(new Set(noData));
+  var uniqueRejected = Array.from(new Set(rejected));
+
+  console.log('[Salary] ' + jobs.length + ' jobs → ' + passed.length + ' passed (' + MIN_SALARY_LPA + '+ LPA or no data)');
+  if (uniqueRejected.length) {
+    console.log('[Salary] Rejected (' + uniqueRejected.length + ' companies): ' + uniqueRejected.slice(0, 15).join(', '));
+  }
+  if (uniqueNoData.length) {
+    console.log('[Salary] No data (' + uniqueNoData.length + ' companies, kept): ' + uniqueNoData.slice(0, 10).join(', ') + (uniqueNoData.length > 10 ? '...' : ''));
+  }
+
+  return passed;
 }
 
 // ─── Job Accumulation ───
@@ -380,18 +509,22 @@ async function main() {
 
   console.log(`[Easy Apply All] ${linkedinEasyAll.length} raw → ${easyAllDeduped.length} after removing careers dupes`);
 
+  // Filter by salary (50+ LPA) using AmbitionBox data
+  const salaryCache = loadSalaryCache();
+  const easyAllSalaryFiltered = await filterBySalary(easyAllDeduped, salaryCache);
+
   // Merge fresh results with existing data (7-day rolling window)
   const prevCompanies = (existing && existing.companies) || {};
   const prev = (key) => (prevCompanies[key] && prevCompanies[key].jobs) || [];
   const mergedSalesforce = mergeJobs(prev('salesforce'), salesforce);
   const mergedBooking = mergeJobs(prev('booking'), booking);
   const mergedLinkedin = mergeJobs(prev('linkedin'), linkedin);
-  const mergedEasyAll = mergeJobs(prev('linkedin_easy_all'), easyAllDeduped);
+  const mergedEasyAll = mergeJobs(prev('linkedin_easy_all'), easyAllSalaryFiltered);
 
   console.log(`[Merge] Salesforce: ${salesforce.length} fresh → ${mergedSalesforce.length} total`);
   console.log(`[Merge] Booking: ${booking.length} fresh → ${mergedBooking.length} total`);
   console.log(`[Merge] LinkedIn: ${linkedin.length} fresh → ${mergedLinkedin.length} total`);
-  console.log(`[Merge] Easy Apply: ${easyAllDeduped.length} fresh → ${mergedEasyAll.length} total`);
+  console.log(`[Merge] Easy Apply: ${easyAllSalaryFiltered.length} fresh → ${mergedEasyAll.length} total`);
 
   const output = {
     fetchedAt: new Date().toISOString(),
@@ -417,7 +550,7 @@ async function main() {
       },
       linkedin_easy_all: {
         name: 'LinkedIn Easy Apply',
-        targetRole: 'Senior+ Engineering Roles · All Companies · India',
+        targetRole: 'Senior+ Backend · 50+ LPA · All Companies · India',
         careersUrl:
           'https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true',
         jobs: mergedEasyAll,

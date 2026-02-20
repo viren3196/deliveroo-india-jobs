@@ -290,7 +290,9 @@
           link.href = jobUrl;
           title.textContent = job.title;
           loc.textContent = job.location || '—';
-          team.textContent = job.team || job.department || '—';
+          var teamLabel = job.team || job.department || '—';
+          if (job.salaryRange) teamLabel += ' · ₹' + job.salaryRange;
+          team.textContent = teamLabel;
           dateEl.textContent = formatPostedDate(job.postedDate || job.date);
           if (!seenIds.has(String(job.id))) badge.hidden = false;
           $('.job-card', clone).dataset.jobId = job.id;
