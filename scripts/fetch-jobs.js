@@ -225,6 +225,46 @@ function parseLinkedInCards(html) {
 
 // ─── LinkedIn Easy Apply — All Companies (Sr. SWE search with f_AL=true) ───
 
+// Companies that always redirect to their own career portals (never Easy Apply).
+// LinkedIn's guest API ignores f_AL=true, so we filter these out ourselves.
+const EXTERNAL_APPLY_COMPANIES = new Set([
+  'microsoft', 'google', 'amazon', 'apple', 'meta', 'netflix',
+  'uber', 'airbnb', 'stripe', 'spotify',
+  'salesforce', 'oracle', 'ibm', 'intel', 'nvidia', 'amd', 'qualcomm',
+  'adobe', 'sap', 'vmware', 'dell', 'cisco', 'hp', 'hpe',
+  'goldman sachs', 'jpmorgan', 'morgan stanley', 'barclays', 'citi',
+  'deloitte', 'mckinsey', 'bcg', 'accenture', 'kpmg', 'ey', 'pwc',
+  'flipkart', 'walmart', 'paypal', 'visa', 'mastercard',
+  'linkedin', 'booking.com', 'booking',
+  'tcs', 'infosys', 'wipro', 'hcl', 'cognizant', 'capgemini',
+  'thoughtworks', 'atlassian', 'databricks', 'snowflake', 'confluent',
+  'servicenow', 'workday', 'intuit', 'autodesk', 'splunk',
+  'swiggy', 'zomato', 'phonepe', 'paytm', 'cred', 'meesho',
+  'samsung', 'sony', 'siemens', 'bosch',
+]);
+
+function isExternalApplyCompany(companyName) {
+  if (!companyName) return false;
+  const c = companyName.toLowerCase().trim();
+  if (EXTERNAL_APPLY_COMPANIES.has(c)) return true;
+  for (const known of EXTERNAL_APPLY_COMPANIES) {
+    if (c.includes(known) || known.includes(c)) return true;
+  }
+  return false;
+}
+
+async function checkJobIsEasyApply(jobUrl) {
+  try {
+    const html = await httpGet(jobUrl, {
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+    });
+    if (html.includes('apply-link-offsite')) return false;
+    return true;
+  } catch {
+    return true;
+  }
+}
+
 async function fetchLinkedInEasyApplyAll() {
   console.log('[LinkedIn Easy Apply All] Fetching Sr. SWE across all companies...');
   const seen = new Set();
@@ -257,10 +297,39 @@ async function fetchLinkedInEasyApplyAll() {
     console.error('[LinkedIn Easy Apply All] Error:', err.message);
   }
 
-  allJobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
+  // Phase 1: Remove known external-apply companies
+  const afterBlocklist = allJobs.filter((job) => {
+    const company = job.department || '';
+    if (isExternalApplyCompany(company)) {
+      return false;
+    }
+    return true;
+  });
 
-  console.log(`[LinkedIn Easy Apply All] Total: ${allJobs.length} unique roles`);
-  return allJobs;
+  console.log(`[LinkedIn Easy Apply All] ${allJobs.length} raw → ${afterBlocklist.length} after blocklist filter`);
+
+  // Phase 2: Verify remaining jobs by checking their detail pages (10 concurrent)
+  const CONCURRENCY = 10;
+  const verified = [];
+  for (let i = 0; i < afterBlocklist.length; i += CONCURRENCY) {
+    const batch = afterBlocklist.slice(i, i + CONCURRENCY);
+    const results = await Promise.all(
+      batch.map(async (job) => {
+        const isEasy = await checkJobIsEasyApply(job.url);
+        return isEasy ? job : null;
+      })
+    );
+    verified.push(...results.filter(Boolean));
+    if (i + CONCURRENCY < afterBlocklist.length) {
+      await new Promise((r) => setTimeout(r, 200));
+    }
+  }
+
+  verified.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
+
+  console.log(`[LinkedIn Easy Apply All] ${afterBlocklist.length} after blocklist → ${verified.length} after page verification`);
+  console.log(`[LinkedIn Easy Apply All] Total: ${verified.length} verified Easy Apply roles`);
+  return verified;
 }
 
 // ─── Main ───
