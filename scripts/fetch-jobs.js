@@ -332,9 +332,46 @@ async function fetchLinkedInEasyApplyAll() {
   return verified;
 }
 
+// ─── Job Accumulation ───
+// Merge new jobs into existing ones, keeping a 7-day rolling window.
+// This ensures each run adds fresh jobs without losing recent ones.
+const ROLLING_WINDOW_DAYS = 7;
+
+function loadExistingJobs(outPath) {
+  try {
+    const raw = fs.readFileSync(outPath, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+function mergeJobs(existingJobs, freshJobs) {
+  const byId = new Map();
+  const cutoff = Date.now() - ROLLING_WINDOW_DAYS * 86400000;
+
+  for (const job of existingJobs) {
+    const posted = new Date(job.postedDate).getTime();
+    if (posted >= cutoff) {
+      byId.set(String(job.id), job);
+    }
+  }
+
+  for (const job of freshJobs) {
+    byId.set(String(job.id), job);
+  }
+
+  return [...byId.values()].sort(
+    (a, b) => new Date(b.postedDate) - new Date(a.postedDate)
+  );
+}
+
 // ─── Main ───
 async function main() {
   console.log('Starting job fetch...', new Date().toISOString());
+
+  const outPath = path.join(__dirname, '..', 'data', 'jobs.json');
+  const existing = loadExistingJobs(outPath);
 
   const [salesforce, booking, linkedin, linkedinEasyAll] = await Promise.all([
     fetchSalesforce(),
@@ -356,6 +393,19 @@ async function main() {
 
   console.log(`[Easy Apply All] ${linkedinEasyAll.length} raw → ${easyAllDeduped.length} after removing careers dupes`);
 
+  // Merge fresh results with existing data (7-day rolling window)
+  const prevCompanies = (existing && existing.companies) || {};
+  const prev = (key) => (prevCompanies[key] && prevCompanies[key].jobs) || [];
+  const mergedSalesforce = mergeJobs(prev('salesforce'), salesforce);
+  const mergedBooking = mergeJobs(prev('booking'), booking);
+  const mergedLinkedin = mergeJobs(prev('linkedin'), linkedin);
+  const mergedEasyAll = mergeJobs(prev('linkedin_easy_all'), easyAllDeduped);
+
+  console.log(`[Merge] Salesforce: ${salesforce.length} fresh → ${mergedSalesforce.length} total`);
+  console.log(`[Merge] Booking: ${booking.length} fresh → ${mergedBooking.length} total`);
+  console.log(`[Merge] LinkedIn: ${linkedin.length} fresh → ${mergedLinkedin.length} total`);
+  console.log(`[Merge] Easy Apply: ${easyAllDeduped.length} fresh → ${mergedEasyAll.length} total`);
+
   const output = {
     fetchedAt: new Date().toISOString(),
     companies: {
@@ -363,41 +413,40 @@ async function main() {
         name: 'Salesforce',
         targetRole: 'Senior Member of Technical Staff (SMTS)',
         careersUrl: 'https://careers.salesforce.com/en/jobs/?country=India',
-        jobs: salesforce,
+        jobs: mergedSalesforce,
       },
       booking: {
         name: 'Booking.com',
         targetRole: 'Senior Software Engineer',
         careersUrl: 'https://jobs.booking.com/booking/jobs?location=India',
-        jobs: booking,
+        jobs: mergedBooking,
       },
       linkedin: {
         name: 'LinkedIn',
         targetRole: 'Senior Software Engineer',
         careersUrl:
           'https://www.linkedin.com/jobs/search/?f_C=1337&geoId=102713980',
-        jobs: linkedin,
+        jobs: mergedLinkedin,
       },
       linkedin_easy_all: {
         name: 'LinkedIn Easy Apply',
         targetRole: 'Senior Software Engineer · All Companies · India',
         careersUrl:
           'https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true',
-        jobs: easyAllDeduped,
+        jobs: mergedEasyAll,
       },
     },
   };
 
-  const outPath = path.join(__dirname, '..', 'data', 'jobs.json');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
-  const total = salesforce.length + booking.length + linkedin.length + easyAllDeduped.length;
-  console.log(`\nDone. ${total} total matching roles written to data/jobs.json`);
-  console.log(`  Salesforce: ${salesforce.length}`);
-  console.log(`  Booking.com: ${booking.length}`);
-  console.log(`  LinkedIn: ${linkedin.length}`);
-  console.log(`  LinkedIn Easy Apply (All): ${easyAllDeduped.length}`);
+  const total = mergedSalesforce.length + mergedBooking.length + mergedLinkedin.length + mergedEasyAll.length;
+  console.log(`\nDone. ${total} total roles in data/jobs.json`);
+  console.log(`  Salesforce: ${mergedSalesforce.length}`);
+  console.log(`  Booking.com: ${mergedBooking.length}`);
+  console.log(`  LinkedIn: ${mergedLinkedin.length}`);
+  console.log(`  LinkedIn Easy Apply (All): ${mergedEasyAll.length}`);
 }
 
 main().catch((err) => {
