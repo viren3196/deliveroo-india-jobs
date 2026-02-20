@@ -253,83 +253,70 @@ function isExternalApplyCompany(companyName) {
   return false;
 }
 
-async function checkJobIsEasyApply(jobUrl) {
-  try {
-    const html = await httpGet(jobUrl, {
-      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
-    });
-    if (html.includes('apply-link-offsite')) return false;
-    return true;
-  } catch {
-    return true;
-  }
+// Broader role filter for Easy Apply — accept any senior-level engineering role
+function matchesEasyApplyFilter(title) {
+  const t = title.toLowerCase();
+  if (/\b(manager|director|recruiter|analyst|consultant|intern)\b/.test(t)) return false;
+  return /\b(senior|sr\.?|lead|staff|principal)\b/.test(t) &&
+    /\b(software|backend|frontend|full[- ]?stack|platform|systems|data|cloud|devops|sre|infrastructure)\b/.test(t) &&
+    /\b(engineer|developer|architect)\b/.test(t);
 }
 
 async function fetchLinkedInEasyApplyAll() {
-  console.log('[LinkedIn Easy Apply All] Fetching Sr. SWE across all companies...');
+  console.log('[LinkedIn Easy Apply All] Fetching across multiple queries...');
   const seen = new Set();
   const allJobs = [];
 
-  // sortBy=DD = most recent, f_TPR=r2592000 = past month
-  const base =
-    'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
-    '?keywords=Senior+Software+Engineer&location=India&f_AL=true&sortBy=DD&f_TPR=r2592000';
+  // Multiple search queries to cast a wider net
+  const searches = [
+    'Senior+Software+Engineer',
+    'Senior+Backend+Engineer',
+    'Senior+Full+Stack+Engineer',
+    'Senior+Platform+Engineer',
+    'Staff+Software+Engineer',
+  ];
 
-  try {
-    for (let start = 0; start < 200; start += 25) {
-      const url = `${base}&start=${start}`;
-      const html = await httpGet(url, {
-        'User-Agent': 'Mozilla/5.0 (compatible; JobTracker/1.0)',
-      });
-      if (!html.includes('base-search-card')) break;
+  for (const keywords of searches) {
+    const base =
+      'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
+      '?keywords=' + keywords + '&location=India&f_AL=true&sortBy=DD&f_TPR=r2592000';
 
-      const jobs = parseLinkedInCards(html);
-      for (const job of jobs) {
-        if (seen.has(job.id)) continue;
-        if (!matchesRoleFilter(job.title, 'linkedin')) continue;
-        seen.add(job.id);
-        allJobs.push(job);
+    try {
+      for (let start = 0; start < 500; start += 25) {
+        const url = base + '&start=' + start;
+        const html = await httpGet(url, {
+          'User-Agent': 'Mozilla/5.0 (compatible; JobTracker/1.0)',
+        });
+        if (!html.includes('base-search-card')) break;
+
+        const jobs = parseLinkedInCards(html);
+        let added = 0;
+        for (const job of jobs) {
+          if (seen.has(job.id)) continue;
+          if (!matchesEasyApplyFilter(job.title)) continue;
+          const company = (job.department || '').toLowerCase().trim();
+          if (isExternalApplyCompany(company)) continue;
+          seen.add(job.id);
+          allJobs.push(job);
+          added++;
+        }
+
+        // Stop paginating this query if we're getting zero new results
+        if (added === 0 && start >= 100) break;
+
+        await new Promise(function (r) { setTimeout(r, 300); });
       }
-
-      await new Promise((r) => setTimeout(r, 300));
+    } catch (err) {
+      console.error('[LinkedIn Easy Apply All] Error on "' + keywords + '":', err.message);
     }
-  } catch (err) {
-    console.error('[LinkedIn Easy Apply All] Error:', err.message);
+
+    await new Promise(function (r) { setTimeout(r, 500); });
   }
 
-  // Phase 1: Remove known external-apply companies
-  const afterBlocklist = allJobs.filter((job) => {
-    const company = job.department || '';
-    if (isExternalApplyCompany(company)) {
-      return false;
-    }
-    return true;
-  });
+  allJobs.sort(function (a, b) { return new Date(b.postedDate) - new Date(a.postedDate); });
 
-  console.log(`[LinkedIn Easy Apply All] ${allJobs.length} raw → ${afterBlocklist.length} after blocklist filter`);
-
-  // Phase 2: Verify remaining jobs by checking their detail pages (10 concurrent)
-  const CONCURRENCY = 10;
-  const verified = [];
-  for (let i = 0; i < afterBlocklist.length; i += CONCURRENCY) {
-    const batch = afterBlocklist.slice(i, i + CONCURRENCY);
-    const results = await Promise.all(
-      batch.map(async (job) => {
-        const isEasy = await checkJobIsEasyApply(job.url);
-        return isEasy ? job : null;
-      })
-    );
-    verified.push(...results.filter(Boolean));
-    if (i + CONCURRENCY < afterBlocklist.length) {
-      await new Promise((r) => setTimeout(r, 200));
-    }
-  }
-
-  verified.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
-
-  console.log(`[LinkedIn Easy Apply All] ${afterBlocklist.length} after blocklist → ${verified.length} after page verification`);
-  console.log(`[LinkedIn Easy Apply All] Total: ${verified.length} verified Easy Apply roles`);
-  return verified;
+  console.log('[LinkedIn Easy Apply All] Total: ' + allJobs.length + ' unique roles across ' + searches.length + ' queries');
+  return allJobs;
 }
 
 // ─── Job Accumulation ───
@@ -430,7 +417,7 @@ async function main() {
       },
       linkedin_easy_all: {
         name: 'LinkedIn Easy Apply',
-        targetRole: 'Senior Software Engineer · All Companies · India',
+        targetRole: 'Senior+ Engineering Roles · All Companies · India',
         careersUrl:
           'https://www.linkedin.com/jobs/search/?keywords=Senior+Software+Engineer&location=India&f_AL=true',
         jobs: mergedEasyAll,
