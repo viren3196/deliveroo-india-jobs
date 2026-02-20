@@ -223,10 +223,43 @@ function parseLinkedInCards(html) {
   return results;
 }
 
-// ─── Salary Lookup (AmbitionBox) ───
+// ─── Salary Lookup: levels.fyi (primary) → AmbitionBox (fallback) ───
 const MIN_SALARY_LPA = 50;
 const SALARY_CACHE_PATH = path.join(__dirname, '..', 'data', 'salary-cache.json');
 const SALARY_CACHE_TTL_DAYS = 14;
+
+// Curated India TC data (P75, senior/staff level) from levels.fyi via job-tracker.
+// Key = lowercase company name, value = max TC in LPA.
+const LEVELS_FYI_INDIA_TC = {
+  'atlassian': 198, 'uber': 155, 'rubrik': 151, 'stripe': 137, 'apple': 137,
+  'snowflake': 120, 'palantir': 120, 'microsoft': 110, 'linkedin': 110,
+  'datadog': 110, 'databricks': 103, 'hashicorp': 100, 'gitlab': 100,
+  'confluent': 95, 'salesforce': 91, 'intuit': 91, 'palo alto networks': 90,
+  'cloudflare': 90, 'elastic': 90, 'flipkart': 86, 'nutanix': 85,
+  'zscaler': 85, 'new relic': 85, 'vmware': 80, 'broadcom': 80, 'netapp': 80,
+  'arista networks': 80, 'razorpay': 80, 'akamai': 75, 'phonepe': 75,
+  'google': 73, 'oracle': 70, 'cisco': 70, 'f5 networks': 70,
+  'juniper networks': 70, 'adobe': 70, 'amazon': 68, 'aws': 68,
+  'booking.com': 66, 'fortinet': 65, 'servicenow': 65, 'goldman sachs': 64,
+  'walmart': 62, 'morgan stanley': 54, 'paypal': 51, 'cred': 50,
+  'visa': 40, 'groww': 40, 'paytm': 35, 'zerodha': 35, 'mastercard': 33,
+  'bharatpe': 32, 'hdfc bank': 28, 'bajaj finance': 28, 'upstox': 28,
+  'icici bank': 25, 'genpact': 25, 'hdfc': 24, 'tcs': 22, 'infosys': 22,
+  'wipro': 20, 'cognizant': 22, 'capgemini': 20, 'hcl': 20,
+  'yes bank': 18, 'concentrix': 18, 'federal bank': 16, 'bandhan bank': 15,
+  'epam systems': 28, 'epam': 28, 'cgi': 16, 'freshworks': 26, 'agoda': 59,
+  'roku': 90, 'coinbase': 69, 'rippling': 60, 'doordash': 64,
+  'commonwealth bank': 38, 'uplers': 22,
+};
+
+function lookupLevelsFyi(companyName) {
+  var c = companyName.toLowerCase().trim();
+  if (LEVELS_FYI_INDIA_TC[c] !== undefined) return LEVELS_FYI_INDIA_TC[c];
+  for (var key in LEVELS_FYI_INDIA_TC) {
+    if (c.includes(key) || key.includes(c)) return LEVELS_FYI_INDIA_TC[key];
+  }
+  return null;
+}
 
 function loadSalaryCache() {
   try {
@@ -272,7 +305,7 @@ async function fetchSalaryFromAmbitionBox(companySlug) {
       var maxLPA = parseFloat(rangeMatch[3].replace(/,/g, ''));
       if (rangeMatch[2].toLowerCase().startsWith('cr')) minLPA *= 100;
       if (rangeMatch[4].toLowerCase().startsWith('cr')) maxLPA *= 100;
-      return { minLPA: minLPA, maxLPA: maxLPA };
+      return { minLPA: minLPA, maxLPA: maxLPA, source: 'ambitionbox' };
     }
     return { minLPA: null, maxLPA: null };
   } catch {
@@ -281,6 +314,13 @@ async function fetchSalaryFromAmbitionBox(companySlug) {
 }
 
 async function getSalaryData(companyName, cache) {
+  // 1. Try levels.fyi curated data (instant, no network)
+  var levelsTc = lookupLevelsFyi(companyName);
+  if (levelsTc !== null) {
+    return { maxLPA: levelsTc, source: 'levels.fyi' };
+  }
+
+  // 2. Try AmbitionBox cache
   var slug = companyToSlug(companyName);
   var cached = cache[slug];
   var now = Date.now();
@@ -288,8 +328,9 @@ async function getSalaryData(companyName, cache) {
     return cached;
   }
 
+  // 3. Fetch from AmbitionBox (fallback)
   var data = await fetchSalaryFromAmbitionBox(slug);
-  cache[slug] = { minLPA: data.minLPA, maxLPA: data.maxLPA, ts: now };
+  cache[slug] = { minLPA: data.minLPA, maxLPA: data.maxLPA, source: 'ambitionbox', ts: now };
   return cache[slug];
 }
 
@@ -395,19 +436,27 @@ async function fetchLinkedInEasyApplyAll() {
   return allJobs;
 }
 
-// Filter jobs by salary using AmbitionBox data
+// Filter jobs by salary: levels.fyi (primary) → AmbitionBox (fallback)
 async function filterBySalary(jobs, salaryCache) {
   var uniqueCompanies = new Set();
   jobs.forEach(function (j) { if (j.department) uniqueCompanies.add(j.department); });
 
-  console.log('[Salary] Checking ' + uniqueCompanies.size + ' unique companies against AmbitionBox...');
+  // First pass: check how many are covered by levels.fyi vs need AmbitionBox
+  var needAmbitionBox = [];
+  var levelsHits = 0;
+  Array.from(uniqueCompanies).forEach(function (c) {
+    if (lookupLevelsFyi(c) !== null) { levelsHits++; }
+    else { needAmbitionBox.push(c); }
+  });
 
-  var companyList = Array.from(uniqueCompanies);
+  console.log('[Salary] ' + uniqueCompanies.size + ' unique companies: ' + levelsHits + ' from levels.fyi, ' + needAmbitionBox.length + ' need AmbitionBox');
+
+  // Fetch AmbitionBox data for companies not in levels.fyi
   var CONCURRENCY = 5;
-  for (var i = 0; i < companyList.length; i += CONCURRENCY) {
-    var batch = companyList.slice(i, i + CONCURRENCY);
+  for (var i = 0; i < needAmbitionBox.length; i += CONCURRENCY) {
+    var batch = needAmbitionBox.slice(i, i + CONCURRENCY);
     await Promise.all(batch.map(function (c) { return getSalaryData(c, salaryCache); }));
-    if (i + CONCURRENCY < companyList.length) {
+    if (i + CONCURRENCY < needAmbitionBox.length) {
       await new Promise(function (r) { setTimeout(r, 300); });
     }
   }
@@ -417,20 +466,27 @@ async function filterBySalary(jobs, salaryCache) {
   var passed = [];
   var rejected = [];
   var noData = [];
+  var sourceCounts = { 'levels.fyi': 0, 'ambitionbox': 0, 'none': 0 };
 
   jobs.forEach(function (job) {
-    var slug = companyToSlug(job.department || '');
-    var data = salaryCache[slug];
-    if (!data || data.maxLPA === null) {
+    var company = job.department || '';
+    var salaryData = getSalaryDataSync(company, salaryCache);
+
+    if (salaryData.maxLPA === null) {
       passed.push(job);
-      noData.push(job.department);
+      noData.push(company);
+      sourceCounts.none++;
       return;
     }
-    if (data.maxLPA >= MIN_SALARY_LPA) {
-      job.salaryRange = data.minLPA + '-' + data.maxLPA + ' LPA';
+
+    sourceCounts[salaryData.source || 'none']++;
+
+    if (salaryData.maxLPA >= MIN_SALARY_LPA) {
+      job.salaryRange = salaryData.maxLPA + ' LPA';
+      job.salarySource = salaryData.source;
       passed.push(job);
     } else {
-      rejected.push(job.department + ' (' + data.maxLPA + ' LPA)');
+      rejected.push(company + ' (' + salaryData.maxLPA + ' LPA, ' + (salaryData.source || '?') + ')');
     }
   });
 
@@ -438,6 +494,7 @@ async function filterBySalary(jobs, salaryCache) {
   var uniqueRejected = Array.from(new Set(rejected));
 
   console.log('[Salary] ' + jobs.length + ' jobs → ' + passed.length + ' passed (' + MIN_SALARY_LPA + '+ LPA or no data)');
+  console.log('[Salary] Sources: levels.fyi=' + sourceCounts['levels.fyi'] + ', ambitionbox=' + sourceCounts['ambitionbox'] + ', no data=' + sourceCounts['none']);
   if (uniqueRejected.length) {
     console.log('[Salary] Rejected (' + uniqueRejected.length + ' companies): ' + uniqueRejected.slice(0, 15).join(', '));
   }
@@ -446,6 +503,20 @@ async function filterBySalary(jobs, salaryCache) {
   }
 
   return passed;
+}
+
+// Synchronous salary lookup (after async cache is populated)
+function getSalaryDataSync(companyName, cache) {
+  var levelsTc = lookupLevelsFyi(companyName);
+  if (levelsTc !== null) {
+    return { maxLPA: levelsTc, source: 'levels.fyi' };
+  }
+  var slug = companyToSlug(companyName);
+  var cached = cache[slug];
+  if (cached && cached.maxLPA !== null && cached.maxLPA !== undefined) {
+    return { maxLPA: cached.maxLPA, source: 'ambitionbox' };
+  }
+  return { maxLPA: null, source: null };
 }
 
 // ─── Job Accumulation ───

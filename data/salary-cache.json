@@ -1,547 +1,944 @@
 {
-  "solera-holdings-llc": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604042745
-  },
-  "procore-technologies": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604042784
-  },
   "weave": {
     "minLPA": 38.6,
     "maxLPA": 49.8,
-    "ts": 1771604042761
+    "source": "ambitionbox",
+    "ts": 1771604940337
   },
-  "syneos-health": {
-    "minLPA": 24.5,
-    "maxLPA": 27,
-    "ts": 1771604042769
-  },
-  "foxsense-innovations": {
-    "minLPA": 11.7,
-    "maxLPA": 13,
-    "ts": 1771604042776
-  },
-  "nextracker-inc": {
+  "solera-holdings-llc": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604044386
+    "source": "ambitionbox",
+    "ts": 1771604940310
   },
-  "freshworks": {
+  "kla": {
+    "minLPA": 19,
+    "maxLPA": 28.1,
+    "source": "ambitionbox",
+    "ts": 1771604940326
+  },
+  "lseg": {
     "minLPA": 23.3,
-    "maxLPA": 25.7,
-    "ts": 1771604044395
+    "maxLPA": 26,
+    "source": "ambitionbox",
+    "ts": 1771604940356
   },
-  "doordash": {
-    "minLPA": 45.9,
-    "maxLPA": 63.5,
-    "ts": 1771604044412
+  "pairsoft": {
+    "minLPA": 8.9,
+    "maxLPA": 13.1,
+    "source": "ambitionbox",
+    "ts": 1771604940347
   },
-  "epam-systems": {
-    "minLPA": 25.7,
-    "maxLPA": 28.4,
-    "ts": 1771604044404
-  },
-  "commonwealth-bank": {
-    "minLPA": 34.1,
-    "maxLPA": 37.6,
-    "ts": 1771604044420
-  },
-  "jrd-systems": {
-    "minLPA": 20.7,
-    "maxLPA": 30.8,
-    "ts": 1771604045272
-  },
-  "tekdoors-inc": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604045290
-  },
-  "alight-solutions": {
-    "minLPA": 8.3,
-    "maxLPA": 12.1,
-    "ts": 1771604045281
-  },
-  "procter-and-gamble": {
-    "minLPA": 24.9,
-    "maxLPA": 36.4,
-    "ts": 1771604045262
-  },
-  "vida-digital-identity": {
-    "minLPA": 41.1,
-    "maxLPA": 45.4,
-    "ts": 1771604045249
-  },
-  "roku": {
-    "minLPA": 81.2,
-    "maxLPA": 89.7,
-    "ts": 1771604046745
-  },
-  "red-hat": {
-    "minLPA": 27.4,
-    "maxLPA": 30.2,
-    "ts": 1771604046752
-  },
-  "vendavo": {
-    "minLPA": 24.8,
-    "maxLPA": 34.8,
-    "ts": 1771604046738
-  },
-  "bebetta": {
-    "minLPA": 12.9,
-    "maxLPA": 14.3,
-    "ts": 1771604046716
-  },
-  "apexx-global": {
-    "minLPA": 6.3,
-    "maxLPA": 8.4,
-    "ts": 1771604046730
-  },
-  "warner-bros-discovery": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604047961
-  },
-  "rumor": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604047996
-  },
-  "momentive": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604047988
-  },
-  "parspec": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604047970
-  },
-  "gruve": {
-    "minLPA": 47,
-    "maxLPA": 51.9,
-    "ts": 1771604047978
-  },
-  "razorpay": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604049500
-  },
-  "anblicks": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604049490
-  },
-  "hopper": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604049510
-  },
-  "ssandc-technologies": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604049528
-  },
-  "caterpillar-inc": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604049519
-  },
-  "span-india": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050014
-  },
-  "assa-abloy-group": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050024
-  },
-  "csc": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050033
-  },
-  "expedia-group": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050052
-  },
-  "agoda": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050043
-  },
-  "trg-screen": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050533
-  },
-  "betsol": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050541
-  },
-  "lexsi-labs": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050516
-  },
-  "ups": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050525
-  },
-  "symplr": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604050549
-  },
-  "acceldata": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051063
-  },
-  "calpion-inc": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051084
-  },
-  "electrolux-group": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051076
-  },
-  "metlife": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051102
-  },
-  "societe-generale-global-solution-centre": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051093
-  },
-  "armorcode-inc": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051566
-  },
-  "cgi": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051588
-  },
-  "broadridge-india": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051580
-  },
-  "yes-bank": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051606
-  },
-  "rippling": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604051597
-  },
-  "webito": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604052138
-  },
-  "zimmer-biomet": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604052120
-  },
-  "ge-vernova": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604052130
-  },
-  "forcepoint": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604052147
-  },
-  "commotion": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604052156
+  "cargill": {
+    "minLPA": 27,
+    "maxLPA": 32.7,
+    "source": "ambitionbox",
+    "ts": 1771604942565
   },
   "iris-software-inc": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604052619
+    "source": "ambitionbox",
+    "ts": 1771604942547
   },
-  "thomson-reuters": {
+  "nec-software-solutions-india": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604052629
+    "source": "ambitionbox",
+    "ts": 1771604942584
+  },
+  "datycs": {
+    "minLPA": 23.5,
+    "maxLPA": 26,
+    "source": "ambitionbox",
+    "ts": 1771604942557
+  },
+  "nice": {
+    "minLPA": 22.8,
+    "maxLPA": 25.2,
+    "source": "ambitionbox",
+    "ts": 1771604942575
+  },
+  "vida-digital-identity": {
+    "minLPA": 41.1,
+    "maxLPA": 45.4,
+    "source": "ambitionbox",
+    "ts": 1771604944314
+  },
+  "supplyhouse": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604944335
+  },
+  "procter-and-gamble": {
+    "minLPA": 24.9,
+    "maxLPA": 36.4,
+    "source": "ambitionbox",
+    "ts": 1771604944326
+  },
+  "procore-technologies": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604944344
+  },
+  "qad": {
+    "minLPA": 18.2,
+    "maxLPA": 25,
+    "source": "ambitionbox",
+    "ts": 1771604944304
+  },
+  "crunchyroll": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945445
+  },
+  "alight-solutions": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945454
+  },
+  "blue-yonder": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945480
+  },
+  "apexx-global": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945462
+  },
+  "vendavo": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945471
+  },
+  "red-hat": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945963
+  },
+  "sas": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945972
+  },
+  "handr-block": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945954
+  },
+  "blackline-india": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945933
+  },
+  "blackline": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604945945
+  },
+  "spoton": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604946505
+  },
+  "earnin": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604946485
+  },
+  "nest-digital": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604946494
+  },
+  "anblicks": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604946515
+  },
+  "parspec": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604946474
+  },
+  "applied-systems": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604946986
+  },
+  "hopper": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604946995
+  },
+  "surt": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947004
+  },
+  "span-india": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947013
+  },
+  "edwards-lifesciences": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947022
+  },
+  "ust": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947495
+  },
+  "assa-abloy-group": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947486
+  },
+  "lytx-inc": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947504
+  },
+  "csc": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947513
+  },
+  "expedia-group": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947522
+  },
+  "symplr": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947980
+  },
+  "lexsi-labs": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947989
+  },
+  "acceldata": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604948016
+  },
+  "aerocontact": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604947999
+  },
+  "erelego-technologies-pvt-ltd-etpl": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604948008
+  },
+  "electrolux-group": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604948508
+  },
+  "ebay": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604948524
+  },
+  "schoolcues": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604948516
+  },
+  "warner-bros-discovery": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604948500
+  },
+  "flam": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604948491
+  },
+  "fm": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949009
+  },
+  "valuemomentum": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949034
+  },
+  "broadridge-india": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949041
+  },
+  "kyndryl-india": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949026
+  },
+  "algoworks": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949050
+  },
+  "beckman-coulter-diagnostics": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949520
+  },
+  "endava": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949539
+  },
+  "valtech": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949531
+  },
+  "okta": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949547
+  },
+  "transunion": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949556
+  },
+  "okta-for-developers": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604949999
+  },
+  "millennium": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950020
+  },
+  "societe-generale-global-solution-centre": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950011
+  },
+  "wells-fargo": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950028
   },
   "sprinklr": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604052637
+    "source": "ambitionbox",
+    "ts": 1771604950036
   },
-  "pocket-fm": {
+  "thomson-reuters": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604052654
-  },
-  "clari5-a-perfios-company": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604052645
-  },
-  "healthedge": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604053111
-  },
-  "amura-health": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604053122
-  },
-  "andor-tech": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604053131
-  },
-  "impetus": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604053139
-  },
-  "payu": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604053147
+    "source": "ambitionbox",
+    "ts": 1771604950482
   },
   "jumpcloud": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604053621
+    "source": "ambitionbox",
+    "ts": 1771604950511
+  },
+  "ninja-van": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950493
+  },
+  "commotion": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950501
+  },
+  "clari5-a-perfios-company": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950521
+  },
+  "yubi": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950981
+  },
+  "impetus": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950989
+  },
+  "payu": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950997
+  },
+  "pocket-fm": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604950970
+  },
+  "leading-healthcare-industry": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604951006
+  },
+  "fidelity-investments": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604951463
+  },
+  "abb": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604951474
+  },
+  "bajaj-finserv": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604951483
+  },
+  "amura-health": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604951491
   },
   "zyoin-group": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604053602
+    "source": "ambitionbox",
+    "ts": 1771604951501
   },
-  "atlan": {
+  "vertafore": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604053648
+    "source": "ambitionbox",
+    "ts": 1771604951960
   },
-  "new-relic": {
+  "trivelta": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604053640
+    "source": "ambitionbox",
+    "ts": 1771604951972
   },
   "smart-working": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604053630
+    "source": "ambitionbox",
+    "ts": 1771604951983
   },
-  "orah": {
+  "pegasystems": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054116
+    "source": "ambitionbox",
+    "ts": 1771604951991
   },
-  "synamedia": {
+  "equinix": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054143
+    "source": "ambitionbox",
+    "ts": 1771604952000
   },
   "qube-cinema": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054125
+    "source": "ambitionbox",
+    "ts": 1771604952472
   },
-  "nexthink": {
+  "healthedge": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054134
+    "source": "ambitionbox",
+    "ts": 1771604952480
   },
-  "guardant-health": {
+  "zinnia": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054152
+    "source": "ambitionbox",
+    "ts": 1771604952489
   },
-  "anaplan": {
+  "athenahealth": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054625
+    "source": "ambitionbox",
+    "ts": 1771604952462
   },
-  "bnp-paribas": {
+  "launch-india": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054605
+    "source": "ambitionbox",
+    "ts": 1771604952498
   },
-  "moody-s-corporation": {
+  "aptean-india": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054616
+    "source": "ambitionbox",
+    "ts": 1771604952961
   },
-  "eptura": {
+  "rprocess": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054635
+    "source": "ambitionbox",
+    "ts": 1771604952953
   },
-  "boku": {
+  "clarivate": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604054646
-  },
-  "weekday-ai-yc-w21": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055113
-  },
-  "fanatics": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055125
-  },
-  "pepsico": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055133
-  },
-  "ericsson": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055150
-  },
-  "mongodb": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055142
-  },
-  "bloomberg": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055618
-  },
-  "rsm-us-llp": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055628
-  },
-  "fossil-group-inc": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055645
-  },
-  "seismic": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055636
-  },
-  "infineon-technologies": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604055654
-  },
-  "american-express": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604056096
-  },
-  "myntra": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604056106
-  },
-  "toast": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604056115
-  },
-  "loop-subscriptions": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604056124
-  },
-  "foodsmart": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604056132
-  },
-  "remitly": {
-    "minLPA": null,
-    "maxLPA": null,
-    "ts": 1771604056591
+    "source": "ambitionbox",
+    "ts": 1771604952969
   },
   "marriott-tech-accelerator": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604056620
+    "source": "ambitionbox",
+    "ts": 1771604952977
   },
-  "osi-digital": {
+  "sandisk": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604056610
+    "source": "ambitionbox",
+    "ts": 1771604952986
+  },
+  "falconx": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953468
+  },
+  "nexthink": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953432
+  },
+  "giga": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953452
+  },
+  "10xtd": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953443
+  },
+  "wolters-kluwer": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953459
+  },
+  "guardant-health": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953960
+  },
+  "bnp-paribas": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953971
+  },
+  "harness": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953980
+  },
+  "appian": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953997
+  },
+  "nielseniq": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604953988
+  },
+  "yipitdata": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604954491
+  },
+  "boku": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604954521
+  },
+  "fanatics": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604954531
+  },
+  "eptura": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604954512
+  },
+  "anaplan": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604954502
+  },
+  "softobiz": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955005
+  },
+  "tmus-global-solutions": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955017
+  },
+  "five9": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955026
+  },
+  "metlife": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955035
+  },
+  "gigster": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955046
+  },
+  "sandp-global": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955569
+  },
+  "simcorp": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955591
+  },
+  "teradata": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955609
+  },
+  "ericsson": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955600
+  },
+  "trellance-cooperative-holdings-inc": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604955583
+  },
+  "saviynt": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956220
+  },
+  "american-express": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956200
+  },
+  "hackerrank": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956238
+  },
+  "coforge": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956229
+  },
+  "myntra": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956212
+  },
+  "fossil-group-inc": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956747
+  },
+  "circles": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956736
+  },
+  "toast": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956775
+  },
+  "zendesk": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956757
+  },
+  "rib-software": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604956766
+  },
+  "gloroots-ai": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604957288
+  },
+  "trimble-inc": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604957307
+  },
+  "vgreen-technology-solutions-vgreentek": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604957326
+  },
+  "nxp-semiconductors": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604957299
+  },
+  "loop-subscriptions": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604957316
+  },
+  "qinecsa-solutions": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604958022
+  },
+  "dhruva-space": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604958012
+  },
+  "emmes-group": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604958038
+  },
+  "sonata-software": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604958047
+  },
+  "adyen": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604958030
+  },
+  "useready": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604958653
   },
   "gartner": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604056601
+    "source": "ambitionbox",
+    "ts": 1771604958669
   },
-  "unison-group": {
+  "kong": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604056631
+    "source": "ambitionbox",
+    "ts": 1771604958633
   },
-  "deutsche-bank": {
+  "thales": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057110
+    "source": "ambitionbox",
+    "ts": 1771604958644
+  },
+  "franklin-templeton-india": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604958660
   },
   "fico": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057129
+    "source": "ambitionbox",
+    "ts": 1771604959238
   },
-  "delta-air-lines": {
+  "unison-group": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057120
+    "source": "ambitionbox",
+    "ts": 1771604959247
   },
-  "precision-staffers": {
+  "bce-global-tech": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057137
+    "source": "ambitionbox",
+    "ts": 1771604959216
   },
-  "infovision-inc": {
+  "deutsche-bank": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057146
+    "source": "ambitionbox",
+    "ts": 1771604959256
+  },
+  "lg-ad-solutions": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604959227
+  },
+  "birla-pivot": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604959830
   },
   "staples-india": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057612
+    "source": "ambitionbox",
+    "ts": 1771604959809
   },
-  "civica": {
+  "delta-air-lines": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057631
+    "source": "ambitionbox",
+    "ts": 1771604959788
+  },
+  "gs1-india": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604959800
   },
   "ab-inbev-gcc-india": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057622
+    "source": "ambitionbox",
+    "ts": 1771604959820
   },
-  "autonomize-ai": {
+  "clarksons-research": {
     "minLPA": null,
     "maxLPA": null,
-    "ts": 1771604057639
+    "source": "ambitionbox",
+    "ts": 1771604960360
+  },
+  "groundtruth": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1771604960376
   }
 }
