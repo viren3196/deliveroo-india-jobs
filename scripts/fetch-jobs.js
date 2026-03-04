@@ -55,6 +55,26 @@ function matchesRoleFilter(title, company) {
       if (/\b(staff|principal|lead|manager|director)\b/i.test(title)) return false;
       return /\b(senior|sr\.?)\s+software\s+engineer/i.test(title);
 
+    case 'confluent':
+      // SSE2 = Senior Software Engineer only
+      if (/\b(staff|principal|lead|manager|director)\b/i.test(title)) return false;
+      return /\b(senior|sr\.?)\s+software\s+engineer/i.test(title);
+
+    case 'docusign':
+      // P4 = Senior Software Engineer only
+      if (/\b(staff|principal|lead|manager|director)\b/i.test(title)) return false;
+      return /\b(senior|sr\.?)\s+software\s+engineer/i.test(title);
+
+    case 'indeed':
+      // L2-II = Senior Software Engineer only
+      if (/\b(staff|principal|lead|manager|director)\b/i.test(title)) return false;
+      return /\b(senior|sr\.?)\s+software\s+engineer/i.test(title);
+
+    case 'tesco':
+      // SE3 = Senior Software Engineer only
+      if (/\b(staff|principal|lead|manager|director)\b/i.test(title)) return false;
+      return /\b(senior|sr\.?)\s+(software|full[- ]?stack)\s+engineer/i.test(title);
+
     default:
       return false;
   }
@@ -232,6 +252,7 @@ const SALARY_CACHE_TTL_DAYS = 14;
 // Key = lowercase company name, value = max TC in LPA.
 const LEVELS_FYI_INDIA_TC = {
   'atlassian': 198, 'uber': 155, 'rubrik': 151, 'stripe': 137, 'apple': 137,
+  'docusign': 100, 'indeed': 100, 'tesco': 85,
   'snowflake': 120, 'palantir': 120, 'microsoft': 110, 'linkedin': 110,
   'datadog': 110, 'databricks': 103, 'hashicorp': 100, 'gitlab': 100,
   'confluent': 95, 'salesforce': 91, 'intuit': 91, 'palo alto networks': 90,
@@ -332,6 +353,97 @@ async function getSalaryData(companyName, cache) {
   var data = await fetchSalaryFromAmbitionBox(slug);
   cache[slug] = { minLPA: data.minLPA, maxLPA: data.maxLPA, source: 'ambitionbox', ts: now };
   return cache[slug];
+}
+
+// ─── Generic LinkedIn Company Fetcher ───
+// Uses the same guest API as fetchLinkedIn() but with a specific company ID (f_C).
+async function fetchLinkedInCompany(companyId, companyName, filterKey) {
+  console.log(`[${companyName}] Fetching LinkedIn company jobs (f_C=${companyId})...`);
+  const allJobs = [];
+
+  const baseUrl =
+    'https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search' +
+    `?keywords=Senior+Software+Engineer&location=India&f_C=${companyId}&sortBy=DD&f_TPR=r2592000`;
+
+  try {
+    for (let start = 0; start < 100; start += 25) {
+      const url = `${baseUrl}&start=${start}`;
+      const html = await httpGet(url, {
+        'User-Agent': 'Mozilla/5.0 (compatible; JobTracker/1.0)',
+      });
+      if (!html.includes('base-search-card')) break;
+
+      const cards = html.split('data-entity-urn').slice(1);
+      for (const card of cards) {
+        const titleMatch = card.match(/base-search-card__title[^"]*"[^>]*>([^<]+)/);
+        const linkMatch = card.match(/href="(https?:\/\/[^"]*linkedin\.com\/jobs\/view\/[^"?&]+)/);
+        const locMatch = card.match(/job-search-card__location[^>]*>([^<]+)/);
+        const dateMatch = card.match(/datetime="([^"]+)"/);
+
+        if (!titleMatch) continue;
+        const title = titleMatch[1].trim();
+        if (!matchesRoleFilter(title, filterKey)) continue;
+
+        allJobs.push({
+          id: linkMatch ? linkMatch[1].split('/').pop() : `li-${allJobs.length}`,
+          title,
+          url: linkMatch ? linkMatch[1] : '#',
+          location: locMatch ? locMatch[1].trim() : 'India',
+          department: companyName,
+          type: 'Full time',
+          postedDate: dateMatch ? dateMatch[1] : new Date().toISOString(),
+        });
+      }
+
+      await new Promise((r) => setTimeout(r, 500));
+    }
+
+    allJobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
+    console.log(`[${companyName}] Found ${allJobs.length} matching India roles`);
+    return allJobs;
+  } catch (err) {
+    console.error(`[${companyName}] Error:`, err.message);
+    return allJobs;
+  }
+}
+
+// ─── Tesco (SmartRecruiters) ───
+async function fetchTesco() {
+  console.log('[Tesco] Fetching SmartRecruiters jobs...');
+  const url = 'https://api.smartrecruiters.com/v1/companies/Tesco/postings?limit=100&offset=0';
+
+  try {
+    const raw = await httpGet(url, { 'Accept': 'application/json' });
+    const data = JSON.parse(raw);
+    const jobs = [];
+
+    for (const job of data.content || []) {
+      const city = (job.location && job.location.city) || '';
+      const country = (job.location && job.location.country) || '';
+      const locationStr = [city, country].filter(Boolean).join(', ');
+      if (!/india|bengaluru|bangalore|hyderabad/i.test(locationStr)) continue;
+
+      const title = job.name || '';
+      if (!matchesRoleFilter(title, 'tesco')) continue;
+
+      jobs.push({
+        id: job.id,
+        title,
+        url: `https://careers.smartrecruiters.com/Tesco/${job.id}`,
+        location: locationStr || 'India',
+        department: (job.department && job.department.label) || '—',
+        type: (job.typeOfEmployment && job.typeOfEmployment.label) || 'Full time',
+        postedDate: job.releasedDate || new Date().toISOString(),
+      });
+    }
+
+    jobs.sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
+    console.log(`[Tesco] Found ${jobs.length} matching India roles`);
+    return jobs;
+  } catch (err) {
+    console.error('[Tesco] Error:', err.message);
+    return [];
+  }
 }
 
 // ─── LinkedIn Easy Apply — All Companies (Sr. SWE search with f_AL=true) ───
@@ -560,16 +672,20 @@ async function main() {
   const outPath = path.join(__dirname, '..', 'data', 'jobs.json');
   const existing = loadExistingJobs(outPath);
 
-  const [salesforce, booking, linkedin, linkedinEasyAll] = await Promise.all([
+  const [salesforce, booking, linkedin, confluent, docusign, indeed, tesco, linkedinEasyAll] = await Promise.all([
     fetchSalesforce(),
     fetchBooking(),
     fetchLinkedIn(),
+    fetchLinkedInCompany('11319256', 'Confluent', 'confluent'),
+    fetchLinkedInCompany('1089', 'DocuSign', 'docusign'),
+    fetchLinkedInCompany('6440', 'Indeed', 'indeed'),
+    fetchTesco(),
     fetchLinkedInEasyApplyAll(),
   ]);
 
   // Build a set of titles already covered by careers sections to mark Easy Apply dupes
   const careersTitles = new Set();
-  for (const job of [...salesforce, ...booking, ...linkedin]) {
+  for (const job of [...salesforce, ...booking, ...linkedin, ...confluent, ...docusign, ...indeed, ...tesco]) {
     careersTitles.add(job.title.toLowerCase().trim());
   }
 
@@ -590,11 +706,19 @@ async function main() {
   const mergedSalesforce = mergeJobs(prev('salesforce'), salesforce);
   const mergedBooking = mergeJobs(prev('booking'), booking);
   const mergedLinkedin = mergeJobs(prev('linkedin'), linkedin);
+  const mergedConfluent = mergeJobs(prev('confluent'), confluent);
+  const mergedDocuSign = mergeJobs(prev('docusign'), docusign);
+  const mergedIndeed = mergeJobs(prev('indeed'), indeed);
+  const mergedTesco = mergeJobs(prev('tesco'), tesco);
   const mergedEasyAll = mergeJobs(prev('linkedin_easy_all'), easyAllSalaryFiltered);
 
   console.log(`[Merge] Salesforce: ${salesforce.length} fresh → ${mergedSalesforce.length} total`);
   console.log(`[Merge] Booking: ${booking.length} fresh → ${mergedBooking.length} total`);
   console.log(`[Merge] LinkedIn: ${linkedin.length} fresh → ${mergedLinkedin.length} total`);
+  console.log(`[Merge] Confluent: ${confluent.length} fresh → ${mergedConfluent.length} total`);
+  console.log(`[Merge] DocuSign: ${docusign.length} fresh → ${mergedDocuSign.length} total`);
+  console.log(`[Merge] Indeed: ${indeed.length} fresh → ${mergedIndeed.length} total`);
+  console.log(`[Merge] Tesco: ${tesco.length} fresh → ${mergedTesco.length} total`);
   console.log(`[Merge] Easy Apply: ${easyAllSalaryFiltered.length} fresh → ${mergedEasyAll.length} total`);
 
   const output = {
@@ -619,6 +743,30 @@ async function main() {
           'https://www.linkedin.com/jobs/search/?f_C=1337&geoId=102713980',
         jobs: mergedLinkedin,
       },
+      confluent: {
+        name: 'Confluent',
+        targetRole: 'Senior Software Engineer (SSE2)',
+        careersUrl: 'https://careers.confluent.io/jobs/engineering-india',
+        jobs: mergedConfluent,
+      },
+      docusign: {
+        name: 'DocuSign',
+        targetRole: 'Senior Software Engineer (P4)',
+        careersUrl: 'https://www.docusign.com/company/careers',
+        jobs: mergedDocuSign,
+      },
+      indeed: {
+        name: 'Indeed',
+        targetRole: 'Senior Software Engineer (L2-II)',
+        careersUrl: 'https://indeed.indeed.com/careers',
+        jobs: mergedIndeed,
+      },
+      tesco: {
+        name: 'Tesco',
+        targetRole: 'Senior Software Engineer (SE3)',
+        careersUrl: 'https://www.tesco-careers.com/search-jobs/',
+        jobs: mergedTesco,
+      },
       linkedin_easy_all: {
         name: 'LinkedIn Easy Apply',
         targetRole: 'Senior+ Backend · 50+ LPA · All Companies · India',
@@ -632,11 +780,16 @@ async function main() {
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
-  const total = mergedSalesforce.length + mergedBooking.length + mergedLinkedin.length + mergedEasyAll.length;
+  const total = mergedSalesforce.length + mergedBooking.length + mergedLinkedin.length +
+    mergedConfluent.length + mergedDocuSign.length + mergedIndeed.length + mergedTesco.length + mergedEasyAll.length;
   console.log(`\nDone. ${total} total roles in data/jobs.json`);
   console.log(`  Salesforce: ${mergedSalesforce.length}`);
   console.log(`  Booking.com: ${mergedBooking.length}`);
   console.log(`  LinkedIn: ${mergedLinkedin.length}`);
+  console.log(`  Confluent: ${mergedConfluent.length}`);
+  console.log(`  DocuSign: ${mergedDocuSign.length}`);
+  console.log(`  Indeed: ${mergedIndeed.length}`);
+  console.log(`  Tesco: ${mergedTesco.length}`);
   console.log(`  LinkedIn Easy Apply (All): ${mergedEasyAll.length}`);
 }
 

@@ -200,6 +200,10 @@
     'broadridge india': 'broadridge.com',
     'electrolux group': 'electroluxgroup.com',
     'wabtec corporation': 'wabteccorp.com',
+    'confluent': 'confluent.io',
+    'docusign': 'docusign.com',
+    'indeed': 'indeed.com',
+    'tesco': 'tesco.com',
   };
 
   function getLogoUrl(companyName) {
@@ -246,6 +250,10 @@
     salesforce: 'Salesforce',
     booking: 'Booking.com',
     linkedin: 'LinkedIn',
+    confluent: 'Confluent',
+    docusign: 'DocuSign',
+    indeed: 'Indeed',
+    tesco: 'Tesco',
   };
 
   function sectionUI(company) {
@@ -461,7 +469,7 @@
         ui.updateMeta(cached.deliveroo.jobs.length, cached.deliveroo.timestamp);
       }
 
-      for (const key of ['salesforce', 'booking', 'linkedin', 'linkedin_easy_all']) {
+      for (const key of ['salesforce', 'booking', 'linkedin', 'confluent', 'docusign', 'indeed', 'tesco', 'linkedin_easy_all']) {
         const data = cached[key];
         if (data?.jobs?.length) {
           const ui = sectionUI(key);
@@ -517,7 +525,7 @@
     },
 
     async refreshTargetCompanies(seenIds, cache, allIds) {
-      const companies = ['salesforce', 'booking', 'linkedin', 'linkedin_easy_all'];
+      const companies = ['salesforce', 'booking', 'linkedin', 'confluent', 'docusign', 'indeed', 'tesco', 'linkedin_easy_all'];
       companies.forEach((c) => {
         const ui = sectionUI(c);
         if (ui.list.children.length === 0) ui.showState('loading');
