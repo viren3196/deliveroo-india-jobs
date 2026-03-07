@@ -12,16 +12,16 @@
     "ts": 1771604940310
   },
   "kla": {
-    "minLPA": 19,
-    "maxLPA": 28.1,
+    "minLPA": null,
+    "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771604940326
+    "ts": 1772848036739
   },
   "lseg": {
-    "minLPA": 23.3,
-    "maxLPA": 26,
+    "minLPA": null,
+    "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771604940356
+    "ts": 1772848036741
   },
   "pairsoft": {
     "minLPA": null,
@@ -465,7 +465,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771604951483
+    "ts": 1772848033562
   },
   "amura-health": {
     "minLPA": null,
@@ -609,7 +609,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771604953971
+    "ts": 1772848033173
   },
   "harness": {
     "minLPA": null,
@@ -657,7 +657,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771604954502
+    "ts": 1772848026912
   },
   "softobiz": {
     "minLPA": null,
@@ -717,7 +717,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771604955583
+    "ts": 1772848040080
   },
   "saviynt": {
     "minLPA": null,
@@ -861,7 +861,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771604958644
+    "ts": 1772848036351
   },
   "franklin-templeton-india": {
     "minLPA": null,
@@ -1167,7 +1167,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771605379800
+    "ts": 1772848039707
   },
   "quest-global": {
     "minLPA": null,
@@ -1353,7 +1353,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771612998585
+    "ts": 1772848037440
   },
   "cimpress-india": {
     "minLPA": null,
@@ -1395,7 +1395,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771613000718
+    "ts": 1772848038424
   },
   "clearwater": {
     "minLPA": null,
@@ -1425,7 +1425,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771613002742
+    "ts": 1772848030976
   },
   "slice": {
     "minLPA": null,
@@ -1509,7 +1509,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771619316214
+    "ts": 1772848027551
   },
   "empower-india": {
     "minLPA": null,
@@ -1545,7 +1545,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1771619318756
+    "ts": 1772848030974
   },
   "icertis": {
     "minLPA": null,
@@ -3418,5 +3418,11 @@
     "maxLPA": null,
     "source": "ambitionbox",
     "ts": 1772835974229
+  },
+  "source": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1772848026909
   }
 }
