@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-20T06:53:14.182Z",
+  "fetchedAt": "2026-03-20T08:38:39.587Z",
   "companies": {
     "salesforce": {
       "name": "Salesforce",
@@ -7,22 +7,13 @@
       "careersUrl": "https://careers.salesforce.com/en/jobs/?country=India",
       "jobs": [
         {
-          "id": "JR314149",
-          "title": "SMTS/LMTS Distributed Systems - Public Cloud, GCP",
-          "url": "https://careers.salesforce.com/en/jobs/jr314149/smtslmts-distributed-systems-public-cloud-gcp/",
-          "location": "Hyderabad, Telangāna, India",
-          "department": "Software Engineering",
-          "type": "Full time",
-          "postedDate": "Wed, 18 Mar 2026 00:00:00 GMT"
-        },
-        {
           "id": "JR312798",
           "title": "Software Engineering-LMTS/SMTS/MTS-SDET-Missionforce",
           "url": "https://careers.salesforce.com/en/jobs/jr312798/software-engineering-lmtssmtsmts-sdet-missionforce/",
           "location": "Hyderabad, Telangāna, India",
           "department": "Software Engineering",
           "type": "Full time",
-          "postedDate": "Tue, 17 Mar 2026 00:00:00 GMT"
+          "postedDate": "Fri, 20 Mar 2026 00:00:00 GMT"
         },
         {
           "id": "JR312327",
@@ -31,7 +22,7 @@
           "location": "Hyderabad, Telangāna, India",
           "department": "Software Engineering",
           "type": "Full time",
-          "postedDate": "Tue, 17 Mar 2026 00:00:00 GMT"
+          "postedDate": "Fri, 20 Mar 2026 00:00:00 GMT"
         },
         {
           "id": "JR312773",
@@ -40,7 +31,16 @@
           "location": "Hyderabad, Telangāna, India",
           "department": "Software Engineering",
           "type": "Full time",
-          "postedDate": "Tue, 17 Mar 2026 00:00:00 GMT"
+          "postedDate": "Fri, 20 Mar 2026 00:00:00 GMT"
+        },
+        {
+          "id": "JR314149",
+          "title": "SMTS/LMTS Distributed Systems - Public Cloud, GCP",
+          "url": "https://careers.salesforce.com/en/jobs/jr314149/smtslmts-distributed-systems-public-cloud-gcp/",
+          "location": "Hyderabad, Telangāna, India",
+          "department": "Software Engineering",
+          "type": "Full time",
+          "postedDate": "Wed, 18 Mar 2026 00:00:00 GMT"
         }
       ]
     },
@@ -55,6 +55,15 @@
       "targetRole": "Senior Software Engineer",
       "careersUrl": "https://www.linkedin.com/jobs/search/?f_C=1337&geoId=102713980",
       "jobs": [
+        {
+          "id": "senior-software-engineer-applications-at-linkedin-4387911688",
+          "title": "Senior Software Engineer - Applications",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-applications-at-linkedin-4387911688",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "LinkedIn",
+          "type": "Full time",
+          "postedDate": "2026-03-20"
+        },
         {
           "id": "senior-software-engineer-data-science-at-linkedin-4387806246",
           "title": "Senior Software Engineer, Data Science",
@@ -72,15 +81,6 @@
           "department": "LinkedIn",
           "type": "Full time",
           "postedDate": "2026-03-17"
-        },
-        {
-          "id": "sr-software-engineer-at-linkedin-4372244236",
-          "title": "Sr. Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-at-linkedin-4372244236",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "LinkedIn",
-          "type": "Full time",
-          "postedDate": "2026-03-07"
         },
         {
           "id": "sr-software-engineer-at-linkedin-4371267467",
@@ -130,6 +130,17 @@
           "department": "Lighting Rod Tech Private Limited",
           "type": "Easy Apply",
           "postedDate": "2026-03-20"
+        },
+        {
+          "id": "staff-software-engineer-tax-platform-at-rippling-4388155785",
+          "title": "Staff Software Engineer - Tax Platform",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-tax-platform-at-rippling-4388155785",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Rippling",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-20",
+          "salaryRange": "60 LPA",
+          "salarySource": "levels.fyi"
         },
         {
           "id": "freecharge-payment-technologies-senior-software-development-engineer-node-js-at-freecharge-4387637324",
@@ -452,6 +463,24 @@
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-dhl-4387838491",
           "location": "Bengaluru, Karnataka, India",
           "department": "DHL",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-19"
+        },
+        {
+          "id": "senior-software-engineer-azure-devops-at-simcorp-4362345393",
+          "title": "Senior Software Engineer (Azure DevOps)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-azure-devops-at-simcorp-4362345393",
+          "location": "Noida, Uttar Pradesh, India",
+          "department": "SimCorp",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-19"
+        },
+        {
+          "id": "lead-software-engineer-at-appian-4387315959",
+          "title": "Lead Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-at-appian-4387315959",
+          "location": "Chennai, Tamil Nadu, India",
+          "department": "Appian",
           "type": "Easy Apply",
           "postedDate": "2026-03-19"
         },
@@ -2032,6 +2061,24 @@
           "postedDate": "2026-03-17"
         },
         {
+          "id": "senior-systems-software-engineer-at-citrix-4385902410",
+          "title": "Senior Systems Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-systems-software-engineer-at-citrix-4385902410",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Citrix",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-17"
+        },
+        {
+          "id": "staff-software-engineer-at-foodhub-4386740641",
+          "title": "Staff Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-at-foodhub-4386740641",
+          "location": "Chennai, Tamil Nadu, India",
+          "department": "Foodhub",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-17"
+        },
+        {
           "id": "senior-software-engineer-backend-8%2B-years-in-dotnet-core-%2B-mongo-db-any-rdbms-%2B-sql-mysql-%2B-azure-at-assurant-4383690431",
           "title": "Senior Software Engineer - BackEnd (8+ Years in DotNet Core + Mongo DB/Any RDBMS + SQL/MySQL + Azure)",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-8%2B-years-in-dotnet-core-%2B-mongo-db-any-rdbms-%2B-sql-mysql-%2B-azure-at-assurant-4383690431",
@@ -2702,6 +2749,24 @@
           "postedDate": "2026-03-16"
         },
         {
+          "id": "senior-software-development-engineer-at-zoom-4386385164",
+          "title": "Senior Software Development Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-development-engineer-at-zoom-4386385164",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Zoom",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-16"
+        },
+        {
+          "id": "principal-software-engineer-at-uipath-4384044962",
+          "title": "Principal Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-at-uipath-4384044962",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "UiPath",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-16"
+        },
+        {
           "id": "sr-software-engineer-java-spring-webflux-spring-boot-microservices-at-blue-yonder-4379921995",
           "title": "Sr Software Engineer - Java, Spring WebFlux, Spring Boot &amp; Microservices",
           "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-java-spring-webflux-spring-boot-microservices-at-blue-yonder-4379921995",
@@ -3051,15 +3116,6 @@
           "postedDate": "2026-03-13"
         },
         {
-          "id": "senior-software-engineer-net-developer-at-experian-4385367327",
-          "title": "Senior Software Engineer (.Net Developer)",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-net-developer-at-experian-4385367327",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Experian",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-13"
-        },
-        {
           "id": "senior-software-engineer-at-ltimindtree-4384248519",
           "title": "Senior Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-ltimindtree-4384248519",
@@ -3087,6 +3143,15 @@
           "postedDate": "2026-03-13"
         },
         {
+          "id": "back-end-senior-software-engineer-ii-at-curriculum-associates-4268552394",
+          "title": "Back-end Senior Software Engineer II",
+          "url": "https://in.linkedin.com/jobs/view/back-end-senior-software-engineer-ii-at-curriculum-associates-4268552394",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Curriculum Associates",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-13"
+        },
+        {
           "id": "bebetta-senior-software-developer-golang-at-bebetta-4385141957",
           "title": "BeBetta - Senior Software Developer - Golang",
           "url": "https://in.linkedin.com/jobs/view/bebetta-senior-software-developer-golang-at-bebetta-4385141957",
@@ -3094,6 +3159,28 @@
           "department": "BeBetta",
           "type": "Easy Apply",
           "postedDate": "2026-03-13"
+        },
+        {
+          "id": "staff-software-engineer-backend-heavy-full-stack-gurugram-based-at-agoda-4339470774",
+          "title": "Staff Software Engineer - Backend-Heavy Full Stack (Gurugram Based)",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-backend-heavy-full-stack-gurugram-based-at-agoda-4339470774",
+          "location": "New Delhi, Delhi, India",
+          "department": "Agoda",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-13",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
+        },
+        {
+          "id": "staff-software-engineer-backend-heavy-full-stack-gurugram-based-at-agoda-4339840509",
+          "title": "Staff Software Engineer - Backend-Heavy Full Stack (Gurugram Based)",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-backend-heavy-full-stack-gurugram-based-at-agoda-4339840509",
+          "location": "Greater Lucknow Area",
+          "department": "Agoda",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-13",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
         },
         {
           "id": "staff-software-engineer-backend-heavy-full-stack-gurugram-based-at-agoda-4339430791",
@@ -3116,6 +3203,15 @@
           "postedDate": "2026-03-13",
           "salaryRange": "59 LPA",
           "salarySource": "levels.fyi"
+        },
+        {
+          "id": "senior-software-engineer-%E2%80%93-data-platform-at-rockwell-automation-4385313257",
+          "title": "Senior Software Engineer – Data Platform",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-%E2%80%93-data-platform-at-rockwell-automation-4385313257",
+          "location": "Pune Division, Maharashtra, India",
+          "department": "Rockwell Automation",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-13"
         },
         {
           "id": "staff-software-engineer-at-saviynt-4334286057",
@@ -3194,11 +3290,11 @@
           "postedDate": "2026-03-12"
         },
         {
-          "id": "infrastructure-engineer-lead-genai-platform-at-techwise-digital-4383900963",
-          "title": "Infrastructure Engineer / Lead (GenAI Platform)",
-          "url": "https://in.linkedin.com/jobs/view/infrastructure-engineer-lead-genai-platform-at-techwise-digital-4383900963",
-          "location": "India",
-          "department": "TechWise Digital",
+          "id": "senior-software-engineer-full-stack-hybrid-bengaluru-at-spoton-4375031947",
+          "title": "Senior Software Engineer(Full Stack) - Hybrid Bengaluru",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-hybrid-bengaluru-at-spoton-4375031947",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "SpotOn",
           "type": "Easy Apply",
           "postedDate": "2026-03-12"
         },
@@ -3212,31 +3308,11 @@
           "postedDate": "2026-03-12"
         },
         {
-          "id": "senior-software-engineer-backend-at-roku-4314125066",
-          "title": "Senior Software Engineer - Backend",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-roku-4314125066",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Roku",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-12",
-          "salaryRange": "90 LPA",
-          "salarySource": "levels.fyi"
-        },
-        {
           "id": "senior-software-engineer-i-python-at-aera-technology-4260961554",
           "title": "Senior Software Engineer I (Python)",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-i-python-at-aera-technology-4260961554",
           "location": "Pune Division, Maharashtra, India",
           "department": "Aera Technology",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-12"
-        },
-        {
-          "id": "lead-software-engineer-fullstack-java-and-node-js-at-nec-software-solutions-4383908649",
-          "title": "Lead Software Engineer - Fullstack Java and Node JS",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-fullstack-java-and-node-js-at-nec-software-solutions-4383908649",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "NEC Software Solutions",
           "type": "Easy Apply",
           "postedDate": "2026-03-12"
         },
@@ -3313,15 +3389,6 @@
           "postedDate": "2026-03-11"
         },
         {
-          "id": "senior-full-stack-laravel-developer-at-webito-4363218008",
-          "title": "Senior Full Stack Laravel Developer",
-          "url": "https://in.linkedin.com/jobs/view/senior-full-stack-laravel-developer-at-webito-4363218008",
-          "location": "Ahmedabad, Gujarat, India",
-          "department": "Webito",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-11"
-        },
-        {
           "id": "tech-lead-java-full-stack-software-engineer-at-anblicks-4372489498",
           "title": "Tech Lead -Java Full Stack Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/tech-lead-java-full-stack-software-engineer-at-anblicks-4372489498",
@@ -3353,6 +3420,17 @@
           "salarySource": "levels.fyi"
         },
         {
+          "id": "principal-software-engineer-platform-bangkok-based-%E2%80%93-relocation-provided-at-agoda-4374714688",
+          "title": "Principal Software Engineer, Platform (Bangkok Based – relocation provided)",
+          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-platform-bangkok-based-%E2%80%93-relocation-provided-at-agoda-4374714688",
+          "location": "Mumbai Metropolitan Region",
+          "department": "Agoda",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-11",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
+        },
+        {
           "id": "senior-cloud-infrastructure-engineer-finops-at-lytx-inc-4374125189",
           "title": "Senior Cloud Infrastructure Engineer (FinOPs)",
           "url": "https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-finops-at-lytx-inc-4374125189",
@@ -3362,31 +3440,33 @@
           "postedDate": "2026-03-11"
         },
         {
-          "id": "senior-cloud-solutions-engineer-at-anblicks-4372601018",
-          "title": "Senior Cloud Solutions Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-cloud-solutions-engineer-at-anblicks-4372601018",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Anblicks",
+          "id": "principal-software-engineer-platform-bangkok-based-%E2%80%93-relocation-provided-at-agoda-4374714687",
+          "title": "Principal Software Engineer, Platform (Bangkok Based – relocation provided)",
+          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-platform-bangkok-based-%E2%80%93-relocation-provided-at-agoda-4374714687",
+          "location": "Chennai, Tamil Nadu, India",
+          "department": "Agoda",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-11",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
+        },
+        {
+          "id": "staff-software-engineer-at-zendesk-4350263915",
+          "title": "Staff Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-at-zendesk-4350263915",
+          "location": "Pune Division, Maharashtra, India",
+          "department": "Zendesk",
           "type": "Easy Apply",
           "postedDate": "2026-03-11"
         },
         {
-          "id": "lead-software-engineer-data-engineering-itc-at-nike-4374136816",
-          "title": "Lead Software Engineer - Data Engineering, ITC",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-data-engineering-itc-at-nike-4374136816",
-          "location": "Karnataka, India",
-          "department": "Nike",
+          "id": "lead-software-engineer-t500-24278-at-fm-4384182966",
+          "title": "Lead Software Engineer [T500-24278]",
+          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-t500-24278-at-fm-4384182966",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "FM",
           "type": "Easy Apply",
           "postedDate": "2026-03-11"
-        },
-        {
-          "id": "senior-software-engineer-at-nielseniq-4382254858",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-nielseniq-4382254858",
-          "location": "Pune/Pimpri-Chinchwad Area",
-          "department": "NielsenIQ",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-10"
         },
         {
           "id": "senior-software-engineer-at-brillio-4382290809",
@@ -3403,6 +3483,15 @@
           "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-full-stack-developer-at-selah-digital-4383821850",
           "location": "Bengaluru, Karnataka, India",
           "department": "Selah Digital",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-10"
+        },
+        {
+          "id": "senior-full-stack-product-engineer-at-autoreel-4383780970",
+          "title": "Senior Full-Stack Product Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-full-stack-product-engineer-at-autoreel-4383780970",
+          "location": "Gurugram, Haryana, India",
+          "department": "AutoReel",
           "type": "Easy Apply",
           "postedDate": "2026-03-10"
         },
@@ -3434,29 +3523,29 @@
           "postedDate": "2026-03-10"
         },
         {
+          "id": "senior-software-engineer-at-symplr-4372585055",
+          "title": "Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-symplr-4372585055",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "symplr",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-10"
+        },
+        {
+          "id": "principal-software-engineer-at-foodsmart-4382527104",
+          "title": "Principal Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/principal-software-engineer-at-foodsmart-4382527104",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Foodsmart",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-10"
+        },
+        {
           "id": "senior-software-engineer-%E2%80%93-databricks-platform-at-anblicks-4364777572",
           "title": "Senior Software Engineer – Databricks Platform",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-%E2%80%93-databricks-platform-at-anblicks-4364777572",
           "location": "Hyderabad, Telangana, India",
           "department": "Anblicks",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-10"
-        },
-        {
-          "id": "senior-software-engineer-at-xten-av-4382298303",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-xten-av-4382298303",
-          "location": "Noida, Uttar Pradesh, India",
-          "department": "XTEN-AV",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-10"
-        },
-        {
-          "id": "senior-cloud-infrastructure-engineer-kubernetes-at-aivar-innovations-4383721959",
-          "title": "Senior Cloud Infrastructure Engineer - Kubernetes",
-          "url": "https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-kubernetes-at-aivar-innovations-4383721959",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Aivar Innovations",
           "type": "Easy Apply",
           "postedDate": "2026-03-10"
         },
@@ -3479,11 +3568,20 @@
           "postedDate": "2026-03-09"
         },
         {
-          "id": "senior-software-engineer-full-stack-at-empower-india-4378933545",
-          "title": "Senior Software Engineer (Full Stack)",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-at-empower-india-4378933545",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Empower India",
+          "id": "senior-software-developer-net-full-stack-at-wood-4373536844",
+          "title": "Senior Software Developer (.Net Full Stack)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-developer-net-full-stack-at-wood-4373536844",
+          "location": "Chennai, Tamil Nadu, India",
+          "department": "Wood",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-09"
+        },
+        {
+          "id": "lead-i-software-engineering-backend-developer-java-node-js-python-at-ust-4381737053",
+          "title": "Lead I - Software Engineering Backend developer- Java, Node.js &amp; Python",
+          "url": "https://in.linkedin.com/jobs/view/lead-i-software-engineering-backend-developer-java-node-js-python-at-ust-4381737053",
+          "location": "Kochi, Kerala, India",
+          "department": "UST",
           "type": "Easy Apply",
           "postedDate": "2026-03-09"
         },
@@ -3562,6 +3660,15 @@
           "postedDate": "2026-03-08"
         },
         {
+          "id": "senior-cloud-data-engineer-aws-at-mogi-i-o-ott-podcast-short-video-apps-for-you-4382633889",
+          "title": "Senior Cloud Data Engineer (AWS)",
+          "url": "https://in.linkedin.com/jobs/view/senior-cloud-data-engineer-aws-at-mogi-i-o-ott-podcast-short-video-apps-for-you-4382633889",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Mogi I/O : OTT/Podcast/Short Video Apps for you",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-08"
+        },
+        {
           "id": "senior-software-engineer-at-experian-4372733117",
           "title": "Senior Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-experian-4372733117",
@@ -3571,29 +3678,11 @@
           "postedDate": "2026-03-07"
         },
         {
-          "id": "senior-software-engineer-at-hackajob-4381352192",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-hackajob-4381352192",
-          "location": "Pune Division, Maharashtra, India",
-          "department": "hackajob",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-07"
-        },
-        {
           "id": "senior-software-engineer-full-stack-at-skylo-4312518559",
           "title": "Senior Software Engineer - Full Stack",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-at-skylo-4312518559",
           "location": "Bengaluru, Karnataka, India",
           "department": "Skylo",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-07"
-        },
-        {
-          "id": "lead-software-engineer-devops-expert-at-societe-generale-global-solution-centre-4372736262",
-          "title": "Lead Software Engineer (DevOps Expert)",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-devops-expert-at-societe-generale-global-solution-centre-4372736262",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Societe Generale Global Solution Centre",
           "type": "Easy Apply",
           "postedDate": "2026-03-07"
         },
@@ -3643,15 +3732,6 @@
           "postedDate": "2026-03-06"
         },
         {
-          "id": "senior-software-engineer-full-stack-developer-edu-at-civica-4381930413",
-          "title": "Senior Software Engineer (Full Stack developer)- EDU",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-developer-edu-at-civica-4381930413",
-          "location": "Vadodara, Gujarat, India",
-          "department": "Civica",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-06"
-        },
-        {
           "id": "senior-software-engineer-%C2%A0-devops-at-roku-4371838406",
           "title": "Senior Software Engineer,  Devops",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-%C2%A0-devops-at-roku-4371838406",
@@ -3668,15 +3748,6 @@
           "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-platform-and-infrastructure-at-samsara-4318926987",
           "location": "Bengaluru, Karnataka, India",
           "department": "Samsara",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-06"
-        },
-        {
-          "id": "senior-software-engineer-i-cloud-infrastructure-at-beckman-coulter-diagnostics-4364491081",
-          "title": "Senior Software Engineer I - Cloud Infrastructure",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-i-cloud-infrastructure-at-beckman-coulter-diagnostics-4364491081",
-          "location": "Bengaluru East, Karnataka, India",
-          "department": "Beckman Coulter Diagnostics",
           "type": "Easy Apply",
           "postedDate": "2026-03-06"
         },
@@ -3719,38 +3790,11 @@
           "postedDate": "2026-03-06"
         },
         {
-          "id": "senior-software-developer-avp-at-deutsche-bank-4381677362",
-          "title": "Senior Software Developer, AVP",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-developer-avp-at-deutsche-bank-4381677362",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Deutsche Bank",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-05"
-        },
-        {
-          "id": "senior-software-engineer-dotnet-developer-at-cendyn-4378784337",
-          "title": "Senior Software Engineer - Dotnet Developer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-dotnet-developer-at-cendyn-4378784337",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Cendyn",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-05"
-        },
-        {
           "id": "lead-software-engineer-backend-itc-at-nike-4381636258",
           "title": "Lead Software Engineer - Backend, ITC",
           "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-backend-itc-at-nike-4381636258",
           "location": "Karnataka, India",
           "department": "Nike",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-05"
-        },
-        {
-          "id": "senior-software-engineer-fullstack-developer-at-ninja-van-4310318792",
-          "title": "Senior Software Engineer - Fullstack Developer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-fullstack-developer-at-ninja-van-4310318792",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Ninja Van",
           "type": "Easy Apply",
           "postedDate": "2026-03-05"
         },
@@ -3764,24 +3808,6 @@
           "postedDate": "2026-03-05"
         },
         {
-          "id": "lead-software-engineer-java-full-stack-developer-at-the-depository-trust-clearing-corporation-dtcc-4371353768",
-          "title": "Lead Software Engineer - Java Full Stack Developer",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-java-full-stack-developer-at-the-depository-trust-clearing-corporation-dtcc-4371353768",
-          "location": "Hyderabad, Telangana, India",
-          "department": "The Depository Trust &amp; Clearing Corporation (DTCC)",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-05"
-        },
-        {
-          "id": "staff-software-engineer-backend-observability-at-kong-4318550454",
-          "title": "Staff Software Engineer (Backend/Observability)",
-          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-backend-observability-at-kong-4318550454",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Kong",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-05"
-        },
-        {
           "id": "senior-software-developer-c%23-and-reactjs-%2B-electron-at-sita-4380498710",
           "title": "Senior Software Developer (C# and ReactJs + Electron)",
           "url": "https://in.linkedin.com/jobs/view/senior-software-developer-c%23-and-reactjs-%2B-electron-at-sita-4380498710",
@@ -3791,22 +3817,24 @@
           "postedDate": "2026-03-05"
         },
         {
-          "id": "senior-software-engineer-cloud-infrastructure-at-chargebee-4380408185",
-          "title": "Senior Software Engineer - Cloud Infrastructure",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-cloud-infrastructure-at-chargebee-4380408185",
-          "location": "Chennai, Tamil Nadu, India",
-          "department": "Chargebee",
+          "id": "infrastructure-site-lead-and-sre-engineer-at-millennium-4237647720",
+          "title": "Infrastructure Site Lead and SRE Engineer",
+          "url": "https://in.linkedin.com/jobs/view/infrastructure-site-lead-and-sre-engineer-at-millennium-4237647720",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Millennium",
           "type": "Easy Apply",
           "postedDate": "2026-03-05"
         },
         {
-          "id": "senior-software-engineer-at-toast-4342901806",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-toast-4342901806",
-          "location": "Chennai, Tamil Nadu, India",
-          "department": "Toast",
+          "id": "sr-software-engineer-commerce-backend-at-docusign-4379643701",
+          "title": "Sr. Software Engineer, Commerce Backend",
+          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-commerce-backend-at-docusign-4379643701",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Docusign",
           "type": "Easy Apply",
-          "postedDate": "2026-03-05"
+          "postedDate": "2026-03-04",
+          "salaryRange": "100 LPA",
+          "salarySource": "levels.fyi"
         },
         {
           "id": "lead-infrastructure-engineer-%E2%80%93-data-platforms-at-general-mills-india-4253273957",
@@ -3829,38 +3857,11 @@
           "salarySource": "levels.fyi"
         },
         {
-          "id": "senior-software-engineer-sdv-platform-at-epiroc-4379648237",
-          "title": "Senior Software Engineer  - SDV Platform",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-sdv-platform-at-epiroc-4379648237",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Epiroc",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-04"
-        },
-        {
           "id": "senior-software-engineer-devops-at-icertis-4278086777",
           "title": "Senior Software Engineer, Devops",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-devops-at-icertis-4278086777",
           "location": "Pune Division, Maharashtra, India",
           "department": "Icertis",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-04"
-        },
-        {
-          "id": "senior-software-engineer-at-teradata-4380014699",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-teradata-4380014699",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Teradata",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-04"
-        },
-        {
-          "id": "senior-software-engineer-at-teradata-4380014701",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-teradata-4380014701",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Teradata",
           "type": "Easy Apply",
           "postedDate": "2026-03-04"
         },
@@ -3883,11 +3884,11 @@
           "postedDate": "2026-03-04"
         },
         {
-          "id": "senior-systems-engineer-at-graphik-dimensions-4380729378",
-          "title": "Senior Systems Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-systems-engineer-at-graphik-dimensions-4380729378",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Graphik Dimensions",
+          "id": "sr-software-engineer-devops-at-sutherland-4380314842",
+          "title": "Sr. Software Engineer - Devops",
+          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-devops-at-sutherland-4380314842",
+          "location": "Pune/Pimpri-Chinchwad Area",
+          "department": "Sutherland",
           "type": "Easy Apply",
           "postedDate": "2026-03-04"
         },
@@ -3910,6 +3911,15 @@
           "postedDate": "2026-03-04"
         },
         {
+          "id": "sr-software-engineer-fullstack-at-five9-4379630620",
+          "title": "Sr Software Engineer - Fullstack",
+          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-fullstack-at-five9-4379630620",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Five9",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-04"
+        },
+        {
           "id": "staff-software-engineer-at-bankwest-4378935455",
           "title": "Staff Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-at-bankwest-4378935455",
@@ -3917,15 +3927,6 @@
           "department": "Bankwest",
           "type": "Easy Apply",
           "postedDate": "2026-03-04"
-        },
-        {
-          "id": "senior-software-engineer-india-at-giga-4364200953",
-          "title": "Senior Software Engineer (India)",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-india-at-giga-4364200953",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Giga",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-03"
         },
         {
           "id": "senior-engineer-software-engineering-java-at-saviynt-4364284101",
@@ -3937,11 +3938,29 @@
           "postedDate": "2026-03-03"
         },
         {
+          "id": "lead-software-engineer-at-williams-sonoma-inc-4378174026",
+          "title": "Lead Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-at-williams-sonoma-inc-4378174026",
+          "location": "Pune District, Maharashtra, India",
+          "department": "Williams-Sonoma, Inc.",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-03"
+        },
+        {
           "id": "senior-software-engineer-at-deutsche-telekom-digital-labs-4380321968",
           "title": "Senior Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-deutsche-telekom-digital-labs-4380321968",
           "location": "Gurgaon, Haryana, India",
           "department": "Deutsche Telekom Digital Labs",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-03"
+        },
+        {
+          "id": "fullstack-senior-software-engineer-at-procter-gamble-4378184409",
+          "title": "FullStack Senior Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/fullstack-senior-software-engineer-at-procter-gamble-4378184409",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Procter &amp; Gamble",
           "type": "Easy Apply",
           "postedDate": "2026-03-03"
         },
@@ -3964,20 +3983,11 @@
           "postedDate": "2026-03-03"
         },
         {
-          "id": "senior-software-data-engineer-at-zendesk-4348280541",
-          "title": "Senior Software Data Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-data-engineer-at-zendesk-4348280541",
-          "location": "Pune Division, Maharashtra, India",
-          "department": "Zendesk",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-03"
-        },
-        {
-          "id": "staff-software-engineer-platform-iam-foundations-at-harness-4378183931",
-          "title": "Staff Software Engineer  - Platform(IAM/Foundations)",
-          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-platform-iam-foundations-at-harness-4378183931",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Harness",
+          "id": "sr-software-engineer-net-node-js-azure-at-electrolux-group-4380304264",
+          "title": "Sr. Software Engineer (.NET, Node.js, Azure)",
+          "url": "https://in.linkedin.com/jobs/view/sr-software-engineer-net-node-js-azure-at-electrolux-group-4380304264",
+          "location": "Bengaluru East, Karnataka, India",
+          "department": "Electrolux Group",
           "type": "Easy Apply",
           "postedDate": "2026-03-03"
         },
@@ -3987,6 +3997,15 @@
           "url": "https://in.linkedin.com/jobs/view/devops-lead-engineer-6%2B-years-at-quest-global-4379428283",
           "location": "Bengaluru, Karnataka, India",
           "department": "Quest Global",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-03"
+        },
+        {
+          "id": "senior-software-engineer-india-at-giga-4364200953",
+          "title": "Senior Software Engineer (India)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-india-at-giga-4364200953",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "Giga",
           "type": "Easy Apply",
           "postedDate": "2026-03-03"
         },
@@ -4027,11 +4046,11 @@
           "postedDate": "2026-03-02"
         },
         {
-          "id": "senior-software-engineer-at-cloudera-4377738011",
+          "id": "senior-software-engineer-at-experian-4379923095",
           "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-cloudera-4377738011",
-          "location": "Greater Kolkata Area",
-          "department": "Cloudera",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-experian-4379923095",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Experian",
           "type": "Easy Apply",
           "postedDate": "2026-03-02"
         },
@@ -4094,11 +4113,11 @@
           "postedDate": "2026-03-02"
         },
         {
-          "id": "staff-software-engineer-full-stack-technical-support-at-outreach-4377376675",
-          "title": "Staff Software Engineer (Full-stack), Technical Support",
-          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-full-stack-technical-support-at-outreach-4377376675",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Outreach",
+          "id": "senior-software-engineer-required-skills-net-core-azure-cloud-at-h-r-block-india-4379960362",
+          "title": "Senior Software Engineer (Required Skills - .Net Core &amp; Azure Cloud)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-required-skills-net-core-azure-cloud-at-h-r-block-india-4379960362",
+          "location": "Thiruvananthapuram, Kerala, India",
+          "department": "H&amp;R Block India",
           "type": "Easy Apply",
           "postedDate": "2026-03-02"
         },
@@ -4112,11 +4131,11 @@
           "postedDate": "2026-03-02"
         },
         {
-          "id": "senior-software-engineer-at-ebay-4354298593",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-ebay-4354298593",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "eBay",
+          "id": "senior-integration-developer-sap-cloud-integration-cpi-and-boomi-at-shure-india-4377386287",
+          "title": "Senior Integration Developer (SAP Cloud Integration (CPI) and Boomi)",
+          "url": "https://in.linkedin.com/jobs/view/senior-integration-developer-sap-cloud-integration-cpi-and-boomi-at-shure-india-4377386287",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Shure India",
           "type": "Easy Apply",
           "postedDate": "2026-03-02"
         },
@@ -4139,13 +4158,26 @@
           "postedDate": "2026-03-02"
         },
         {
-          "id": "senior-software-engineer-at-experian-4379923095",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-experian-4379923095",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Experian",
+          "id": "staff-software-engineer-back-end-bangkok-based-relocation-provided-at-agoda-4299770536",
+          "title": "Staff Software Engineer - Back End (Bangkok based, Relocation provided)",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-back-end-bangkok-based-relocation-provided-at-agoda-4299770536",
+          "location": "Pune Division, Maharashtra, India",
+          "department": "Agoda",
           "type": "Easy Apply",
-          "postedDate": "2026-03-02"
+          "postedDate": "2026-03-02",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
+        },
+        {
+          "id": "lead-software-engineer-back-end-gurugram-based-at-agoda-4309399620",
+          "title": "Lead Software Engineer - Back End (Gurugram based)",
+          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-back-end-gurugram-based-at-agoda-4309399620",
+          "location": "New Delhi, Delhi, India",
+          "department": "Agoda",
+          "type": "Easy Apply",
+          "postedDate": "2026-03-01",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
         },
         {
           "id": "back-end-staff-software-engineer-bangkok-based-relocation-provided-at-agoda-4299777256",
@@ -4278,17 +4310,6 @@
           "salarySource": "levels.fyi"
         },
         {
-          "id": "back-end-staff-software-engineer-bangkok-based-relocation-provided-at-agoda-4299772471",
-          "title": "Back End Staff Software Engineer (Bangkok based, Relocation provided)",
-          "url": "https://in.linkedin.com/jobs/view/back-end-staff-software-engineer-bangkok-based-relocation-provided-at-agoda-4299772471",
-          "location": "Pune Division, Maharashtra, India",
-          "department": "Agoda",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-01",
-          "salaryRange": "59 LPA",
-          "salarySource": "levels.fyi"
-        },
-        {
           "id": "staff-software-engineer-back-end-gurugram-based-at-agoda-4299776202",
           "title": "Staff Software Engineer - Back End (Gurugram based)",
           "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-back-end-gurugram-based-at-agoda-4299776202",
@@ -4304,17 +4325,6 @@
           "title": "Staff Software Engineer - Back End (Gurugram based)",
           "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-back-end-gurugram-based-at-agoda-4299758975",
           "location": "Greater Lucknow Area",
-          "department": "Agoda",
-          "type": "Easy Apply",
-          "postedDate": "2026-03-01",
-          "salaryRange": "59 LPA",
-          "salarySource": "levels.fyi"
-        },
-        {
-          "id": "lead-software-engineer-back-end-gurugram-based-at-agoda-4309399620",
-          "title": "Lead Software Engineer - Back End (Gurugram based)",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-back-end-gurugram-based-at-agoda-4309399620",
-          "location": "New Delhi, Delhi, India",
           "department": "Agoda",
           "type": "Easy Apply",
           "postedDate": "2026-03-01",
@@ -4366,11 +4376,11 @@
           "salarySource": "levels.fyi"
         },
         {
-          "id": "senior-software-engineer-at-yipitdata-4342207412",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-yipitdata-4342207412",
-          "location": "India",
-          "department": "YipitData",
+          "id": "senior-software-engineer-fullstack-developer-at-innovative-information-technologies-inc-4378268036",
+          "title": "Senior Software Engineer-FullStack Developer",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-fullstack-developer-at-innovative-information-technologies-inc-4378268036",
+          "location": "Pune Division, Maharashtra, India",
+          "department": "Innovative Information Technologies, Inc.",
           "type": "Easy Apply",
           "postedDate": "2026-02-28"
         },
@@ -4400,6 +4410,17 @@
           "department": "Strategic HR Solutions",
           "type": "Easy Apply",
           "postedDate": "2026-02-28"
+        },
+        {
+          "id": "staff-software-engineer-back-end-gurugram-based-at-agoda-4299767573",
+          "title": "Staff Software Engineer - Back End (Gurugram based)",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-back-end-gurugram-based-at-agoda-4299767573",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Agoda",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-28",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
         },
         {
           "id": "senior-software-engineer-c%23-at-nice-4353573436",
@@ -4440,6 +4461,15 @@
           "postedDate": "2026-02-28"
         },
         {
+          "id": "senior-software-engineer-backend-at-digicert-4369117106",
+          "title": "Senior Software Engineer(Backend)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-backend-at-digicert-4369117106",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "DigiCert",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-27"
+        },
+        {
           "id": "principal-engineer-software-engineering-at-saviynt-4145507670",
           "title": "Principal Engineer, Software Engineering",
           "url": "https://in.linkedin.com/jobs/view/principal-engineer-software-engineering-at-saviynt-4145507670",
@@ -4447,6 +4477,17 @@
           "department": "Saviynt",
           "type": "Easy Apply",
           "postedDate": "2026-02-27"
+        },
+        {
+          "id": "lead-software-engineer-back-end-gurugram-based-at-agoda-4309608019",
+          "title": "Lead Software Engineer - Back End (Gurugram based)",
+          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-back-end-gurugram-based-at-agoda-4309608019",
+          "location": "Pune Division, Maharashtra, India",
+          "department": "Agoda",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-27",
+          "salaryRange": "59 LPA",
+          "salarySource": "levels.fyi"
         },
         {
           "id": "senior-software-engineer-backend-at-jitterbit-4342032462",
@@ -4494,11 +4535,38 @@
           "postedDate": "2026-02-27"
         },
         {
+          "id": "senior-software-engineer-full-stack-at-cambridge-mobile-telematics-4375964551",
+          "title": "Senior Software Engineer, Full Stack",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-at-cambridge-mobile-telematics-4375964551",
+          "location": "Chennai, Tamil Nadu, India",
+          "department": "Cambridge Mobile Telematics",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-27"
+        },
+        {
           "id": "azure-devops-lead-engineer-at-unity-infotech-4377642987",
           "title": "Azure DevOps Lead Engineer",
           "url": "https://in.linkedin.com/jobs/view/azure-devops-lead-engineer-at-unity-infotech-4377642987",
           "location": "Kochi, Kerala, India",
           "department": "Unity Infotech",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-27"
+        },
+        {
+          "id": "staff-software-engineer-at-fanatics-4361400522",
+          "title": "Staff Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-engineer-at-fanatics-4361400522",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Fanatics",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-27"
+        },
+        {
+          "id": "senior-lead-database-engineer-devops-at-lseg-4249547579",
+          "title": "Senior Lead Database Engineer - DevOps",
+          "url": "https://in.linkedin.com/jobs/view/senior-lead-database-engineer-devops-at-lseg-4249547579",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "LSEG",
           "type": "Easy Apply",
           "postedDate": "2026-02-27"
         },
@@ -4510,17 +4578,6 @@
           "department": "Tessell",
           "type": "Easy Apply",
           "postedDate": "2026-02-27"
-        },
-        {
-          "id": "lead-software-engineer-back-end-gurugram-based-at-agoda-4309608019",
-          "title": "Lead Software Engineer - Back End (Gurugram based)",
-          "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-back-end-gurugram-based-at-agoda-4309608019",
-          "location": "Pune Division, Maharashtra, India",
-          "department": "Agoda",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-27",
-          "salaryRange": "59 LPA",
-          "salarySource": "levels.fyi"
         },
         {
           "id": "staff-software-engineer-at-ping-identity-4361071826",
@@ -4550,31 +4607,11 @@
           "postedDate": "2026-02-26"
         },
         {
-          "id": "senior-software-engineer-data-and-backend-services-at-roku-4369229700",
-          "title": "Senior Software Engineer - Data and Backend Services",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-data-and-backend-services-at-roku-4369229700",
-          "location": "Bengaluru, Karnataka, India",
-          "department": "Roku",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-26",
-          "salaryRange": "90 LPA",
-          "salarySource": "levels.fyi"
-        },
-        {
           "id": "senior-software-engineer-at-teradata-4328731286",
           "title": "Senior Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-teradata-4328731286",
           "location": "Telangana, India",
           "department": "Teradata",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-26"
-        },
-        {
-          "id": "senior-software-engineer-at-chubb-4378376030",
-          "title": "Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-chubb-4378376030",
-          "location": "Telangana, India",
-          "department": "Chubb",
           "type": "Easy Apply",
           "postedDate": "2026-02-26"
         },
@@ -4606,6 +4643,15 @@
           "postedDate": "2026-02-26"
         },
         {
+          "id": "senior-software-engineer-back-end-at-goto-4378098423",
+          "title": "Senior Software Engineer (Back End)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-back-end-at-goto-4378098423",
+          "location": "Bengaluru, Karnataka, India",
+          "department": "GoTo",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-26"
+        },
+        {
           "id": "senior-software-engineer-platform-at-rippling-4376991373",
           "title": "Senior Software Engineer - Platform",
           "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-platform-at-rippling-4376991373",
@@ -4626,11 +4672,20 @@
           "postedDate": "2026-02-26"
         },
         {
-          "id": "sr-infrastructure-engineer-%E2%80%93-data-platforms-at-general-mills-india-4375533322",
-          "title": "Sr. Infrastructure Engineer – Data Platforms",
-          "url": "https://in.linkedin.com/jobs/view/sr-infrastructure-engineer-%E2%80%93-data-platforms-at-general-mills-india-4375533322",
-          "location": "Mumbai, Maharashtra, India",
-          "department": "General Mills India",
+          "id": "senior-cloud-infrastructure-engineer-working-hours-aligned-to-utc%2B2-at-covergo-insurtech-4378304048",
+          "title": "Senior Cloud Infrastructure Engineer (Working hours aligned to UTC+2)",
+          "url": "https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-working-hours-aligned-to-utc%2B2-at-covergo-insurtech-4378304048",
+          "location": "New Delhi, Delhi, India",
+          "department": "CoverGo | Insurtech",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-26"
+        },
+        {
+          "id": "staff-software-developer-at-loopio-4378360500",
+          "title": "Staff Software Developer",
+          "url": "https://in.linkedin.com/jobs/view/staff-software-developer-at-loopio-4378360500",
+          "location": "India",
+          "department": "Loopio",
           "type": "Easy Apply",
           "postedDate": "2026-02-26"
         },
@@ -4671,13 +4726,13 @@
           "postedDate": "2026-02-25"
         },
         {
-          "id": "net-full-stack-senior-software-engineer-at-bytestrone-4377193294",
-          "title": ".NET Full Stack Senior Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/net-full-stack-senior-software-engineer-at-bytestrone-4377193294",
-          "location": "Kochi, Kerala, India",
-          "department": "Bytestrone",
+          "id": "senior-software-engineer-c%23-sql-blazor-azure-at-franklin-templeton-india-4331973495",
+          "title": "Senior Software Engineer (C#, SQL, Blazor, Azure)",
+          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-c%23-sql-blazor-azure-at-franklin-templeton-india-4331973495",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Franklin Templeton India",
           "type": "Easy Apply",
-          "postedDate": "2026-02-24"
+          "postedDate": "2026-02-25"
         },
         {
           "id": "lead-software-engineer-backend-at-rapido-4375711325",
@@ -4685,15 +4740,6 @@
           "url": "https://in.linkedin.com/jobs/view/lead-software-engineer-backend-at-rapido-4375711325",
           "location": "Bengaluru, Karnataka, India",
           "department": "Rapido",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-23"
-        },
-        {
-          "id": "accordion-india-senior-software-engineer-2-at-accordion-4374231786",
-          "title": "Accordion India - Senior Software Engineer 2",
-          "url": "https://in.linkedin.com/jobs/view/accordion-india-senior-software-engineer-2-at-accordion-4374231786",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Accordion",
           "type": "Easy Apply",
           "postedDate": "2026-02-23"
         },
@@ -4707,6 +4753,15 @@
           "postedDate": "2026-02-23"
         },
         {
+          "id": "accordion-india-senior-software-engineer-2-at-accordion-4374231786",
+          "title": "Accordion India - Senior Software Engineer 2",
+          "url": "https://in.linkedin.com/jobs/view/accordion-india-senior-software-engineer-2-at-accordion-4374231786",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Accordion",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-23"
+        },
+        {
           "id": "senior-staff-software-engineer-at-epsilon-4374920843",
           "title": "Senior Staff Software Engineer",
           "url": "https://in.linkedin.com/jobs/view/senior-staff-software-engineer-at-epsilon-4374920843",
@@ -4714,6 +4769,15 @@
           "department": "Epsilon",
           "type": "Easy Apply",
           "postedDate": "2026-02-21"
+        },
+        {
+          "id": "senior-java-software-engineer-at-olea-4374371190",
+          "title": "Senior Java Software Engineer",
+          "url": "https://in.linkedin.com/jobs/view/senior-java-software-engineer-at-olea-4374371190",
+          "location": "Hyderabad, Telangana, India",
+          "department": "Olea",
+          "type": "Easy Apply",
+          "postedDate": "2026-02-20"
         },
         {
           "id": "senior-java-software-engineer-at-idfc-first-bank-4373445392",
@@ -4748,24 +4812,6 @@
           "url": "https://in.linkedin.com/jobs/view/senior-software-developer-full-stack-at-foxsense-innovations-4375800577",
           "location": "Coimbatore, Tamil Nadu, India",
           "department": "Foxsense Innovations",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-20"
-        },
-        {
-          "id": "senior-software-engineer-java-aws-at-nice-4306512946",
-          "title": "Senior Software Engineer (Java, AWS)",
-          "url": "https://in.linkedin.com/jobs/view/senior-software-engineer-java-aws-at-nice-4306512946",
-          "location": "Pune City, Maharashtra, India",
-          "department": "NiCE",
-          "type": "Easy Apply",
-          "postedDate": "2026-02-20"
-        },
-        {
-          "id": "senior-java-software-engineer-at-olea-4374371190",
-          "title": "Senior Java Software Engineer",
-          "url": "https://in.linkedin.com/jobs/view/senior-java-software-engineer-at-olea-4374371190",
-          "location": "Hyderabad, Telangana, India",
-          "department": "Olea",
           "type": "Easy Apply",
           "postedDate": "2026-02-20"
         },
