@@ -2001,7 +2001,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1774490717358
+    "ts": 1776093304606
   },
   "couchbase": {
     "minLPA": null,
@@ -3627,7 +3627,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1774850302511
+    "ts": 1776093307961
   },
   "revolut": {
     "minLPA": null,
@@ -5578,5 +5578,11 @@
     "maxLPA": null,
     "source": "ambitionbox",
     "ts": 1776086521013
+  },
+  "pice": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1776093312864
   }
 }
