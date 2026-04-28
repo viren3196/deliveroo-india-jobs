@@ -3585,7 +3585,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1773280356477
+    "ts": 1777357686392
   },
   "esri": {
     "minLPA": null,
@@ -5295,7 +5295,7 @@
     "minLPA": null,
     "maxLPA": null,
     "source": "ambitionbox",
-    "ts": 1775638705004
+    "ts": 1777357697431
   },
   "viasat": {
     "minLPA": null,
@@ -10708,5 +10708,17 @@
     "maxLPA": null,
     "source": "ambitionbox",
     "ts": 1777344023384
+  },
+  "cambium-networks": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1777357687087
+  },
+  "avyro": {
+    "minLPA": null,
+    "maxLPA": null,
+    "source": "ambitionbox",
+    "ts": 1777357688044
   }
 }
